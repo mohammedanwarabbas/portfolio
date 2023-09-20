@@ -1,93 +1,300 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--additional scripts and styles-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Skranji" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico" rel="stylesheet">
+
+
+    <!--end additional scripts and styles-->
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans';
+            text-align: center;
+        }
+
+        body .main-heading {
+            font-family: "Skranji";
+            background: -webkit-linear-gradient(246deg, rgba(255,0,0,1) 0%, rgba(13,29,163,1) 52%, rgba(182,29,241,1) 100%);
+            -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        }
+
+        body .side-heading {}
+
+        .project-image {
+            background-image: url('https://images.unsplash.com/photo-1694112867341-8a2087c50c64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80');
+            background-position: center;
+            background-size: cover;
+            height: 20rem;
+        }
+
+        .project-container .project-body {}
+
+        .project-body {
+            border-radius: 1rem 0 0 1rem;
+            box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.443);
+        }
+
+        .project-image {
+            border-radius: 0 1rem 1rem 0;
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
+        }
+
+        .contact-section {
+            background: rgb(255, 0, 194);
+            background: -moz-linear-gradient(246deg, rgba(255, 0, 194, 1) 0%, rgba(78, 13, 163, 1) 55%, rgba(241, 29, 29, 1) 100%);
+            background: -webkit-linear-gradient(246deg, rgba(255, 0, 194, 1) 0%, rgba(78, 13, 163, 1) 55%, rgba(241, 29, 29, 1) 100%);
+            background: linear-gradient(246deg, rgba(255, 0, 194, 1) 0%, rgba(78, 13, 163, 1) 55%, rgba(241, 29, 29, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00c2", endColorstr="#f11d1d", GradientType=1);
+        }
+
+        .footer-logo img,
+        .navbar-logo {
+            width: 3rem;
+        }
+
+        nav h2 {
+            font-family: 'Pacifico';
+        }
+
+        .resume-section .resume-heading {
+            background: -webkit-linear-gradient(246deg, rgba(255,0,0,1) 0%, rgba(13,29,163,1) 52%, rgba(182,29,241,1) 100%);
+            -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        }
+
+        .resume-section .skill {
+            background-color: rgb(240, 129, 18);
+            border-radius: 0.2rem;
+            padding: 0.2rem;
+            margin: 2px;
+        }
+        .resume-section div.card-body{
+            box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.443);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">PORTFOLIO</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">
-                            Search
-                        </button>
-                    </form>
+
+    <!--starts navbar-->
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light" id="home">
+        <div class="container-fluid">
+            <img class="navbar-brand navbar-logo" src="img/anwar-logo.png" alt="">
+
+            <h2 class="m-auto">Anwr's Portfolio</h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--ends navbar-->
+
+    <!--start project section-->
+    <section class="projects-section container my-5" id="projects">
+        <h1 class="main-heading">Live Projects</h1>
+        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-7">
+                <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                    <h3 class="card-title"><i class="bi bi-1-square-fill"></i>Live website 1</h3>
+                    <p class="card-text">this is php live website sold for 20,000/- for one of the travel agency</p>
                 </div>
             </div>
-        </nav>
-    </div>
-    <div class="container">
-        <div class="text-center alert alert-danger alert-dismissible fade show p-5 m-5" role="alert">
-            <strong>Website under development!</strong> <p class="text-dark">click <a class="btn btn-dark px-1 mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal">here</a> for more details</p>
-            <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
-          </div>
+            <div class="project-image col-md-3 border-1 border-primary border">
+            </div>
+        </div>
+        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-7">
+                <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                    <h3 class="card-title"><i class="bi bi-2-square-fill"></i>Live website 2</h3>
+                    <p class="card-text">this is php live website sold for 20,000/- for one of the travel agency</p>
+                </div>
+            </div>
+            <div class="project-image col-md-3 border-1 border-primary border">
+            </div>
+        </div>
+    </section>
+    <!--ends projects section-->
 
+    <!--starts resume section-->
+    <section class="resume-section container my-5" id="resume">
+        <h1 class="main-heading mb-5">Resume</h1>
+        <h3 class="ps-5 text-start">Skills</h3>
+        <div>
+            <p>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">Javascript</span>
+                <span class="skill">Bootstrap</span>
+                <span class="skill">Jquery</span>
+            </p>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"> work under development</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <p>Backend scripting
+                <span class="skill">Python</span>
+                <span class="skill">PHP</span>
+            </p>
+            <p>Frontend framework
+                <span class="skill">React</span>
+            </p>
+            <p>Backend framework
+                <span class="skill">Django</span>
+            </p>
+
+        </div>
+        <h3 class="ps-5 text-start">Work Experience</h3>
+        <div class="card-body rounded-3 my-1">
+            <div class="row align-items-center">
+                <div class="col text-center text-lg-start mb-lg-0">
+                    <div class="bg-light p-4 rounded-3">
+                        <div class="fw-bolder mb-2 h5 resume-heading"><i class="bi bi-1-square-fill"></i> Web Developer - Part-time</div>
+                        <div class="small fw-bolder">Jan 2023 - Jul 2023</div>
+                        <div class="small text-muted">Vinyasa Tech Solutions</div>
+                        <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Mangalore</div>
                     </div>
-                    <div class="modal-body">Sorry! due to many emergency works we coudn't complete this web work. Stay connected, will back soon</div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                            Close
-                        </button>
+                </div>
+                <div class="col-lg-8">
+                    <div>
+                        <p class="fw-bold">Tasks accomplished : </p>
+                        <ul>
+                            <li>Successfully led the development and maintenance
+                                of web applications.</li>
+                            <li>Managed end-to-end deployment and maintenance
+                                of websites.</li>
+                            <li>Diagnosed and resolved technical issues, optimizing
+                                user experience and overall project performance.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="card-body rounded-3 my-1">
+            <div class="row align-items-center">
+                <div class="col text-center text-lg-start mb-lg-0">
+                    <div class="bg-light p-4 rounded-3">
+                        <div class="fw-bolder mb-2 resume-heading h5"><i class="bi bi-2-square-fill"></i> Web development using Django Internship</div>
+                        <div class="small fw-bolder">Nov 2021 - Apr 2022</div>
+                        <div class="small text-muted">Codelab Systems</div>
+                        <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Mangalore</div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div>
+                        <p class="fw-bold">Topics covered : </p>Python, Django framework, Django Template Language
+                        (DTL), Django's Object-Relational Mapping (ORM)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h3 class="ps-5 text-start">Education</h3>
+        <div class="card-body rounded-3 my-1">
+            <div class="row align-items-center">
+                <div class="col text-center text-lg-start mb-lg-0">
+                    <div class="bg-light p-4 rounded-3">
+                        <div class="fw-bolder mb-2 resume-heading h5"><i class="bi bi-cursor-fill"></i> M.C.A</div>
+                        <div class="small fw-bolder">2022-2023 - 2 Years</div>
+                        <div class="small text-muted">Shree Devi Institute of Technology</div>
+                        <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Mangalore</div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div><span class="fw-bold">University : </span>Visvesvaraya Technological University (VTU)<br />
+                        <span class="fw-bold">Marks : </span>80%
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body rounded-3 my-1">
+            <div class="row align-items-center">
+                <div class="col text-center text-lg-start mb-lg-0">
+                    <div class="bg-light p-4 rounded-3">
+                        <div class="fw-bolder mb-2 resume-heading h5"><i class="bi bi-cursor-fill"></i> B.C.A</div>
+                        <div class="small fw-bolder">2017-2020 - 3 Years</div>
+                        <div class="small text-muted">St. Mary's college</div>
+                        <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Shirva, Udupi dist</div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div><span class="fw-bold">University : </span>Mangalore University<br>
+                        <span class="fw-bold">Marks : </span>82%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ends resume section-->
+
+    <!--start contact section-->
+    <section class="contact-section container-fluid text-center my-5 py-5" id="contact">
+        <h2 class="text-light">Ready to Create Together?</h2>
+        <h1 class="text-light main-heading mb-5">Contact Me <i class="bi bi-chevron-double-down"></i></h1>
+
+        <div class="container row text-center m-auto">
+            <div class="col-md-6 border-light border-start border-end">
+                <p class="text-light h5"><i class="bi bi-geo-alt-fill"></i>Location : Kaup, Udupi District,
+                    Karnataka State, India</p>
+                <hr class="d-md-none d-block">
+                <p class="text-light h5"><i class="bi bi-telephone-outbound-fill"></i>Contact : <a
+                        class="text-light text-decoration-none" href="tel:919972595842">+91 9972595842</a></p>
+                <hr class="d-md-none d-block">
+                <p class="text-light h5 text-break text-break-word"><i class="bi bi-envelope"></i>Mail Id : <a
+                        class="text-light text-decoration-none"
+                        href="mailto:mohameedanwarabbas@gmail.com">mohammedanwarabbas@gmail.com</a></p>
+                <hr class="d-md-none d-block">
+            </div>
+            <div class="col-md-6 border-light border-end border-start">
+                <p class="text-light h5">Finde me on</p>
+                <a class="text-light h4" href=""><i class="bi bi-whatsapp"></i></a> |
+                <a class="text-light h4" href=""><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
+        <!--map-->
+        <div class="ratio ratio-21x9 container my-5">
+            <iframe class="border border-5 rounded-3"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62144.23735493468!2d74.76296606476087!3d13.224385178337211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcb02b2bc438eb%3A0x901c0008c65ea894!2sPadu%2C%20Karnataka%20574106!5e0!3m2!1sen!2sin!4v1695202542356!5m2!1sen!2sin"></iframe>
+        </div>
+    </section>
+    <!--ends contact section-->
+
+    <!--start footer-->
+    <footer
+        class="container-fluid bg-dark d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-light">© 2023 Anwar Kaup</p>
+        <a href="index.html"
+            class="footer-logo col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="img/anwar-logo.png" alt="">
+        </a>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="index.html#home" class="text-light nav-link px-2">Home</a></li>
+            <li class="nav-item"><a href="index.html#projects" class="text-light nav-link px-2">Projects</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="text-light nav-link px-2">Contact me</a></li>
+            <li class="nav-item"><a href="index.html#resume" class="text-light nav-link px-2">Resume</a></li>
+        </ul>
+    </footer>
+    <!--ends footer-->
 </body>
 
 </html>
