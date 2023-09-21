@@ -29,9 +29,9 @@
 
         body .main-heading {
             font-family: "Skranji";
-            background: -webkit-linear-gradient(246deg, rgba(255,0,0,1) 0%, rgba(13,29,163,1) 52%, rgba(182,29,241,1) 100%);
+            background: -webkit-linear-gradient(246deg, rgba(255, 0, 0, 1) 0%, rgba(13, 29, 163, 1) 52%, rgba(182, 29, 241, 1) 100%);
             -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
         }
 
         body .side-heading {}
@@ -41,21 +41,27 @@
             background-size: cover;
             height: 20rem;
         }
-        .prjimg1{
-background-image: url('img/ss1.png');
+
+        .prjimg1 {
+            background-image: url('img/ss1.png');
         }
-        .prjimg2{
-           background-image: url('img/ss2.png'); 
+
+        .prjimg2 {
+            background-image: url('img/ss2.png');
         }
-        .prjimg3{
-           background-image: url('img/ss3.png'); 
+
+        .prjimg3 {
+            background-image: url('img/ss3.png');
         }
-        .prjimg4{
+
+        .prjimg4 {
             background-image: url('img/ss4.png');
         }
-        .prjimg5{
+
+        .prjimg5 {
             background-image: url('img/ss5.png');
         }
+
         .project-container .project-body {}
 
         .project-body {
@@ -86,9 +92,9 @@ background-image: url('img/ss1.png');
         }
 
         .resume-section .resume-heading {
-            background: -webkit-linear-gradient(246deg, rgba(255,0,0,1) 0%, rgba(13,29,163,1) 52%, rgba(182,29,241,1) 100%);
+            background: -webkit-linear-gradient(246deg, rgba(255, 0, 0, 1) 0%, rgba(13, 29, 163, 1) 52%, rgba(182, 29, 241, 1) 100%);
             -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
         }
 
         .resume-section .skill {
@@ -98,41 +104,93 @@ background-image: url('img/ss1.png');
             margin: 0.2rem;
             display: inline-block;
         }
-        .resume-section div.card-body{
+
+        .resume-section div.card-body {
             box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
         }
 
         /*add side borders from address and find me on section on large screen*/
-        .contact-section .container div{
-    border-width: 0 0.1rem 0 0.1rem;
-    border-color: white;
-    border-style: solid;
-}
-.about-section{
-    
-}
-.about-section .my-name{
-font-family: 'Rubik Wet Paint';
-}
-.about-section .about-underline{
-    font-size: 5rem;
-}
-/*For mobile or small screen*/
-    @media (max-width: 767px) {
-.contact-section .container div{
-    /*remove side borders from address and find me on section */
-    border: 0;
-}
-/*remove border radius from projects*/
-.project-body {
-            border-radius: 1rem 1rem 0 0;
+        .contact-section .container div {
+            border-width: 0 0.1rem 0 0.1rem;
+            border-color: white;
+            border-style: solid;
         }
 
-        .project-image {
-            border-radius: 0 0 1rem 1rem;
-            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
+        .about-section {}
+
+        .about-section .my-name {
+            font-family: 'Rubik Wet Paint';
         }
-}
+
+        .about-section .about-underline {
+            font-size: 5rem;
+        }
+
+        .about-section .social-accounts i {
+            font-size: 1.8rem;
+            width: 4.1rem;
+            height: 4.1rem;
+            padding: 1rem;
+            display: inline-block;
+        }
+
+        .contact-section .social-accounts i {
+            font-size: 1.8rem;
+            width: 4.1rem;
+            height: 4.1rem;
+            padding: 1rem;
+            display: inline-block;
+        }
+
+        .social-accounts a:hover i {
+            animation: shakeAnimation 0.5s ease infinite;
+            /* Adjust the duration and timing function as needed */
+        }
+
+        /* Define the keyframes for the shake animation */
+        @keyframes shakeAnimation {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-5px);
+            }
+
+            40% {
+                transform: translateX(5px);
+            }
+
+            60% {
+                transform: translateX(-5px);
+            }
+
+            80% {
+                transform: translateX(5px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /*For mobile or small screen*/
+        @media (max-width: 767px) {
+            .contact-section .container div {
+                /*remove side borders from address and find me on section */
+                border: 0;
+            }
+
+            /*remove border radius from projects*/
+            .project-body {
+                border-radius: 1rem 1rem 0 0;
+            }
+
+            .project-image {
+                border-radius: 0 0 1rem 1rem;
+                box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
+            }
+        }
     </style>
 </head>
 
@@ -153,16 +211,16 @@ font-family: 'Rubik Wet Paint';
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html#home">Home</a>
-                      </li>
-                      <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html#resume">Resume</a>
-                      </li>
-                      <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html#projects">Project</a>
-                      </li>
-                      <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html#contact">Contact</a>
-                      </li>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -171,13 +229,20 @@ font-family: 'Rubik Wet Paint';
 
 
     <!--starts about-->
-<section class="about-section container my-5" id="home">
-    <h1 class="mt-5 pt-5"></h1>
-    <h1 class="main-heading mt-5 pt-5">About Me</h1>
-    <h4 class="mt-5">My name is <span class="my-name">Mohammed Anwar</span>. I recently completed <span class="fw-bold">M.C.A</span> from Vishweshwarayya Technological University, Balagavi in <span class="fw-bold">2023 September</span>. As a fresher with freelancing experience in web development, I have honed my skills in creating dynamic websites.</h4>
-    <h1 class="mb-5 mt-0 p-0"><i class="fw-bolder bi bi-three-dots text-dark about-underline"></i></h1>
-</section>
-<!--ends about-->
+    <section class="about-section container my-5" id="home">
+        <h1 class="mt-5 pt-5"></h1>
+        <h1 class="main-heading mt-5 pt-5">About Me</h1>
+        <h4 class="mt-5">My name is <span class="my-name">Mohammed Anwar</span>. I recently completed <span
+                class="fw-bold">M.C.A</span> from Vishweshwarayya Technological University, Balagavi in <span
+                class="fw-bold">2023 September</span>. As a fresher with freelancing experience in web development, I
+            have honed my skills in creating dynamic websites.</h4>
+        <p class="social-accounts my-4"> 
+            <a class="pe-4" href="https://www.linkedin.com/in/mohammed-anwar-36aab3179/" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-linkedin"></i></a>
+            <a class="pe-4" href="mailto:mohammedanwarabbas@gmail.com" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-envelope"></i></a>
+            <a href="https://github.com/mohammedanwarabbas" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-github"></i></a></p>
+        <h1 class="mb-5 mt-0 p-0"><i class="fw-bolder bi bi-three-dots text-dark about-underline"></i></h1>
+    </section>
+    <!--ends about-->
 
 
     <!--start project section-->
@@ -187,9 +252,12 @@ font-family: 'Rubik Wet Paint';
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-1-square-fill"></i>Live website 1</h3>
-                    <p class="card-text">This is a Dynamic PHP project delivered to small business located in Udupi District. Note : double cliking on developer button of footer section dosen't work, It requires tripple click.
+                    <p class="card-text">This is a Dynamic PHP project delivered to small business located in Udupi
+                        District. Note : double cliking on developer button of footer section dosen't work, It requires
+                        tripple click.
                     </p>
-                    <a class="px-3 btn btn-outline-dark" href="https://www.ayushgroupstoursandtravels.com" target="_blank">view live</a>
+                    <a class="px-3 btn btn-outline-dark" href="https://www.ayushgroupstoursandtravels.com"
+                        target="_blank">view live</a>
                 </div>
             </div>
             <div class="prjimg1 project-image col-md-3 border-1 border">
@@ -199,7 +267,9 @@ font-family: 'Rubik Wet Paint';
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-2-square-fill"></i>Live website 2</h3>
-                    <p class="card-text">This is a dynamic PHP website <span class="text-danger">under development</span> for one of the ayurvedic clinic located in  mangalore. Note : double cliking on developer button of footer section dosen't work, It requires tripple click.</p>
+                    <p class="card-text">This is a dynamic PHP website <span class="text-danger">under
+                            development</span> for one of the ayurvedic clinic located in mangalore. Note : double
+                        cliking on developer button of footer section dosen't work, It requires tripple click.</p>
                     <a class="px-3 btn btn-outline-dark" href="http://www.anwarbro.rf.gd" target="_blank">view live</a>
                 </div>
             </div>
@@ -211,8 +281,11 @@ font-family: 'Rubik Wet Paint';
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-3-square-fill"></i>Python QR code generator</h3>
-                    <p class="card-text">This Python project is developed using Django framework, This project will generate customized QR codes for specified links or content which can be scanned by QR code scanners later.</p>
-                    <a class="px-3 btn btn-outline-dark" href="https://github.com/mohammedanwarabbas/QR-Code-Generator" target="_black">view on github</a>
+                    <p class="card-text">This Python project is developed using Django framework, This project will
+                        generate customized QR codes for specified links or content which can be scanned by QR code
+                        scanners later.</p>
+                    <a class="px-3 btn btn-outline-dark" href="https://github.com/mohammedanwarabbas/QR-Code-Generator"
+                        target="_black">view on github</a>
                 </div>
             </div>
             <div class="prjimg3 project-image col-md-3 border-1 border">
@@ -222,8 +295,12 @@ font-family: 'Rubik Wet Paint';
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-4-square-fill"></i>Python Web scraping</h3>
-                    <p class="card-text">This Python project is developed using Django. This project helps in performing webscraping based on the website link provided to it. Note: It's not legal to perform webscraping without owner's consent</p>
-                    <a class="px-3 btn btn-outline-dark" href="https://github.com/mohammedanwarabbas/web-scraping/tree/branch2" target="_blank">view on github</a>
+                    <p class="card-text">This Python project is developed using Django. This project helps in performing
+                        webscraping based on the website link provided to it. Note: It's not legal to perform
+                        webscraping without owner's consent</p>
+                    <a class="px-3 btn btn-outline-dark"
+                        href="https://github.com/mohammedanwarabbas/web-scraping/tree/branch2" target="_blank">view on
+                        github</a>
                 </div>
             </div>
             <div class="prjimg4 project-image col-md-3 border-1 border">
@@ -233,8 +310,10 @@ font-family: 'Rubik Wet Paint';
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-5-square-fill"></i>React.js Quote Generator</h3>
-                    <p class="card-text">This is my first React.js project called QuoteDog, developed recently when I start studying React.js. This website fetches quotes from quote generator API</p>
-                    <a class="px-3 btn btn-outline-dark" href="https://mohammedanwarabbas.github.io/quotedog/" target="_blank">view live</a>
+                    <p class="card-text">This is my first React.js project called QuoteDog, developed recently when I
+                        start studying React.js. This website fetches quotes from quote generator API</p>
+                    <a class="px-3 btn btn-outline-dark" href="https://mohammedanwarabbas.github.io/quotedog/"
+                        target="_blank">view live</a>
                 </div>
             </div>
             <div class="prjimg5 project-image col-md-3 border-1 border">
@@ -274,7 +353,8 @@ font-family: 'Rubik Wet Paint';
             <div class="row align-items-center">
                 <div class="col text-center text-lg-start mb-lg-0">
                     <div class="bg-light p-4 rounded-3">
-                        <div class="fw-bolder mb-2 h5 resume-heading"><i class="bi bi-1-square-fill"></i> Web Developer - Part-time</div>
+                        <div class="fw-bolder mb-2 h5 resume-heading"><i class="bi bi-1-square-fill"></i> Web Developer
+                            - Part-time</div>
                         <div class="small fw-bolder">Jan 2023 - Jul 2023</div>
                         <div class="small text-muted">Vinyasa Tech Solutions</div>
                         <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Mangalore</div>
@@ -299,7 +379,8 @@ font-family: 'Rubik Wet Paint';
             <div class="row align-items-center">
                 <div class="col text-center text-lg-start mb-lg-0">
                     <div class="bg-light p-4 rounded-3">
-                        <div class="fw-bolder mb-2 resume-heading h5"><i class="bi bi-2-square-fill"></i> Web development using Django Internship</div>
+                        <div class="fw-bolder mb-2 resume-heading h5"><i class="bi bi-2-square-fill"></i> Web
+                            development using Django Internship</div>
                         <div class="small fw-bolder">Nov 2021 - Apr 2022</div>
                         <div class="small text-muted">Codelab Systems</div>
                         <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Mangalore</div>
@@ -374,8 +455,13 @@ font-family: 'Rubik Wet Paint';
             </div>
             <div class="col-md-6">
                 <p class="text-light h5">Finde me on</p>
-                <a class="text-light h4" href=""><i class="bi bi-whatsapp"></i></a> |
-                <a class="text-light h4" href=""><i class="bi bi-instagram"></i></a>
+                <p class="social-accounts">
+                    <a class="text-light h4" href="https://wa.me/919972595842?text=Hello%20Anwar%2C%20I%20came%20from%20your%20portfolio"><i
+                            class="rounded-circle bg-light text-dark h1 bi bi-whatsapp"></i></a> <span
+                        class="text-light h1">|</span>
+                    <a class="text-light h4" href="https://www.instagram.com/mohammed_anwar_abbas/" target="_blank"><i
+                            class="rounded-circle bg-light text-dark h1 bi bi-instagram"></i></a>
+                </p>
             </div>
         </div>
 
