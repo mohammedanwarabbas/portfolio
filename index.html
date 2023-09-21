@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Skranji" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint" rel="stylesheet">
 
 
     <!--end additional scripts and styles-->
@@ -36,12 +37,25 @@
         body .side-heading {}
 
         .project-image {
-            background-image: url('https://images.unsplash.com/photo-1694112867341-8a2087c50c64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80');
             background-position: center;
             background-size: cover;
             height: 20rem;
         }
-
+        .prjimg1{
+background-image: url('img/ss1.png');
+        }
+        .prjimg2{
+           background-image: url('img/ss2.png'); 
+        }
+        .prjimg3{
+           background-image: url('img/ss3.png'); 
+        }
+        .prjimg4{
+            background-image: url('img/ss4.png');
+        }
+        .prjimg5{
+            background-image: url('img/ss5.png');
+        }
         .project-container .project-body {}
 
         .project-body {
@@ -81,18 +95,51 @@
             background-color: rgb(240, 129, 18);
             border-radius: 0.2rem;
             padding: 0.2rem;
-            margin: 2px;
+            margin: 0.2rem;
+            display: inline-block;
         }
         .resume-section div.card-body{
-            box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.443);
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
         }
+
+        /*add side borders from address and find me on section on large screen*/
+        .contact-section .container div{
+    border-width: 0 0.1rem 0 0.1rem;
+    border-color: white;
+    border-style: solid;
+}
+.about-section{
+    
+}
+.about-section .my-name{
+font-family: 'Rubik Wet Paint';
+}
+.about-section .about-underline{
+    font-size: 5rem;
+}
+/*For mobile or small screen*/
+    @media (max-width: 767px) {
+.contact-section .container div{
+    /*remove side borders from address and find me on section */
+    border: 0;
+}
+/*remove border radius from projects*/
+.project-body {
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .project-image {
+            border-radius: 0 0 1rem 1rem;
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
+        }
+}
     </style>
 </head>
 
 <body>
 
     <!--starts navbar-->
-    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light" id="home">
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <img class="navbar-brand navbar-logo" src="img/anwar-logo.png" alt="">
 
@@ -104,41 +151,101 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html#home">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html#resume">Resume</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html#projects">Project</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html#contact">Contact</a>
+                      </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!--ends navbar-->
 
+
+    <!--starts about-->
+<section class="about-section container my-5" id="home">
+    <h1 class="mt-5 pt-5"></h1>
+    <h1 class="main-heading mt-5 pt-5">About Me</h1>
+    <h4 class="mt-5">My name is <span class="my-name">Mohammed Anwar</span>. I recently completed <span class="fw-bold">M.C.A</span> from Vishweshwarayya Technological University, Balagavi in <span class="fw-bold">2023 September</span>. As a fresher with freelancing experience in web development, I have honed my skills in creating dynamic websites.</h4>
+    <h1 class="mb-5 mt-0 p-0"><i class="fw-bolder bi bi-three-dots text-dark about-underline"></i></h1>
+</section>
+<!--ends about-->
+
+
     <!--start project section-->
-    <section class="projects-section container my-5" id="projects">
-        <h1 class="main-heading">Live Projects</h1>
+    <section class="projects-section container my-5 py-5" id="projects">
+        <h1 class="main-heading mt-5">Live Projects</h1>
         <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-1-square-fill"></i>Live website 1</h3>
-                    <p class="card-text">this is php live website sold for 20,000/- for one of the travel agency</p>
+                    <p class="card-text">This is a Dynamic PHP project delivered to small business located in Udupi District. Note : double cliking on developer button of footer section dosen't work, It requires tripple click.
+                    </p>
+                    <a class="px-3 btn btn-outline-dark" href="https://www.ayushgroupstoursandtravels.com" target="_blank">view live</a>
                 </div>
             </div>
-            <div class="project-image col-md-3 border-1 border-primary border">
+            <div class="prjimg1 project-image col-md-3 border-1 border">
             </div>
         </div>
         <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-2-square-fill"></i>Live website 2</h3>
-                    <p class="card-text">this is php live website sold for 20,000/- for one of the travel agency</p>
+                    <p class="card-text">This is a dynamic PHP website <span class="text-danger">under development</span> for one of the ayurvedic clinic located in  mangalore. Note : double cliking on developer button of footer section dosen't work, It requires tripple click.</p>
+                    <a class="px-3 btn btn-outline-dark" href="http://www.anwarbro.rf.gd" target="_blank">view live</a>
                 </div>
             </div>
-            <div class="project-image col-md-3 border-1 border-primary border">
+            <div class="prjimg2 project-image col-md-3 border-1 border">
+            </div>
+        </div>
+        <h1 class="main-heading">Academic Projects</h1>
+        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-7">
+                <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                    <h3 class="card-title"><i class="bi bi-3-square-fill"></i>Python QR code generator</h3>
+                    <p class="card-text">This Python project is developed using Django framework, This project will generate customized QR codes for specified links or content which can be scanned by QR code scanners later.</p>
+                    <a class="px-3 btn btn-outline-dark" href="https://github.com/mohammedanwarabbas/QR-Code-Generator" target="_black">view on github</a>
+                </div>
+            </div>
+            <div class="prjimg3 project-image col-md-3 border-1 border">
+            </div>
+        </div>
+        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-7">
+                <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                    <h3 class="card-title"><i class="bi bi-4-square-fill"></i>Python Web scraping</h3>
+                    <p class="card-text">This Python project is developed using Django. This project helps in performing webscraping based on the website link provided to it. Note: It's not legal to perform webscraping without owner's consent</p>
+                    <a class="px-3 btn btn-outline-dark" href="https://github.com/mohammedanwarabbas/web-scraping/tree/branch2" target="_blank">view on github</a>
+                </div>
+            </div>
+            <div class="prjimg4 project-image col-md-3 border-1 border">
+            </div>
+        </div>
+        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-7">
+                <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                    <h3 class="card-title"><i class="bi bi-5-square-fill"></i>React.js Quote Generator</h3>
+                    <p class="card-text">This is my first React.js project called QuoteDog, developed recently when I start studying React.js. This website fetches quotes from quote generator API</p>
+                    <a class="px-3 btn btn-outline-dark" href="https://mohammedanwarabbas.github.io/quotedog/" target="_blank">view live</a>
+                </div>
+            </div>
+            <div class="prjimg5 project-image col-md-3 border-1 border">
             </div>
         </div>
     </section>
     <!--ends projects section-->
 
     <!--starts resume section-->
-    <section class="resume-section container my-5" id="resume">
-        <h1 class="main-heading mb-5">Resume</h1>
+    <section class="resume-section container my-5 py-5" id="resume">
+        <h1 class="main-heading my-5">Resume</h1>
         <h3 class="ps-5 text-start">Skills</h3>
         <div>
             <p>
@@ -248,11 +355,11 @@
 
     <!--start contact section-->
     <section class="contact-section container-fluid text-center my-5 py-5" id="contact">
-        <h2 class="text-light">Ready to Create Together?</h2>
+        <h2 class="text-light mt-5">Ready to Create Together?</h2>
         <h1 class="text-light main-heading mb-5">Contact Me <i class="bi bi-chevron-double-down"></i></h1>
 
-        <div class="container row text-center m-auto">
-            <div class="col-md-6 border-light border-start border-end">
+        <div class="container row text-center m-auto p-0 p-sm-5">
+            <div class="col-md-6">
                 <p class="text-light h5"><i class="bi bi-geo-alt-fill"></i>Location : Kaup, Udupi District,
                     Karnataka State, India</p>
                 <hr class="d-md-none d-block">
@@ -264,7 +371,7 @@
                         href="mailto:mohameedanwarabbas@gmail.com">mohammedanwarabbas@gmail.com</a></p>
                 <hr class="d-md-none d-block">
             </div>
-            <div class="col-md-6 border-light border-end border-start">
+            <div class="col-md-6">
                 <p class="text-light h5">Finde me on</p>
                 <a class="text-light h4" href=""><i class="bi bi-whatsapp"></i></a> |
                 <a class="text-light h4" href=""><i class="bi bi-instagram"></i></a>
@@ -282,7 +389,7 @@
     <!--start footer-->
     <footer
         class="container-fluid bg-dark d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-light">© 2023 Anwar Kaup</p>
+        <p class="col-md-4 mb-0 text-light">© 2023 Anwar Kaup. All Rights Reserved.</p>
         <a href="index.html"
             class="footer-logo col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
             <img src="img/anwar-logo.png" alt="">
