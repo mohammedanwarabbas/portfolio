@@ -18,10 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Skranji" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint" rel="stylesheet">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
     <!--end additional scripts and styles-->
     <style>
+
         /* Style for the loader container */
         #loader {
             position: fixed;
@@ -211,6 +213,10 @@
                 border-radius: 0 0 1rem 1rem;
                 box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
             }
+            .project-container{
+                border: 0.1rem solid black;
+                border-radius: 1rem;
+            }
         }
     </style>
 </head>
@@ -260,14 +266,14 @@
     <section class="about-section container my-5" id="home">
         <h1 class="mt-5 pt-5"></h1>
         <h1 class="main-heading mt-5 pt-5">About Me</h1>
-        <h4 class="mt-5">My name is <span class="my-name">Mohammed Anwar</span>. I recently completed <span
+        <h4 data-aos="fade-bottom" data-aos-duration="3000" class="mt-5">My name is <span class="my-name">Mohammed Anwar</span>. I recently completed <span
                 class="fw-bold">M.C.A</span> from Vishweshwarayya Technological University, Balagavi in <span
                 class="fw-bold">2023 September</span>. As a fresher with freelancing experience in web development, I
             have honed my skills in creating dynamic websites.</h4>
         <p class="social-accounts my-4"> 
-            <a class="pe-4" href="https://www.linkedin.com/in/mohammed-anwar-36aab3179/" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-linkedin"></i></a>
-            <a class="pe-4" href="mailto:mohammedanwarabbas@gmail.com" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-envelope"></i></a>
-            <a href="https://github.com/mohammedanwarabbas" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-github"></i></a></p>
+            <a data-aos="fade-up" data-aos-duration="3000" class="pe-4" href="https://www.linkedin.com/in/mohammed-anwar-36aab3179/" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-linkedin"></i></a>
+            <a data-aos="fade-up" data-aos-duration="3000" class="pe-4" href="mailto:mohammedanwarabbas@gmail.com" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-envelope"></i></a>
+            <a data-aos="fade-up" data-aos-duration="3000" href="https://github.com/mohammedanwarabbas" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-github"></i></a></p>
         <h1 class="mb-5 mt-0 p-0"><i class="fw-bolder bi bi-three-dots text-dark about-underline"></i></h1>
     </section>
     <!--ends about-->
@@ -276,7 +282,7 @@
     <!--start project section-->
     <section class="projects-section container my-5 py-5" id="projects">
         <h1 class="main-heading mt-5">Live Projects</h1>
-        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+        <div data-aos="fade-up" data-aos-duration="1000" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-1-square-fill"></i>Live website 1</h3>
@@ -291,7 +297,7 @@
             <div class="prjimg1 project-image col-md-3 border-1 border">
             </div>
         </div>
-        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+        <div  data-aos="fade-up" data-aos-duration="1000" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-2-square-fill"></i>Live website 2</h3>
@@ -305,7 +311,7 @@
             </div>
         </div>
         <h1 class="main-heading">Academic Projects</h1>
-        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+        <div  data-aos="fade-up" data-aos-duration="1000" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-3-square-fill"></i>Python QR code generator</h3>
@@ -319,7 +325,7 @@
             <div class="prjimg3 project-image col-md-3 border-1 border">
             </div>
         </div>
-        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+        <div data-aos="fade-up" data-aos-duration="1000" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-4-square-fill"></i>Python Web scraping</h3>
@@ -334,7 +340,7 @@
             <div class="prjimg4 project-image col-md-3 border-1 border">
             </div>
         </div>
-        <div class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+        <div data-aos="fade-up" data-aos-duration="1000" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
             <div class="project-body card col-md-7">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
                     <h3 class="card-title"><i class="bi bi-5-square-fill"></i>React.js Quote Generator</h3>
@@ -357,27 +363,27 @@
         <h3 class="ps-5 text-start">Skills</h3>
         <div>
             <p>
-                <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">Javascript</span>
-                <span class="skill">Bootstrap</span>
-                <span class="skill">Jquery</span>
+                <span data-aos="fade-up" data-aos-duration="1500" class="skill">HTML</span>
+                <span data-aos="fade-down" data-aos-duration="1500" class="skill">CSS</span>
+                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Javascript</span>
+                <span data-aos="fade-down" data-aos-duration="1500" class="skill">Bootstrap</span>
+                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Jquery</span>
             </p>
 
             <p>Backend scripting
-                <span class="skill">Python</span>
-                <span class="skill">PHP</span>
+                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Python</span>
+                <span data-aos="fade-up" data-aos-duration="1500" class="skill">PHP</span>
             </p>
             <p>Frontend framework
-                <span class="skill">React</span>
+                <span data-aos="fade-up" data-aos-duration="1500" class="skill">React</span>
             </p>
             <p>Backend framework
-                <span class="skill">Django</span>
+                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Django</span>
             </p>
 
         </div>
         <h3 class="ps-5 text-start">Work Experience</h3>
-        <div class="card-body rounded-3 my-1">
+        <div data-aos="flip-up" data-aos-duration="1500" class="card-body rounded-3 my-1">
             <div class="row align-items-center">
                 <div class="col text-center text-lg-start mb-lg-0">
                     <div class="bg-light p-4 rounded-3">
@@ -403,7 +409,7 @@
                 </div>
             </div>
         </div>
-        <div class="card-body rounded-3 my-1">
+        <div data-aos="flip-up" data-aos-duration="1500" class="card-body rounded-3 my-1">
             <div class="row align-items-center">
                 <div class="col text-center text-lg-start mb-lg-0">
                     <div class="bg-light p-4 rounded-3">
@@ -426,7 +432,7 @@
         <hr>
 
         <h3 class="ps-5 text-start">Education</h3>
-        <div class="card-body rounded-3 my-1">
+        <div data-aos="flip-up" data-aos-duration="1500" class="card-body rounded-3 my-1">
             <div class="row align-items-center">
                 <div class="col text-center text-lg-start mb-lg-0">
                     <div class="bg-light p-4 rounded-3">
@@ -443,7 +449,7 @@
                 </div>
             </div>
         </div>
-        <div class="card-body rounded-3 my-1">
+        <div data-aos="flip-up" data-aos-duration="1500" class="card-body rounded-3 my-1">
             <div class="row align-items-center">
                 <div class="col text-center text-lg-start mb-lg-0">
                     <div class="bg-light p-4 rounded-3">
@@ -464,12 +470,12 @@
     <!--ends resume section-->
 
     <!--start contact section-->
-    <section class="contact-section container-fluid text-center my-5 py-5" id="contact">
+    <section class="contact-section container-fluid text-center my-5 py-5" data-aos="fade-up" data-aos-duration="1500" id="contact">
         <h2 class="text-light mt-5">Ready to Create Together?</h2>
         <h1 class="text-light main-heading mb-5">Contact Me <i class="bi bi-chevron-double-down"></i></h1>
 
         <div class="container row text-center m-auto p-0 p-sm-5">
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1500">
                 <p class="text-light h5"><i class="bi bi-geo-alt-fill"></i>Location : Kaup, Udupi District,
                     Karnataka State, India</p>
                 <hr class="d-md-none d-block">
@@ -481,7 +487,7 @@
                         href="mailto:mohameedanwarabbas@gmail.com">mohammedanwarabbas@gmail.com</a></p>
                 <hr class="d-md-none d-block">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1500">
                 <p class="text-light h5">Finde me on</p>
                 <p class="social-accounts">
                     <a class="text-light h4" href="https://wa.me/919972595842?text=Hello%20Anwar%2C%20I%20came%20from%20your%20portfolio"><i
@@ -494,7 +500,7 @@
         </div>
 
         <!--map-->
-        <div class="ratio ratio-21x9 container my-5">
+        <div class="ratio ratio-21x9 container my-5" data-aos="zoom-in" data-aos-duration="1500">
             <iframe class="border border-5 rounded-3"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62144.23735493468!2d74.76296606476087!3d13.224385178337211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcb02b2bc438eb%3A0x901c0008c65ea894!2sPadu%2C%20Karnataka%20574106!5e0!3m2!1sen!2sin!4v1695202542356!5m2!1sen!2sin"></iframe>
         </div>
@@ -502,8 +508,7 @@
     <!--ends contact section-->
 
     <!--start footer-->
-    <footer
-        class="container-fluid bg-dark d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <footer data-aos="fade-up" data-aos-duration="1500" class="container-fluid bg-dark d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-light">© 2023 Anwar Kaup. All Rights Reserved.</p>
         <a href="index.html"
             class="footer-logo col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -527,6 +532,11 @@
         // Show Div A while the page is loading
         window.addEventListener("load", hideLoader);
     </script>
+
+    <script>
+    AOS.init();
+</script>
+
 
 </body>
 
