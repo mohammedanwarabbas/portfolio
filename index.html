@@ -2,29 +2,29 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--additional scripts and styles-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Skranji" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Skranji" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
     <!--end additional scripts and styles-->
     <style>
-
-        /* Style for the loader container */
+        /* loader container */
         #loader {
             position: fixed;
             top: 0;
@@ -34,88 +34,199 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999; /* Ensure the loader is on top of everything */
+            z-index: 9999;
         }
-        .spinner-border{
+
+        .spinner-border {
             height: 3.5rem;
             width: 3.5rem;
-            color:rgb(9, 31, 232);
+            color: rgb(9, 31, 232);
         }
 
-
-
-
+        /* body */
         body {
-            font-family: 'Plus Jakarta Sans';
+            box-sizing: border-box;
+            font-family: "Plus Jakarta Sans";
             text-align: center;
         }
 
         body .main-heading {
             font-family: "Skranji";
-            background: -webkit-linear-gradient(246deg, rgba(255, 0, 0, 1) 0%, rgba(13, 29, 163, 1) 52%, rgba(182, 29, 241, 1) 100%);
+            background: -webkit-linear-gradient(246deg,
+                    rgba(255, 0, 0, 1) 0%,
+                    rgba(13, 29, 163, 1) 52%,
+                    rgba(182, 29, 241, 1) 100%);
+                    background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        body .side-heading {}
 
-        .project-image {
-            background-position: center;
-            background-size: cover;
-            height: 20rem;
-        }
 
-        .prjimg1 {
-            background-image: url('img/ss1.png');
-        }
-
-        .prjimg2 {
-            background-image: url('img/ss2.png');
-        }
-
-        .prjimg3 {
-            background-image: url('img/ss3.png');
-        }
-
-        .prjimg4 {
-            background-image: url('img/ss4.png');
-        }
-
-        .prjimg5 {
-            background-image: url('img/ss5.png');
-        }
-
-        .project-container .project-body {}
-
-        .project-body {
-            border-radius: 1rem 0 0 1rem;
-            box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.443);
-        }
-
-        .project-image {
-            border-radius: 0 1rem 1rem 0;
-            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
-        }
-
-        .contact-section {
-            background: rgb(255, 0, 194);
-            background: -moz-linear-gradient(246deg, rgba(255, 0, 194, 1) 0%, rgba(78, 13, 163, 1) 55%, rgba(241, 29, 29, 1) 100%);
-            background: -webkit-linear-gradient(246deg, rgba(255, 0, 194, 1) 0%, rgba(78, 13, 163, 1) 55%, rgba(241, 29, 29, 1) 100%);
-            background: linear-gradient(246deg, rgba(255, 0, 194, 1) 0%, rgba(78, 13, 163, 1) 55%, rgba(241, 29, 29, 1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00c2", endColorstr="#f11d1d", GradientType=1);
-        }
-
-        .footer-logo img,
+        /* navbar */
         .navbar-logo {
             width: 3rem;
         }
 
         nav h2 {
-            font-family: 'Pacifico';
+            font-family: "Pacifico";
         }
 
+          /* sidebar section */
+          .sidebar-section{
+background-color: rgba(4, 11,20, 1);
+        }
+        .sidebar-section #sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.sidebar-section #profile img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 60%;
+    width: 60%;
+}
+.sidebar-section #profile .profile-name{
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+}
+.sidebar-section #profile .profile-designation{
+    font-family: "Poppinsc", sans-serif;
+}
+.sidbar-menu li{
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 0.5rem 1rem;
+}
+.sidbar-menu li a{
+    color:rgba(195, 195, 195, 0.889);
+}
+.sidbar-menu li i{
+    color:rgba(195, 195, 195, 0.889);
+    font-size: 1.5rem;
+}
+.sidbar-menu li a.active{
+ font-weight: bold;
+ color: rgb(255, 255, 255);
+}
+.sidbar-menu li a.active i{
+
+color: rgba(64, 0, 166, 1);
+}
+
+/* parallax hero section */
+.parallax-hero {
+  position: relative;
+  height: 100vh; /* Set the height to be the full viewport height */
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/parallax-hero.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  z-index: -1; /* Make sure the background is behind the content */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  /* font-family: 'Skranji', cursive; */
+  font-family: 'Rubik Wet Paint', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Pacifico', cursive; */
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  font-family: 'Skranji', cursive;
+}
+
+
+        /* project section */
+        .project-image {
+            background-position: top;
+    background-size: cover;
+    height: auto;
+
+        }
+
+        .prjimg1 {
+            background-image: url(img/ss-cnv.png);
+        }
+
+        .prjimg2 {
+            background-image: url(img/ss-eyeqdotnet.png);
+        }
+
+        .prjimg3 {
+            background-image: url(img/ss-almirath_best-real-estate-agency-in-dubai_.png);
+        }
+
+        .prjimg4 {
+            background-image: url(img/ss-almirath_best-villa-areas-in-dubai_.png);
+        }
+
+        .prjimg5 {
+            background-image: url(img/ss-almirath_best-villa-community-in-dubai_.png);
+        }
+        .prjimg6 {
+            background-image: url(img/ss-almirath_best-villa-for-sale-in-dubai_.png);
+        }
+        .prjimg7 {
+            background-image: url(img/ss-almirath_dammac-sapphire_.png);
+        }
+        .prjimg8 {
+            background-image: url(img/ss-ag.png);
+        }
+        .prjimg9 {
+            background-image: url(img/ss-medi-vaidya.png);
+        }
+        /* academic project starts from 41 */
+        .prjimg41{
+            background-image: url(img/ss-Python-QR-Code-Generator.png);
+        }
+        .prjimg42 {
+            background-image: url(img/ss-python-web-scraping.png);
+        }
+        .prjimg43 {
+            background-image: url(img/ss-quotedog.png);
+        }
+
+
+        .project-body {
+            border-radius: 1rem 0 0 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(40, 39, 39, 0.269);
+        }
+
+        .project-image {
+            border-radius: 0 1rem 1rem 0;
+            box-shadow: 0.5rem 0.5rem 1rem rgba(40, 39, 39, 0.269);
+        }
+
+        /* resume section */
         .resume-section .resume-heading {
-            background: -webkit-linear-gradient(246deg, rgba(255, 0, 0, 1) 0%, rgba(13, 29, 163, 1) 52%, rgba(182, 29, 241, 1) 100%);
+            background: -webkit-linear-gradient(246deg,
+                    rgba(255, 0, 0, 1) 0%,
+                    rgba(13, 29, 163, 1) 52%,
+                    rgba(182, 29, 241, 1) 100%);
+                    background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -129,20 +240,56 @@
         }
 
         .resume-section div.card-body {
-            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
+            box-shadow: 0.5rem 0.5rem 1rem rgba(34, 33, 33, 0.199), -0.5rem -0.5rem 1rem rgba(34, 33, 33, 0.199);
         }
 
-        /*add side borders from address and find me on section on large screen*/
-        .contact-section .container div {
-            border-width: 0 0.1rem 0 0.1rem;
-            border-color: white;
-            border-style: solid;
+        /* contact us section */
+        .contact-section {
+            background: rgb(255, 0, 194);
+            background: -moz-linear-gradient(246deg,
+                    rgba(255, 0, 194, 1) 0%,
+                    rgba(78, 13, 163, 1) 55%,
+                    rgba(241, 29, 29, 1) 100%);
+            background: -webkit-linear-gradient(246deg,
+                    rgba(255, 0, 194, 1) 0%,
+                    rgba(78, 13, 163, 1) 55%,
+                    rgba(241, 29, 29, 1) 100%);
+            background: linear-gradient(246deg,
+                    rgba(255, 0, 194, 1) 0%,
+                    rgba(78, 13, 163, 1) 55%,
+                    rgba(241, 29, 29, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00c2", endColorstr="#f11d1d", GradientType=1);
+        }
+        .contact-section .social-accounts i {
+            font-size: 1.8rem;
+            width: 4.1rem;
+            height: 4.1rem;
+            padding: 1rem;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .about-section {}
+        .contact-section div.contact-form-box .form-description{
+           text-align: justify;
+        }
+
+        .contact-section div.contact-form-box label {
+            color: rgb(0, 0, 0);
+            float: left;
+        }
+        .contact-section div.contact-form-box input {
+            border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: thin solid #ccc; /* Set the border color and style */
+        }
+
+        /* about us section */
 
         .about-section .my-name {
-            font-family: 'Rubik Wet Paint';
+            font-family: "Rubik Wet Paint";
         }
 
         .about-section .about-underline {
@@ -155,16 +302,17 @@
             height: 4.1rem;
             padding: 1rem;
             display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .contact-section .social-accounts i {
-            font-size: 1.8rem;
-            width: 4.1rem;
-            height: 4.1rem;
-            padding: 1rem;
-            display: inline-block;
+        /* footer */
+        .footer-logo img {
+            width: 3rem;
         }
 
+        /* social acoounts animation */
         .social-accounts a:hover i {
             animation: shakeAnimation 0.5s ease infinite;
             /* Adjust the duration and timing function as needed */
@@ -197,45 +345,66 @@
             }
         }
 
+/* custom-underline */
+.custom-underline {
+  position: relative;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  top: 1.8rem; /* Adjust this value to control the distance between the text and the underline */
+  left: 0;
+  width: 100%;
+  height: 2.45em;/* Adjust this value to control the height of the image */
+  background-image: url('https://res.cloudinary.com/dztuxvl4l/image/upload/v1561346293/unitingline-anim_tje077_hdw2p5.svg'); /* Replace this URL with your image */
+  background-repeat: no-repeat;
+  background-size: contain; 
+z-index: -1;
+  /* transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); */
+}
+
+
+
         /*For mobile or small screen*/
         @media (max-width: 767px) {
             .contact-section .container div {
                 /*remove side borders from address and find me on section */
                 border: 0;
             }
-
             /*remove border radius from projects*/
             .project-body {
                 border-radius: 1rem 1rem 0 0;
             }
-
             .project-image {
-                border-radius: 0 0 1rem 1rem;
-                box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.443);
+                height: 20rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(40, 39, 39, 0.269);
+    
             }
-            .project-container{
-                border: 0.1rem solid rgb(35, 33, 33);
+            .project-container {
                 border-radius: 1rem;
+
             }
+            .resume-section div.card-body {
+            box-shadow:none;
+        }
         }
     </style>
 </head>
 
 <body>
-
-<div id="loader">
-    <div class="spinner-border" role="status">
-</div>
+    <div class="container-fluid">
+    <div id="loader">
+        <div class="spinner-border" role="status"></div>
     </div>
 
-
-
     <!--starts navbar-->
-    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white d-lg-none sticky-top">
         <div class="container-fluid">
-            <img class="navbar-brand navbar-logo" src="img/anwar-logo.png" alt="">
+            <img class="navbar-brand navbar-logo" src="img/anwar-logo.png" alt="" />
 
-            <h2 class="m-auto">Anwr's Portfoliooo</h2>
+            <h2 class="m-auto">Anwr's Portfolio</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -244,16 +413,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html#home">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.html#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html#resume">Resume</a>
+                        <a class="nav-link" aria-current="page" href="index.html#resume">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html#projects">Project</a>
+                        <a class="nav-link" aria-current="page" href="index.html#projects">Project</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html#contact">Contact</a>
+                        <a class="nav-link" aria-current="page" href="index.html#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -262,96 +431,321 @@
     <!--ends navbar-->
 
 
-    <!--starts about-->
-    <section class="about-section container my-5" id="home">
+   <div class="row">
+<!-- Sidebar -->
+<div class="sidebar-section col-lg-2 d-none d-lg-block text-light position-relative">
+    
+  <div id="sidebar" class="d-md-block">
+    <div class="sidebar-sticky">
+       
+       
+        <div id="profile" class="text-center">
+            <img src="img/profile-picture.png" class="border border-dark border-5" alt="Profile Picture">
+            <h4 class="profile-name mt-3">Mohd. Anwar</h4>
+            <p class="profile-designation text-muted">Web Developer</p>
+            <div class="p-4">
+                <p class="text-start text-light"><i class="bi bi-globe-central-south-asia"></i><span>&nbsp;&nbsp;</span>India</p>
+                <p class="text-start"><a class="text-light text-decoration-none" href="tel:919972595842"><i class="bi bi-telephone-outbound"></i><span>&nbsp;&nbsp;</span>91 9972595842</a></p>
+            </div>
+          </div>
+      
+          
+        
+
+       
+        <div class="sidbar-menu my-2">
+            <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="index.html#home" class="d-block text-decoration-none active">
+                    <i class="bi bi-house-door-fill me-2"></i> Home
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="index.html#about" class="d-block text-decoration-none">
+                    <i class="bi bi-info-circle-fill me-2"></i> About
+                  </a>
+                </li>
+                <li class="mb-2">
+                    <a href="index.html#projects" class="d-block text-decoration-none">
+                      <i class="bi bi-card-list me-2"></i> Project
+                    </a>
+                  </li>
+                <li class="mb-2">
+                  <a href="index.html#resume" class="d-block text-decoration-none">
+                    <i class="bi bi-file-person-fill me-2"></i> Resume
+                  </a>
+                </li>
+               
+                <li class="mb-2">
+                  <a href="index.html#contact" class="d-block text-decoration-none">
+                    <i class="bi bi-telephone-fill me-2"></i> Contact
+                  </a>
+                </li>
+              </ul>
+        </div> 
+
+      </div>
+    </div>
+  </div>
+  
+
+
+    <div class="col-lg-10 px-0">
+        <!-- starts parallax hero section -->
+        <section id="home">
+        <section class="parallax-hero">
+            <div class="parallax-bg"></div>
+            <div class="hero-content">
+              <h1>Mohammed Anwar</h1>
+              <p>I am a passionate and creative web developer dedicated to crafting engaging and user-friendly websites. With expertise in front-end and back-end development, I bring ideas to life and deliver impactful digital experiences.</p>
+            </div>
+          </section>
+        </section>
+          
+        <!-- ends parallax hero section -->
+
+
+         <!--starts about-->
+    <section class="about-section container my-5" id="about">
         <h1 class="mt-5 pt-5"></h1>
         <h1 class="main-heading mt-5 pt-5">About Me</h1>
-        <h4 data-aos="fade-up" data-aos-duration="1500" class="mt-5">My name is <span class="my-name">Mohammed Anwar</span>. I recently completed <span
-                class="fw-bold">M.C.A</span> from Vishweshwarayya Technological University, Balagavi in <span
-                class="fw-bold">2023 September</span>. As a fresher with freelancing experience in web development, I
-            have honed my skills in creating dynamic websites.</h4>
-        <p class="social-accounts my-4"> 
-            <a data-aos="fade-up" data-aos-duration="1500" class="pe-4" href="https://www.linkedin.com/in/mohammed-anwar-36aab3179/" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-linkedin"></i></a>
-            <a data-aos="fade-up" data-aos-duration="1500" class="pe-4" href="mailto:mohammedanwarabbas@gmail.com" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-envelope"></i></a>
-            <a data-aos="fade-up" data-aos-duration="1500" href="https://github.com/mohammedanwarabbas" target="_blank"><i class="bg-dark text-light rounded-circle bi bi-github"></i></a></p>
-        <h1 class="mb-5 mt-0 p-0"><i class="fw-bolder bi bi-three-dots text-dark about-underline"></i></h1>
+        <h4 data-aos="fade-up" data-aos-duration="1500" class="mt-5">
+            My name is <span class="my-name">Mohammed Anwar</span>. I recently
+            completed <span class="fw-bold">M.C.A</span> from Vishweshwarayya
+            Technological University, Balagavi in
+            <span class="fw-bold">2023 September</span>. As a fresher with
+            freelancing experience in web development, I have honed my skills in
+            creating dynamic websites and am currently seeking a
+            <b>web developer</b> position to further develop and apply my expertise.
+        </h4>
+        <p class="d-flex justify-content-center align-items-center social-accounts my-4">
+            <a data-aos="fade-up" data-aos-duration="1500" class="text-decoration-none pe-4"
+                href="https://www.linkedin.com/in/mohammed-anwar-36aab3179/" target="_blank"><i
+                    class="bg-dark text-light rounded-circle bi bi-linkedin"></i></a>
+            <a data-aos="fade-up" data-aos-duration="1500" class="text-decoration-none pe-4"
+                href="mailto:mohammedanwarabbas@gmail.com" target="_blank"><i
+                    class="bg-dark text-light rounded-circle bi bi-envelope"></i></a>
+            <a data-aos="fade-up" data-aos-duration="1500" class="text-decoration-none pe-4"
+                href="https://github.com/mohammedanwarabbas" target="_blank"><i
+                    class="bg-dark text-light rounded-circle bi bi-github"></i></a>
+            <a data-aos="fade-up" data-aos-duration="1500" class="text-decoration-none"
+                href="https://wa.me/919972595842?text=Hello%20Anwar%2C%20I%20came%20from%20your%20portfolio"
+                target="_blank"><i class="bg-dark text-light rounded-circle bi bi-whatsapp"></i></a>
+        </p>
+
+        <h1 class="mb-5 mt-0 p-0">
+            <i class="fw-bolder bi bi-three-dots text-dark about-underline"></i>
+        </h1>
     </section>
     <!--ends about-->
-
 
     <!--start project section-->
     <section class="projects-section container my-5 py-5" id="projects">
         <h1 class="main-heading mt-5">Live Projects</h1>
-        <div data-aos="fade-up" data-aos-duration="1500" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
-            <div class="project-body card col-md-7">
+        <div data-aos="fade-up" data-aos-duration="1500"
+            class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-9 col-lg-4">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
-                    <h3 class="card-title"><i class="bi bi-1-square-fill"></i>Live website 1</h3>
-                    <p class="card-text">This is a Dynamic PHP project delivered to small business located in Udupi
-                        District. Note : double cliking on developer button of footer section dosen't work, It requires
-                        tripple click.
+                    <h3 class="card-title">
+                        <i class="bi bi-1-square-fill"></i> Click&Vision (Live Website)
+                    </h3>
+                    <p class="card-text">
+                        A bespoke digital marketing agency platform, Click And Vision, meticulously crafted from scratch. This innovative solution is tailored exclusively for Digital Marketing agency - Click&Vision, located in Mangalore, designed to elevate online visibility and amplify audience engagement. With a keen focus on strategic marketing initiatives, this platform stands as a testament to the commitment to delivering unique and impactful solutions.
                     </p>
-                    <a class="px-3 btn btn-outline-dark" href="https://www.ayushgroupstoursandtravels.com"
+                    <a class="px-3 btn btn-outline-dark" href="https://clicknvision.com/"
                         target="_blank">view live</a>
                 </div>
             </div>
-            <div class="prjimg1 project-image col-md-3 border-1 border">
+            <div class="prjimg1 project-image col-md-3 col-lg-3 border-1 border"></div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500"
+            class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-9 col-lg-4">
+                <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                    <h3 class="card-title">
+                        <i class="bi bi-2-square-fill"></i> EyeQ Dot Net Pvt. Ltd. (Live Website)
+                    </h3>
+                    <p class="card-text">
+                        Upgraded a PHP project for EyeQ Dot Net Pvt Ltd, a Cyber Security Service Provider located in Mangalore, Karnataka. The project involved enhancing the user experience by implementing client-suggested design enhancements and resolving backend bugs to ensure enhanced functionality and performance.
+                    </p>
+                    <a class="px-3 btn btn-outline-dark" href="https://www.eyeqdotnet.com/"
+                        target="_blank">view live</a>
+                </div>
+            </div>
+            <div class="prjimg2 project-image col-md-3 col-lg-3 border-1 border"></div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500"
+            class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-9 col-lg-4">
+                <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                    <h3 class="card-title">
+                        <i class="bi bi-3-square-fill"></i> Al Mirath Landing Page - Version 1
+                    </h3>
+                    <p class="card-text">
+                        1st version of five distinct WordPress landing pages for the digital marketing team, each featuring unique URL endpoints tailored for enhanced SEO performance. These pages serve as strategic entry points, optimized to attract and engage target audiences effectively.
+                    </p>
+                    <a class="px-3 btn btn-outline-dark" href="https://www.almirath.ae/best-real-estate-agency-in-dubai/"
+                        target="_blank">view live</a>
+                </div>
+            </div>
+            <div class="prjimg3 project-image col-md-3 col-lg-3 border-1 border"></div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500"
+        class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+        <div class="project-body card col-md-9 col-lg-4">
+            <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                <h3 class="card-title">
+                    <i class="bi bi-4-square-fill"></i> Al Mirath Landing Page - Version 2
+                </h3>
+                <p class="card-text">
+                    2nd version of five distinct WordPress landing pages for the digital marketing team, each featuring unique URL endpoints tailored for enhanced SEO performance. These pages serve as strategic entry points, optimized to attract and engage target audiences effectively.
+                </p>
+                <a class="px-3 btn btn-outline-dark" href="https://www.almirath.ae/best-villa-areas-in-dubai/"
+                    target="_blank">view live</a>
             </div>
         </div>
-        <div  data-aos="fade-up" data-aos-duration="1500" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
-            <div class="project-body card col-md-7">
+        <div class="prjimg4 project-image col-md-3 col-lg-3 border-1 border"></div>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1500"
+    class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+    <div class="project-body card col-md-9 col-lg-4">
+        <div class="d-flex flex-column align-items-center justify-content-center card-body">
+            <h3 class="card-title">
+                <i class="bi bi-5-square-fill"></i> Al Mirath Landing Page - Version 3
+            </h3>
+            <p class="card-text">
+                3rd version of five distinct WordPress landing pages for the digital marketing team, each featuring unique URL endpoints tailored for enhanced SEO performance. These pages serve as strategic entry points, optimized to attract and engage target audiences effectively.
+            </p>
+            <a class="px-3 btn btn-outline-dark" href="https://www.almirath.ae/best-villa-community-in-dubai/"
+                target="_blank">view live</a>
+        </div>
+    </div>
+    <div class="prjimg5 project-image col-md-3 col-lg-3 border-1 border"></div>
+</div>
+<div data-aos="fade-up" data-aos-duration="1500"
+class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+<div class="project-body card col-md-9 col-lg-4">
+    <div class="d-flex flex-column align-items-center justify-content-center card-body">
+        <h3 class="card-title">
+            <i class="bi bi-6-square-fill"></i> Al Mirath Landing Page - Version 4
+        </h3>
+        <p class="card-text">
+            4th version of five distinct WordPress landing pages for the digital marketing team, each featuring unique URL endpoints tailored for enhanced SEO performance. These pages serve as strategic entry points, optimized to attract and engage target audiences effectively.
+        </p>
+        <a class="px-3 btn btn-outline-dark" href="https://www.almirath.ae/best-villa-for-sale-in-dubai/"
+            target="_blank">view live</a>
+    </div>
+</div>
+<div class="prjimg6 project-image col-md-3 col-lg-3 border-1 border"></div>
+</div>
+<div data-aos="fade-up" data-aos-duration="1500"
+class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+<div class="project-body card col-md-9 col-lg-4">
+    <div class="d-flex flex-column align-items-center justify-content-center card-body">
+        <h3 class="card-title">
+            <i class="bi bi-7-square-fill"></i> Al Mirath Landing Page - Version 5
+        </h3>
+        <p class="card-text">
+            5th version of five distinct WordPress landing pages for the digital marketing team, each featuring unique URL endpoints tailored for enhanced SEO performance. These pages serve as strategic entry points, optimized to attract and engage target audiences effectively.
+        </p>
+        <a class="px-3 btn btn-outline-dark" href="https://www.almirath.ae/dammac-sapphire/"
+            target="_blank">view live</a>
+    </div>
+</div>
+<div class="prjimg7 project-image col-md-3 col-lg-3 border-1 border"></div>
+</div>
+        <div data-aos="fade-up" data-aos-duration="1500"
+            class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-9 col-lg-4">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
-                    <h3 class="card-title"><i class="bi bi-2-square-fill"></i>Live website 2</h3>
-                    <p class="card-text">This is a dynamic PHP website <span class="text-danger">under
-                            development</span> for one of the ayurvedic clinic located in mangalore. Note : double
-                        cliking on developer button of footer section dosen't work, It requires tripple click.</p>
+                    <h3 class="card-title">
+                        <i class="bi bi-8-square-fill"></i> AG Travels
+                    </h3>
+                    <p class="card-text">
+                        This is a Dynamic PHP project delivered to small business located
+                        in Udupi District. Note : Project successfully ran for 1 year, attracting a significant number of customers. However, it is now inactive at the client's request.
+                    </p>
+                    <a class="px-3 btn btn-outline-dark disabled" href="https://www.ayushgroupstoursandtravels.com"
+                        target="_blank">view live</a>
+                </div>
+            </div>
+            <div class="prjimg8 project-image col-md-3 col-lg-3 border-1 border"></div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1500"
+            class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-9 col-lg-4">
+                <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                    <h3 class="card-title">
+                        <i class="bi bi-9-square-fill"></i> Medi Vaidya
+                    </h3>
+                    <p class="card-text">
+                        This is a dynamic PHP website
+                        <span class="text-danger">under development</span> for one of the
+                        ayurvedic clinic located in mangalore. Note : double cliking on
+                        developer button of footer section dosen't work, It requires
+                        tripple click.
+                    </p>
                     <a class="px-3 btn btn-outline-dark" href="http://www.anwarbro.rf.gd" target="_blank">view live</a>
                 </div>
             </div>
-            <div class="prjimg2 project-image col-md-3 border-1 border">
-            </div>
+            <div class="prjimg9 project-image col-md-3 col-lg-3 border-1 border"></div>
         </div>
         <h1 class="main-heading">Academic Projects</h1>
-        <div  data-aos="fade-up" data-aos-duration="1500" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
-            <div class="project-body card col-md-7">
+        <div data-aos="fade-up" data-aos-duration="1500"
+            class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-9 col-lg-4">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
-                    <h3 class="card-title"><i class="bi bi-3-square-fill"></i>Python QR code generator</h3>
-                    <p class="card-text">This Python project is developed using Django framework, This project will
-                        generate customized QR codes for specified links or content which can be scanned by QR code
-                        scanners later.</p>
+                    <h3 class="card-title">
+                        <i class="bi bi-1-square-fill"></i><i class="bi bi-0-square-fill"></i> Python QR code generator
+                    </h3>
+                    <p class="card-text">
+                        This Python project is developed using Django framework, This
+                        project will generate customized QR codes for specified links or
+                        content which can be scanned by QR code scanners later.
+                    </p>
                     <a class="px-3 btn btn-outline-dark" href="https://github.com/mohammedanwarabbas/QR-Code-Generator"
                         target="_black">view on github</a>
                 </div>
             </div>
-            <div class="prjimg3 project-image col-md-3 border-1 border">
-            </div>
+            <div class="prjimg41 project-image col-md-3 col-lg-3 border-1 border"></div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1500" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
-            <div class="project-body card col-md-7">
+        <div data-aos="fade-up" data-aos-duration="1500"
+            class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-9 col-lg-4">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
-                    <h3 class="card-title"><i class="bi bi-4-square-fill"></i>Python Web scraping</h3>
-                    <p class="card-text">This Python project is developed using Django. This project helps in performing
-                        webscraping based on the website link provided to it. Note: It's not legal to perform
-                        webscraping without owner's consent</p>
+                    <h3 class="card-title">
+                        <i class="bi bi-1-square-fill"></i><i class="bi bi-1-square-fill"></i> Python Web scraping
+                    </h3>
+                    <p class="card-text">
+                        This Python project is developed using Django. This project helps
+                        in performing webscraping based on the website link provided to
+                        it. Note: It's not legal to perform webscraping without owner's
+                        consent
+                    </p>
                     <a class="px-3 btn btn-outline-dark"
                         href="https://github.com/mohammedanwarabbas/web-scraping/tree/branch2" target="_blank">view on
                         github</a>
                 </div>
             </div>
-            <div class="prjimg4 project-image col-md-3 border-1 border">
-            </div>
+            <div class="prjimg42 project-image col-md-3 col-lg-3 border-1 border"></div>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1500" class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
-            <div class="project-body card col-md-7">
+        <div data-aos="fade-up" data-aos-duration="1500"
+            class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+            <div class="project-body card col-md-9 col-lg-4">
                 <div class="d-flex flex-column align-items-center justify-content-center card-body">
-                    <h3 class="card-title"><i class="bi bi-5-square-fill"></i>React.js Quote Generator</h3>
-                    <p class="card-text">This is my first React.js project called QuoteDog, developed recently when I
-                        start studying React.js. This website fetches quotes from quote generator API</p>
+                    <h3 class="card-title">
+                        <i class="bi bi-1-square-fill"></i><i class="bi bi-2-square-fill"></i> React.js Quote Generator
+                    </h3>
+                    <p class="card-text">
+                        This is my first React.js project called QuoteDog, developed
+                        recently when I start studying React.js. This website fetches
+                        quotes from quote generator API
+                    </p>
                     <a class="px-3 btn btn-outline-dark" href="https://mohammedanwarabbas.github.io/quotedog/"
                         target="_blank">view live</a>
                 </div>
             </div>
-            <div class="prjimg5 project-image col-md-3 border-1 border">
-            </div>
+            <div class="prjimg43 project-image col-md-3 col-lg-3 border-1 border"></div>
         </div>
         <p>and many other Django and PHP ecommerce academic projects...</p>
     </section>
@@ -360,169 +754,283 @@
     <!--starts resume section-->
     <section class="resume-section container my-5 py-5" id="resume">
         <h1 class="main-heading my-5">Resume</h1>
-        <h3 class="ps-5 text-start">Skills</h3>
-        <div>
-            <p>
-                <span data-aos="fade-up" data-aos-duration="1500" class="skill">HTML</span>
-                <span data-aos="fade-down" data-aos-duration="1500" class="skill">CSS</span>
-                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Javascript</span>
-                <span data-aos="fade-down" data-aos-duration="1500" class="skill">Bootstrap</span>
-                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Jquery</span>
-            </p>
 
-            <p>Backend scripting
-                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Python</span>
-                <span data-aos="fade-up" data-aos-duration="1500" class="skill">PHP</span>
-            </p>
-            <p>Frontend framework
-                <span data-aos="fade-up" data-aos-duration="1500" class="skill">React</span>
-            </p>
-            <p>Backend framework
-                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Django</span>
-            </p>
+        
 
-        </div>
-        <h3 class="ps-5 text-start">Work Experience</h3>
+
+
+
         <div data-aos="fade-up" data-aos-duration="1500" class="card-body rounded-3 my-1">
-            <div class="row align-items-center">
-                <div class="col text-center text-lg-start mb-lg-0">
-                    <div class="bg-light p-4 rounded-3">
-                        <div class="fw-bolder mb-2 h5 resume-heading"><i class="bi bi-1-square-fill"></i> Web Developer
-                            - Part-time</div>
-                        <div class="small fw-bolder">Jan 2023 - Jul 2023</div>
-                        <div class="small text-muted">Vinyasa Tech Solutions</div>
-                        <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Mangalore</div>
+
+            <h3 class="text-start mt-4"><i class="bi bi-clipboard2-check"></i> Skills</h3>
+            <div>
+                <p>
+                    <span data-aos="fade-up" data-aos-duration="1500" class="skill">HTML</span>
+                    <span data-aos="fade-down" data-aos-duration="1500" class="skill">CSS</span>
+                    <span data-aos="fade-up" data-aos-duration="1500" class="skill">Javascript</span>
+                    <span data-aos="fade-down" data-aos-duration="1500" class="skill">Bootstrap</span>
+                    <span data-aos="fade-up" data-aos-duration="1500" class="skill">Jquery</span>
+                </p>
+    
+                <p>
+                    Backend scripting
+                    <span data-aos="fade-up" data-aos-duration="1500" class="skill">Python</span>
+                    <span data-aos="fade-up" data-aos-duration="1500" class="skill">PHP</span>
+                </p>
+                <p>
+                    Frontend framework
+                    <span data-aos="fade-up" data-aos-duration="1500" class="skill">React</span>
+                </p>
+                <p>
+                    Backend framework
+                    <span data-aos="fade-up" data-aos-duration="1500" class="skill">Django</span>
+                </p>
+            </div>
+
+
+            <h3 class="text-start mt-4"><i class="bi bi-briefcase"></i> Work Experience</h3>
+            <!-- <hr class='custom-underline ps-5 ms-5'> -->
+                <div class="row mt-4">
+                    <div class="col-md-6 text-center text-lg-start mb-lg-0 px-4">
+                        <div class="bg-light p-1 rounded-3">
+                            <div class="text-start fw-bolder mb-2 h5 resume-heading">
+                                <i class="bi bi-1-square-fill"></i> ReactJS Developer - Intern
+                            </div>
+                            <div class="text-start fw-bolder">Jan 2024 - Present</div>
+                            <div class="text-start text-muted"><i class="bi bi-building-fill"></i> Emproto Technologies</div>
+                            <div class="text-start text-muted">
+                                <i class="bi bi-geo-alt-fill"></i> Bangalore
+                            </div>
+                        </div>
+                        <div class="p-1">
+                            <p class="text-start fw-bold">Tasks accomplished :</p>
+                            <ul class="text-start">
+                                <li>
+                                    Successfully led the development and maintenance of web
+                                    applications.
+                                </li>
+                                <li>
+                                    Managed end-to-end deployment and maintenance of websites.
+                                </li>
+                                <li>
+                                    Diagnosed and resolved technical issues, optimizing user
+                                    experience and overall project performance.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-6 text-center text-lg-start mb-lg-0 px-4">
+                        <div class="bg-light p-1 rounded-3">
+                            <div class="text-start fw-bolder mb-2 h5 resume-heading">
+                                <i class="bi bi-2-square-fill"></i> Web Developer - Part-time
+                            </div>
+                            <div class="text-start fw-bolder">Jan 2023 - Jul 2023</div>
+                            <div class="text-start text-muted"><i class="bi bi-building-fill"></i> Vinyasa Tech Solutions</div>
+                            <div class="text-start text-muted">
+                                <i class="bi bi-geo-alt-fill"></i> Mangalore
+                            </div>
+                        </div>
+                        <div class="p-1">
+                            <p class="text-start fw-bold">Tasks accomplished :</p>
+                            <ul class="text-start">
+                                <li>
+                                    Successfully led the development and maintenance of web
+                                    applications.
+                                </li>
+                                <li>
+                                    Managed end-to-end deployment and maintenance of websites.
+                                </li>
+                                <li>
+                                    Diagnosed and resolved technical issues, optimizing user
+                                    experience and overall project performance.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-lg-start mb-lg-0 px-4">
+                        <div class="bg-light p-1 rounded-3">
+                            <div class="text-start fw-bolder mb-2 h5 resume-heading">
+                                <i class="bi bi-3-square-fill"></i> Web development using Django
+                                Internship
+                            </div>
+                            <div class="text-start ">Nov 2021 - Apr 2022</div>
+                            <div class="text-start text-muted"><i class="bi bi-building-fill"></i> Codelab Systems</div>
+                            <div class="text-start text-muted">
+                                <i class="bi bi-geo-alt-fill"></i> Mangalore
+                            </div>
+                        </div>
+                       
+                            <p class="text-start p-1 my-0"><span class="fw-bold">Topics covered :</span> Python, Django framework, Django Template Language (DTL), Django's
+                                Object-Relational Mapping (ORM)</p>
+                            
+                    </div>
+                   
+                </div>
+               
+                <hr class="mx-auto d-md-none d-block" style="color:rgba(66, 66, 66, 0.767);width: 100%;height: 0.1rem;opacity: 0.5;">
+     
+            <h3 class="text-start mt-4"><i class="bi bi-backpack"></i> Education</h3>
+            <!-- <hr class="mt-0 pt-0" style="color:rgb(126, 72, 197);width: 5rem;height: 0.2rem;opacity: 0.5;"> -->
+            <div class="row align-items-center mt-4">
+                <div class="col-md-6 text-center text-lg-start mb-lg-0">
+                    <div class="px-4 rounded-3">
+                        <p class="text-start fw-bolder mb-2 resume-heading h5">
+                            <i class="bi bi-cursor-fill"></i> M.C.A
+                        </p>
+                        <p class="text-start fw-bolder">2021-2023 - 2 Years</p>
+                        <p class="text-start text-muted"><i class="bi bi-book-half"></i> Shree Devi Institute of Technology
+                        </p>
+                        <p class="text-start text-muted">
+                            <i class="bi bi-geo-alt-fill"></i>Mangalore
+                        </p>
+                        <p class="text-start text-muted"><i class="bi bi-buildings"></i> Visvesvaraya
+                            Technological University (VTU)</p>
+                        <p class="text-start text-muted"><i class="bi bi-star"></i> 80%</p>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-md-6 text-center text-lg-start mb-lg-0">
+                    <div class="px-4 rounded-3">
+                        <p class="text-start fw-bolder mb-2 resume-heading h5">
+                            <i class="bi bi-cursor-fill"></i> B.C.A
+                        </p>
+                        <p class="text-start fw-bolder">2017-2020 - 3 Years</p>
+                        <p class="text-start text-muted"><i class="bi bi-book-half"></i> St. Mary's college</p>
+                        <p class="text-start text-muted">
+                            <i class="bi bi-geo-alt-fill"></i> Shirva, Udupi Dist
+                        </p>
+                        <p class="text-start text-muted"><i class="bi bi-buildings"></i> Mangalore University</p>
+                        <p class="text-start text-muted"><i class="bi bi-star"></i> 82%</p>
+                    </div>
                     <div>
-                        <p class="fw-bold">Tasks accomplished : </p>
-                        <ul>
-                            <li>Successfully led the development and maintenance
-                                of web applications.</li>
-                            <li>Managed end-to-end deployment and maintenance
-                                of websites.</li>
-                            <li>Diagnosed and resolved technical issues, optimizing
-                                user experience and overall project performance.</li>
-                        </ul>
+                      
+                       
                     </div>
                 </div>
             </div>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1500" class="card-body rounded-3 my-1">
-            <div class="row align-items-center">
-                <div class="col text-center text-lg-start mb-lg-0">
-                    <div class="bg-light p-4 rounded-3">
-                        <div class="fw-bolder mb-2 resume-heading h5"><i class="bi bi-2-square-fill"></i> Web
-                            development using Django Internship</div>
-                        <div class="small fw-bolder">Nov 2021 - Apr 2022</div>
-                        <div class="small text-muted">Codelab Systems</div>
-                        <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Mangalore</div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div>
-                        <p class="fw-bold">Topics covered : </p>Python, Django framework, Django Template Language
-                        (DTL), Django's Object-Relational Mapping (ORM)
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <hr>
+            <hr class="mx-auto d-md-none d-block" style="color:rgba(66, 66, 66, 0.767);width: 100%;height: 0.1rem;opacity: 0.5;">
 
-        <h3 class="ps-5 text-start">Education</h3>
-        <div data-aos="fade-up" data-aos-duration="1500" class="card-body rounded-3 my-1">
-            <div class="row align-items-center">
-                <div class="col text-center text-lg-start mb-lg-0">
-                    <div class="bg-light p-4 rounded-3">
-                        <div class="fw-bolder mb-2 resume-heading h5"><i class="bi bi-cursor-fill"></i> M.C.A</div>
-                        <div class="small fw-bolder">2022-2023 - 2 Years</div>
-                        <div class="small text-muted">Shree Devi Institute of Technology</div>
-                        <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Mangalore</div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div><span class="fw-bold">University : </span>Visvesvaraya Technological University (VTU)<br />
-                        <span class="fw-bold">Marks : </span>80%
-                    </div>
+            <h3 class="text-start mt-4"><i class="bi bi-award"></i> Achievements</h3>
+            <div class="row mt-4">
+                <div class="col-md-6 text-center text-lg-start mb-lg-0 px-4">
+                    <p class="px-4"><i class="bi bi-award text-muted"></i> Second Prize at the coding event</p>
                 </div>
             </div>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1500" class="card-body rounded-3 my-1">
-            <div class="row align-items-center">
-                <div class="col text-center text-lg-start mb-lg-0">
-                    <div class="bg-light p-4 rounded-3">
-                        <div class="fw-bolder mb-2 resume-heading h5"><i class="bi bi-cursor-fill"></i> B.C.A</div>
-                        <div class="small fw-bolder">2017-2020 - 3 Years</div>
-                        <div class="small text-muted">St. Mary's college</div>
-                        <div class="small text-muted"><i class="bi bi-geo-alt-fill"></i>Shirva, Udupi dist</div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div><span class="fw-bold">University : </span>Mangalore University<br>
-                        <span class="fw-bold">Marks : </span>82%
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
     <!--ends resume section-->
 
     <!--start contact section-->
-    <section class="contact-section container-fluid text-center my-5 py-5" data-aos="fade-up" data-aos-duration="1500" id="contact">
+    <section class="contact-section container-fluid text-center mt-5 py-5" data-aos="fade-up" data-aos-duration="1500"
+        id="contact">
         <h2 class="text-light mt-5">Ready to Create Together?</h2>
-        <h1 class="text-light main-heading mb-5">Contact Me <i class="bi bi-chevron-double-down"></i></h1>
+        <h1 class="text-light main-heading mb-5">
+            Contact Me <i class="bi bi-chevron-double-down"></i>
+        </h1>
 
-        <div class="container row text-center m-auto p-0 p-sm-5">
-            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">
-                <p class="text-light h5"><i class="bi bi-geo-alt-fill"></i>Location : Kaup, Udupi District,
-                    Karnataka State, India</p>
-                <hr class="d-md-none d-block">
-                <p class="text-light h5"><i class="bi bi-telephone-outbound-fill"></i>Contact : <a
-                        class="text-light text-decoration-none" href="tel:919972595842">+91 9972595842</a></p>
-                <hr class="d-md-none d-block">
-                <p class="text-light h5 text-break text-break-word"><i class="bi bi-envelope"></i>Mail Id : <a
-                        class="text-light text-decoration-none"
-                        href="mailto:mohameedanwarabbas@gmail.com">mohammedanwarabbas@gmail.com</a></p>
-                <hr class="d-md-none d-block">
+
+            <div class="row">
+                <div class="col-lg-6 contact-form-box py-5">
+                    <h3 class="form-description">If you're a company interested in hiring or collaborating with me, please fill out the form below. I'd love to hear from you and discuss potential opportunities.</h3>
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required />
+                            <div class="valid-feedback">Looks good!</div>
+                             <div class="invalid-feedback text-white"><i class="bi bi-arrow-90deg-up"></i>Please enter your full name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailAddress" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="emailAddress" name="emailAddress" required />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback text-white"><i class="bi bi-arrow-90deg-up"></i>Please enter valide email id</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactNumber" class="form-label">Contact Number</label>
+                            <input type="number" class="form-control" id="contactNumber" name="contactNumber"
+                                required />
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback text-white"><i class="bi bi-arrow-90deg-up"></i>Please enter your contact number.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="company" class="form-label">Company/Organization</label>
+                            <input type="text" class="form-control" id="company" name="company" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message/Inquiry</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback text-white"><i class="bi bi-arrow-90deg-up"></i>Please enter your message here</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="return submitFormData()">Submit</button>
+                    </form>
+                </div>
+
+                <div class="col-lg-6 d-flex flex-column justify-content-evenly mt-2 mx-sm-0">
+
+                        
+                        <p class="d-flex justify-content-center align-items-center social-accounts my-4">
+                            <a data-aos="fade-up" data-aos-duration="1500" class="text-decoration-none pe-4"
+                                href="https://www.linkedin.com/in/mohammed-anwar-36aab3179/" target="_blank"><i
+                                    class="bg-dark text-light rounded-circle bi bi-linkedin"></i></a>
+                            <a data-aos="fade-up" data-aos-duration="1500" class="text-decoration-none pe-4"
+                                href="mailto:mohammedanwarabbas@gmail.com" target="_blank"><i
+                                    class="bg-dark text-light rounded-circle bi bi-envelope"></i></a>
+                            <a data-aos="fade-up" data-aos-duration="1500" class="text-decoration-none pe-4"
+                                href="https://github.com/mohammedanwarabbas" target="_blank"><i
+                                    class="bg-dark text-light rounded-circle bi bi-github"></i></a>
+                            <a data-aos="fade-up" data-aos-duration="1500" class="text-decoration-none"
+                                href="https://wa.me/919972595842?text=Hello%20Anwar%2C%20I%20came%20from%20your%20portfolio"
+                                target="_blank"><i class="bg-dark text-light rounded-circle bi bi-whatsapp"></i></a>
+                        </p> 
+                        
+                  
+                    
+                   
+             
+                    <hr class="d-md-none d-block" />
+                    
+
+                    <iframe class="border border-5 rounded-3 w-100 h-50"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62144.23735493468!2d74.76296606476087!3d13.224385178337211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcb02b2bc438eb%3A0x901c0008c65ea894!2sPadu%2C%20Karnataka%20574106!5e0!3m2!1sen!2sin!4v1695202542356!5m2!1sen!2sin"></iframe>
+                </div>
             </div>
-            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">
-                <p class="text-light h5">Finde me on</p>
-                <p class="social-accounts">
-                    <a class="text-light h4" href="https://wa.me/919972595842?text=Hello%20Anwar%2C%20I%20came%20from%20your%20portfolio"><i
-                            class="rounded-circle bg-light text-dark h1 bi bi-whatsapp"></i></a> <span
-                        class="text-light h1">|</span>
-                    <a class="text-light h4" href="https://www.instagram.com/mohammed_anwar_abbas/" target="_blank"><i
-                            class="rounded-circle bg-light text-dark h1 bi bi-instagram"></i></a>
-                </p>
-            </div>
-        </div>
+
 
         <!--map-->
-        <div class="ratio ratio-21x9 container my-5" data-aos="fade-up" data-aos-duration="1500">
+        <!-- <div class="ratio ratio-21x9 container my-5" data-aos="fade-up" data-aos-duration="1500">
             <iframe class="border border-5 rounded-3"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62144.23735493468!2d74.76296606476087!3d13.224385178337211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcb02b2bc438eb%3A0x901c0008c65ea894!2sPadu%2C%20Karnataka%20574106!5e0!3m2!1sen!2sin!4v1695202542356!5m2!1sen!2sin"></iframe>
-        </div>
+        </div> -->
     </section>
     <!--ends contact section-->
 
-    <!--start footer-->
-    <footer data-aos="fade-up" data-aos-duration="1500" class="container-fluid bg-dark d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-light">© 2023 Anwar Kaup. All Rights Reserved.</p>
-        <a href="index.html"
-            class="footer-logo col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <img src="img/anwar-logo.png" alt="">
-        </a>
-        <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="index.html#home" class="text-light nav-link px-2">Home</a></li>
-            <li class="nav-item"><a href="index.html#projects" class="text-light nav-link px-2">Projects</a></li>
-            <li class="nav-item"><a href="index.html#contact" class="text-light nav-link px-2">Contact me</a></li>
-            <li class="nav-item"><a href="index.html#resume" class="text-light nav-link px-2">Resume</a></li>
-        </ul>
-    </footer>
-    <!--ends footer-->
 
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-success" id="exampleModalLabel">Message Sent</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Thank you, will contact you. Try Whatsapp for faster response.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+   </div>
+    
+</div>
     <script>
         // Function to hide Div A
         function hideLoader() {
@@ -534,11 +1042,99 @@
     </script>
 
     <script>
-    AOS.init();
+        AOS.init();
+    </script>
+
+    <script>
+        function submitFormData() {
+    var form = document.querySelector('.needs-validation');
+
+    
+    if (!form.checkValidity()) {
+        // If the form is invalid, prevent form submission
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        return false; // Add this line to prevent default form submission
+    }
+
+    
+    const formData = new FormData();
+    formData.append("entry.1563769549", document.getElementById("fullName").value); // Full Name
+    formData.append("entry.1487511800", document.getElementById("emailAddress").value); // Email Address
+    formData.append("entry.1812610927", document.getElementById("contactNumber").value); // Contact Number
+    formData.append("entry.1913643017", document.getElementById("company").value); // Company/Organization
+    formData.append("entry.2139772844", document.getElementById("message").value); // Message/Inquiry
+
+    const formUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSftjaevhn5NshlCrLGp_W6lNcydGuxJIz0DVCUH3CcMXqXAkw/formResponse"
+    fetch(formUrl, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
+    }).then(response => {
+console.log("Form submission successful");
+        // Clear form fields
+        form.reset();
+        // Reset form validation state
+        form.classList.remove('was-validated');
+        // Trigger modal display
+        var modal = document.getElementById('exampleModal');
+        var modalInstance = new bootstrap.Modal(modal);
+        modalInstance.show();
+    }).catch(error => {
+        console.error("Error submitting form:", error);
+    });
+
+    return false; // Prevent default form submission
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(function(navLink) {
+        navLink.addEventListener('click', function() {
+            var navbarCollapse = document.querySelector('.navbar-collapse');
+            navbarCollapse.classList.remove('show'); // Hide the collapsed navbar
+        });
+    });
+});
+  </script>
+  <script>
+ document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section[id]');
+    const menuLinks = document.querySelectorAll('.sidbar-menu a');
+
+    function highlightMenu() {
+        let scrollY = window.scrollY;
+
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50;
+            const sectionId = current.getAttribute('id');
+
+            if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
+                menuLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `index.html#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener('scroll', highlightMenu);
+});
+
 </script>
 
 
-</body>
+<script>
 
+
+</script>
+
+</body>
 
 </html>
