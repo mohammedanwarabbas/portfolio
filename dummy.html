@@ -1,7 +1,4 @@
-
-
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -388,6 +385,21 @@
 
         /*For mobile or small screen*/
         @media (max-width: 767px) {
+            .sidebar-section #sidebar {
+            position:fixed;
+            top: 0;
+            height: 100vh;
+            z-index: 2;
+            background-color: rgba(255, 252, 252, 0.943);
+            color: black;
+        }
+        .sidebar-section #profile img {
+            object-fit: cover;
+            border-radius: 50%;
+            height: 30%;
+            width: 30%;
+        }
+
             .contact-section .container div {
                 /*remove side borders from address and find me on section */
                 border: 0;
@@ -422,31 +434,37 @@
         </div>
 
         <!--starts navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
+        <style>
+            nav{
+                
+            }
+        </style>
+        <nav class="row navbar navbar-expand-lg navbar-light d-lg-none sticky-top justify-content-end">
+            
+                
+      
+                    <span onclick="toggleDj()" class="btn text-end bg-info navbar-toggler-icon"></span>
+               
+               <script>
+                function toggleDj(){
+                    const sidebarSection = document.getElementsByClassName('sidebar-section')[0];
+                    if(sidebarSection.style.display == 'none'){
+                        sidebarSection.style.display = "block";
+                    }
+                    else
+                    {
+                        sidebarSection.style.display="none";
+                    }
+                }
+               </script>
+       
+        </nav>
         <!--ends navbar-->
 
         <div class="row">
             <!-- Sidebar -->
-            <div class="sidebar-section col-lg-2 d-none d-lg-block text-light position-relative">
-                <div id="sidebar" class="d-md-block">
+            <div class="sidebar-section col-lg-2 d-lg-block text-light position-relative" style="display:none;">
+                <div id="sidebar" class="d-md-block" >
                     <div class="sidebar-sticky">
                         <div id="profile" class="text-center">
                             <img src="img/profile-picture.png" class="border border-dark border-5"

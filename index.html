@@ -62,11 +62,14 @@
         }
 
         /* navbar */
-        .navbar-logo {
+        #top-navbar{
+            box-shadow: 0 0.5rem 0.5rem rgba(74, 71, 71, 0.527);
+        }
+        #top-navbar .navbar-logo {
             width: 3rem;
         }
 
-        nav h2 {
+        #top-navbar h2 {
             font-family: "Pacifico";
         }
 
@@ -419,7 +422,7 @@
         </div>
 
         <!--starts navbar-->
-        <nav class="row navbar navbar-expand-lg navbar-light bg-white d-lg-none sticky-top">
+        <nav id="top-navbar" class="row navbar navbar-expand-lg navbar-light bg-white d-lg-none" style="position: fixed;z-index: 2;width: 100%;">
             <div class="container-fluid">
                 <img class="navbar-brand navbar-logo" src="img/anwar-logo.png" alt="" />
 
