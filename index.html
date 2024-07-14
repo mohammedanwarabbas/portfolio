@@ -22,6 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- typewriter library -->
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
 
     <!--end additional scripts and styles-->
     <style>
@@ -553,6 +555,9 @@
                                 in front-end and back-end development, I bring ideas to life
                                 and deliver impactful digital experiences.
                             </p>
+                            <p class="text-warning">
+                                <!-- content comes from typewriter library -->
+                              <i class="bi bi-briefcase text-danger h2" style="filter: drop-shadow(0.2rem 0.2rem 0.2rem red);"></i> <span id="typewriter"></span> </p>
                         </div>
                     </section>
                 </section>
@@ -899,42 +904,7 @@
                         </div>
                         <div class="prjimg8 project-image col-md-3 col-lg-3 border-1 border"></div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1500"
-                        class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
-                        <div class="project-body card col-md-9 col-lg-4">
-                            <div class="d-flex flex-column align-items-center justify-content-center card-body">
-                                <h3 class="card-title">
-                                    <i class="bi bi-9-square-fill"></i> Medi Vaidya
-                                </h3>
-                                <div class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center"> 
-                                    <img src="icons/php-icon.svg" alt="">
-                                    <span class="separator"></span>
-                                    <img src="icons/mysql-icon.svg" alt="">
-                                    <span class="separator"></span>
-                                    <img src="icons/html-icon.svg" alt="">
-                                    <span class="separator"></span>
-                                    <img src="icons/css-icon.svg" alt="">
-                                    <span class="separator"></span>
-                                    <img src="icons/bootstrap-icon.svg" alt="">
-                                    <span class="separator"></span>
-                                    <img src="icons/javascript-icon.svg" alt="">
-                                    <span class="separator"></span>
-                                    <img src="icons/jquery-icon.svg" alt="">
-                            </div>
-                                <p class="card-text">
-                                    This is a dynamic PHP website
-                                    <span class="text-danger">under development</span> for one
-                                    of the ayurvedic clinic located in mangalore. Note : double
-                                    cliking on developer button of footer section dosen't work,
-                                    It requires tripple click.
-                                </p>
-
-                                <a class="px-3 btn btn-outline-dark" href="http://www.anwarbro.rf.gd"
-                                    target="_blank">view live</a>
-                            </div>
-                        </div>
-                        <div class="prjimg9 project-image col-md-3 col-lg-3 border-1 border"></div>
-                    </div>
+                   
                     <h1 class="main-heading">Internship + Academic Projects</h1>
                     <div data-aos="fade-up" data-aos-duration="1500"
                         class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
@@ -1105,8 +1075,8 @@
 
                             <p>
                                 Backend scripting
-                                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Python</span>
                                 <span data-aos="fade-up" data-aos-duration="1500" class="skill">PHP</span>
+                                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Python</span>
                             </p>
                             <p>
                                 Frontend framework
@@ -1126,9 +1096,9 @@
                             <div class="col-md-6 text-center text-lg-start mb-lg-0 px-4">
                                 <div class="bg-light p-1 rounded-3">
                                     <div class="text-start fw-bolder mb-2 h5 resume-heading">
-                                        <i class="bi bi-1-square-fill"></i> ReactJS Developer
+                                        <i class="bi bi-1-square-fill"></i> Software Engineer - ReactJS
                                     </div>
-                                    <div class="text-start fw-bolder">Dec 2023 - Present</div>
+                                    <div class="text-start fw-bolder">Jan 2024 - Present</div>
                                     <div class="text-start text-muted">
                                         <i class="bi bi-building-fill"></i> Emproto Technologies
                                     </div>
@@ -1156,10 +1126,9 @@
                             <div class="col-md-6 text-center text-lg-start mb-lg-0 px-4">
                                 <div class="bg-light p-1 rounded-3">
                                     <div class="text-start fw-bolder mb-2 h5 resume-heading">
-                                        <i class="bi bi-2-square-fill"></i> Web Developer -
-                                        Part-time
+                                        <i class="bi bi-2-square-fill"></i> Full Stack Developer - PHP (1Yr)
                                     </div>
-                                    <div class="text-start fw-bolder">Jan 2023 - Jul 2023</div>
+                                    <div class="text-start fw-bolder">Jan 2023 - Jan 2024</div>
                                     <div class="text-start text-muted">
                                         <i class="bi bi-building-fill"></i> Vinyasa Tech Solutions
                                     </div>
@@ -1542,6 +1511,20 @@
                 document.querySelector("#mapIframe").style.visibility = "visible";
             });
     </script>
+
+    <!-- script to enable typewriter effect -->
+    <script>
+        var app = document.getElementById('typewriter');
+    
+        var typewriter = new Typewriter(app, {
+          loop: false,
+          delay: 50,
+        });
+    
+        typewriter
+          .typeString(" I am actively seeking a web developer position due to my current company running out of projects!")
+          .start();
+      </script>
 </body>
 
 </html>
