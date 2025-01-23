@@ -14,6 +14,9 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Skranji" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Pacifico" rel="stylesheet" />
@@ -21,6 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- typewriter library -->
+    <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
 
     <!--end additional scripts and styles-->
     <style>
@@ -62,11 +67,15 @@
         }
 
         /* navbar */
-        .navbar-logo {
+        #top-navbar {
+            box-shadow: 0 0.5rem 0.5rem rgba(74, 71, 71, 0.527);
+        }
+
+        #top-navbar .navbar-logo {
             width: 3rem;
         }
 
-        nav h2 {
+        #top-navbar h2 {
             font-family: "Pacifico";
         }
 
@@ -167,10 +176,42 @@
         }
 
         /* project section */
+
         .project-image {
             background-position: top;
             background-size: cover;
             height: auto;
+        }
+
+        .projects-section .icon-section .separator {
+            margin: 0 0.1rem;
+            font-size: 1.6rem;
+        }
+
+
+        .projects-section .projects-section-tech-icon-section {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow the icons to wrap to the next line */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .projects-section .icon-section img {
+            margin: 0 10px;
+            /* Adjust the margin as needed */
+        }
+
+        .companyprjimg1 {
+            background-image: url(img/ss-hoabl-main-site.png);
+        }
+
+        .companyprjimg2 {
+            background-image: url(img/ss-hoabl-CMS.png);
+        }
+
+        .companyprjimg3 {
+            background-image: url(img/ss-hoabl-payments.png);
         }
 
         .prjimg1 {
@@ -209,7 +250,7 @@
             background-image: url(img/ss-medi-vaidya.png);
         }
 
-        /* academic project starts from 41 */
+        /* internship / academic project starts from 41 */
         .prjimg41 {
             background-image: url(img/ss-Python-QR-Code-Generator.png);
         }
@@ -220,6 +261,10 @@
 
         .prjimg43 {
             background-image: url(img/ss-quotedog.png);
+        }
+
+        .prjimg44 {
+            background-image: url(img/ss-the-world.png);
         }
 
         .project-body {
@@ -385,21 +430,6 @@
 
         /*For mobile or small screen*/
         @media (max-width: 767px) {
-            .sidebar-section #sidebar {
-            position:fixed;
-            top: 0;
-            height: 100vh;
-            z-index: 2;
-            background-color: rgba(255, 252, 252, 0.943);
-            color: black;
-        }
-        .sidebar-section #profile img {
-            object-fit: cover;
-            border-radius: 50%;
-            height: 30%;
-            width: 30%;
-        }
-
             .contact-section .container div {
                 /*remove side borders from address and find me on section */
                 border: 0;
@@ -434,37 +464,41 @@
         </div>
 
         <!--starts navbar-->
-        <style>
-            nav{
-                
-            }
-        </style>
-        <nav class="row navbar navbar-expand-lg navbar-light d-lg-none sticky-top justify-content-end">
-            
-                
-      
-                    <span onclick="toggleDj()" class="btn text-end bg-info navbar-toggler-icon"></span>
-               
-               <script>
-                function toggleDj(){
-                    const sidebarSection = document.getElementsByClassName('sidebar-section')[0];
-                    if(sidebarSection.style.display == 'none'){
-                        sidebarSection.style.display = "block";
-                    }
-                    else
-                    {
-                        sidebarSection.style.display="none";
-                    }
-                }
-               </script>
-       
+        <nav id="top-navbar" class="row navbar navbar-expand-lg navbar-light bg-white d-lg-none"
+            style="position: fixed;z-index: 2;width: 100%;">
+            <div class="container-fluid">
+                <img class="navbar-brand navbar-logo" src="img/anwar-logo.png" alt="" />
+
+                <h2 class="m-auto">Anwar's Portfolio</h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html#resume">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html#projects">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <!--ends navbar-->
 
         <div class="row">
             <!-- Sidebar -->
-            <div class="sidebar-section col-lg-2 d-lg-block text-light position-relative" style="display:none;">
-                <div id="sidebar" class="d-md-block" >
+            <div class="sidebar-section col-lg-2 d-none d-lg-block text-light position-relative">
+                <div id="sidebar" class="d-md-block">
                     <div class="sidebar-sticky">
                         <div id="profile" class="text-center">
                             <img src="img/profile-picture.png" class="border border-dark border-5"
@@ -531,6 +565,12 @@
                                 in front-end and back-end development, I bring ideas to life
                                 and deliver impactful digital experiences.
                             </p>
+                            <p class="text-warning d-none d-md-block">
+                                <!-- content comes from typewriter library -->
+                                <i class="bi bi-briefcase text-danger h2"
+                                    style="filter: drop-shadow(0.2rem 0.2rem 0.2rem red);"></i> <span
+                                    id="typewriter"></span>
+                            </p>
                         </div>
                     </section>
                 </section>
@@ -574,7 +614,121 @@
 
                 <!--start project section-->
                 <section class="projects-section container my-5 py-5" id="projects">
-                    <h1 class="main-heading mt-5">Live Projects</h1>
+                    <div id="company-projects">
+                        <div id="freelance-projects">
+                            <div id="training-projects">
+
+                    </div>
+                    <h1 class="main-heading mt-5">Company Contributions</h1>
+                    <div data-aos="fade-up" data-aos-duration="1500"
+                        class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+                        <div class="project-body card col-md-9 col-lg-4">
+                            <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                                <h3 class="card-title">
+                                    <i class="bi bi-1-circle-fill"></i> Real Estate | ReactJS
+                                </h3>
+                                <h5 class="text-warning"><i class="bi bi-tools text-secondary"></i> under maintenance
+                                </h5>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+
+                                    <img src="icons/reactjs-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/typescript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/mui-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/api-icon.svg" alt="">
+                                </div>
+                                <p class="card-text">
+                                    This is a comprehensive main real estate platform developed to client -
+                                    <i>HOABL</i>, showcasing a wide range of properties for potential buyers.
+                                    The site, built using React.js, Redux, and Material-UI (MUI), features detailed
+                                    property listings, advanced search filters, and interactive maps to help users find
+                                    their ideal properties.
+                                </p>
+                                <a class="px-3 btn btn-outline-dark" href="https://www.hoabl.com/" target="_blank">view
+                                    live</a>
+                            </div>
+                        </div>
+                        <div class="companyprjimg1 project-image col-md-3 col-lg-3 border-1 border"></div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1500"
+                        class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+                        <div class="project-body card col-md-9 col-lg-4">
+                            <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                                <h3 class="card-title">
+                                    <i class="bi bi-2-circle-fill"></i> Real Estate CMS | ReactJS
+                                </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+
+                                    <img src="icons/reactjs-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/typescript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/mui-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/api-icon.svg" alt="">
+                                </div>
+                                <p class="card-text">
+                                    RealEstateCMS is a robust content management system designed to streamline the
+                                    management of the client’s real estate listings.
+                                    Developed with React.js, Redux, and MUI, it allows administrators to add or remove
+                                    properties, modify prices, update locations, and manage other critical information.
+                                    This tool ensures that the main real estate site is always up-to-date with the
+                                    latest property information.
+                                </p>
+                                <a class="px-3 btn btn-outline-dark" href="https://cms-panel.hoabl.in/"
+                                    target="_blank">view live</a>
+                            </div>
+                        </div>
+                        <div class="companyprjimg2 project-image col-md-3 col-lg-3 border-1 border"></div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1500"
+                        class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+                        <div class="project-body card col-md-9 col-lg-4">
+                            <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                                <h3 class="card-title">
+                                    <i class="bi bi-3-circle-fill"></i> Payment Gateway Site | ReactJS
+                                </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+
+                                    <img src="icons/reactjs-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/typescript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/mui-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/api-icon.svg" alt="">
+                                </div>
+                                <p class="card-text">
+                                    This web application serves as a secure payment gateway integrated across Android,
+                                    iOS, and web platforms.
+                                    Utilizing React.js, Redux, and Material-UI (MUI) for the web interface, the system
+                                    facilitates seamless financial transactions for property purchases listed on the
+                                    main Real Estate website.
+                                </p>
+                                <a class="px-3 btn btn-outline-dark" href="https://payments.hoabl.in/login/login"
+                                    target="_blank">view live</a>
+                            </div>
+                        </div>
+                        <div class="companyprjimg3 project-image col-md-3 col-lg-3 border-1 border"></div>
+                    </div>
+                    <h1 class="main-heading mt-5">Freelance Endeavors(Live Projects)</h1>
                     <div data-aos="fade-up" data-aos-duration="1500"
                         class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
                         <div class="project-body card col-md-9 col-lg-4">
@@ -583,6 +737,19 @@
                                     <i class="bi bi-1-square-fill"></i> Click&Vision (Live
                                     Website)
                                 </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/bootstrap-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/javascript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/jquery-icon.svg" alt="">
+                                </div>
+
                                 <p class="card-text">
                                     A bespoke digital marketing agency platform, Click And
                                     Vision, meticulously crafted from scratch. This innovative
@@ -607,6 +774,26 @@
                                     <i class="bi bi-2-square-fill"></i> EyeQ Dot Net Pvt. Ltd.
                                     (Live Website)
                                 </h3>
+
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/php-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/mysql-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/bootstrap-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/javascript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/jquery-icon.svg" alt="">
+
+                                </div>
+
+
                                 <p class="card-text">
                                     Upgraded a PHP project for EyeQ Dot Net Pvt Ltd, a Cyber
                                     Security Service Provider located in Mangalore, Karnataka.
@@ -629,6 +816,13 @@
                                     <i class="bi bi-3-square-fill"></i> Al Mirath Landing Page -
                                     Version 1
                                 </h3>
+
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/wordpress-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/elementor-icon.svg" alt="">
+                                </div>
                                 <p class="card-text">
                                     1st version of five distinct WordPress landing pages for the
                                     digital marketing team, each featuring unique URL endpoints
@@ -651,6 +845,12 @@
                                     <i class="bi bi-4-square-fill"></i> Al Mirath Landing Page -
                                     Version 2
                                 </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/wordpress-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/elementor-icon.svg" alt="">
+                                </div>
                                 <p class="card-text">
                                     2nd version of five distinct WordPress landing pages for the
                                     digital marketing team, each featuring unique URL endpoints
@@ -673,6 +873,12 @@
                                     <i class="bi bi-5-square-fill"></i> Al Mirath Landing Page -
                                     Version 3
                                 </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/wordpress-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/elementor-icon.svg" alt="">
+                                </div>
                                 <p class="card-text">
                                     3rd version of five distinct WordPress landing pages for the
                                     digital marketing team, each featuring unique URL endpoints
@@ -695,6 +901,12 @@
                                     <i class="bi bi-6-square-fill"></i> Al Mirath Landing Page -
                                     Version 4
                                 </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/wordpress-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/elementor-icon.svg" alt="">
+                                </div>
                                 <p class="card-text">
                                     4th version of five distinct WordPress landing pages for the
                                     digital marketing team, each featuring unique URL endpoints
@@ -717,6 +929,12 @@
                                     <i class="bi bi-7-square-fill"></i> Al Mirath Landing Page -
                                     Version 5
                                 </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/wordpress-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/elementor-icon.svg" alt="">
+                                </div>
                                 <p class="card-text">
                                     5th version of five distinct WordPress landing pages for the
                                     digital marketing team, each featuring unique URL endpoints
@@ -737,6 +955,22 @@
                                 <h3 class="card-title">
                                     <i class="bi bi-8-square-fill"></i> AG Travels
                                 </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/php-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/mysql-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/bootstrap-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/javascript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/jquery-icon.svg" alt="">
+                                </div>
                                 <p class="card-text">
                                     This is a Dynamic PHP project delivered to small business
                                     located in Udupi District. Note : Project successfully ran
@@ -749,27 +983,8 @@
                         </div>
                         <div class="prjimg8 project-image col-md-3 col-lg-3 border-1 border"></div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1500"
-                        class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
-                        <div class="project-body card col-md-9 col-lg-4">
-                            <div class="d-flex flex-column align-items-center justify-content-center card-body">
-                                <h3 class="card-title">
-                                    <i class="bi bi-9-square-fill"></i> Medi Vaidya
-                                </h3>
-                                <p class="card-text">
-                                    This is a dynamic PHP website
-                                    <span class="text-danger">under development</span> for one
-                                    of the ayurvedic clinic located in mangalore. Note : double
-                                    cliking on developer button of footer section dosen't work,
-                                    It requires tripple click.
-                                </p>
-                                <a class="px-3 btn btn-outline-dark" href="http://www.anwarbro.rf.gd"
-                                    target="_blank">view live</a>
-                            </div>
-                        </div>
-                        <div class="prjimg9 project-image col-md-3 col-lg-3 border-1 border"></div>
-                    </div>
-                    <h1 class="main-heading">Academic Projects</h1>
+
+                    <h1 class="main-heading">Internship + Academic Projects</h1>
                     <div data-aos="fade-up" data-aos-duration="1500"
                         class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
                         <div class="project-body card col-md-9 col-lg-4">
@@ -779,6 +994,22 @@
                                     code
                                     generator
                                 </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/python-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/django-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/bootstrap-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/javascript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/jquery-icon.svg" alt="">
+                                </div>
                                 <p class="card-text">
                                     This Python project is developed using Django framework,
                                     This project will generate customized QR codes for specified
@@ -800,6 +1031,24 @@
                                     <i class="bi bi-1-square-fill"></i><i class="bi bi-1-square-fill"></i> Python Web
                                     scraping
                                 </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                                    <img src="icons/python-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/django-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/bootstrap-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/javascript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/jquery-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/api-icon.svg" alt="">
+                                </div>
                                 <p class="card-text">
                                     This Python project is developed using Django. This project
                                     helps in performing webscraping based on the website link
@@ -822,9 +1071,25 @@
                                     Quote
                                     Generator
                                 </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+
+                                    <img src="icons/reactjs-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/bootstrap-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/javascript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/api-icon.svg" alt="">
+
+                                </div>
                                 <p class="card-text">
                                     This is my first React.js project called QuoteDog, developed
-                                    recently when I start studying React.js. This website
+                                    when I start studying React.js. This website
                                     fetches quotes from quote generator API
                                 </p>
                                 <a class="px-3 btn btn-outline-dark"
@@ -833,7 +1098,44 @@
                         </div>
                         <div class="prjimg43 project-image col-md-3 col-lg-3 border-1 border"></div>
                     </div>
-                    <p>and many other Django and PHP ecommerce academic projects...</p>
+                    <div data-aos="fade-up" data-aos-duration="1500"
+                        class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+                        <div class="project-body card col-md-9 col-lg-4">
+                            <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                                <h3 class="card-title">
+                                    <i class="bi bi-1-square-fill"></i><i class="bi bi-3-square-fill"></i> The World
+                                </h3>
+                                <div
+                                    class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+
+                                    <img src="icons/reactjs-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/typescript-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/mui-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/html-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/css-icon.svg" alt="">
+                                    <span class="separator"></span>
+                                    <img src="icons/api-icon.svg" alt="">
+                                </div>
+
+                                <p class="card-text">
+                                    The World" is a React.js and TypeScript project that seamlessly integrates
+                                    third-party APIs.
+                                    Through its sleek design and intuitive interface, users can explore information like
+                                    country flags, population, languages spoken, currencies, and other country-related
+                                    data.
+                                    Dive into a world of real-time information with this immersive web application.
+                                </p>
+                                <a class="px-3 btn btn-outline-dark"
+                                    href="https://mohammedanwarabbas.github.io/the-world/" target="_blank">view live</a>
+                            </div>
+                        </div>
+                        <div class="prjimg44 project-image col-md-3 col-lg-3 border-1 border"></div>
+                    </div>
+                    <p>and many other ReactJS,Django and PHP ecommerce non-live projects...</p>
                 </section>
                 <!--ends projects section-->
 
@@ -859,8 +1161,8 @@
 
                             <p>
                                 Backend scripting
-                                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Python</span>
                                 <span data-aos="fade-up" data-aos-duration="1500" class="skill">PHP</span>
+                                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Python</span>
                             </p>
                             <p>
                                 Frontend framework
@@ -880,15 +1182,14 @@
                             <div class="col-md-6 text-center text-lg-start mb-lg-0 px-4">
                                 <div class="bg-light p-1 rounded-3">
                                     <div class="text-start fw-bolder mb-2 h5 resume-heading">
-                                        <i class="bi bi-1-square-fill"></i> ReactJS Developer -
-                                        Intern
+                                        <i class="bi bi-1-square-fill"></i> Software Engineer - ReactJS
                                     </div>
                                     <div class="text-start fw-bolder">Jan 2024 - Present</div>
                                     <div class="text-start text-muted">
                                         <i class="bi bi-building-fill"></i> Emproto Technologies
                                     </div>
                                     <div class="text-start text-muted">
-                                        <i class="bi bi-geo-alt-fill"></i> Bangalore
+                                        <i class="bi bi-geo-alt-fill"></i> Bangalore, India
                                     </div>
                                 </div>
                                 <div class="p-1">
@@ -911,15 +1212,14 @@
                             <div class="col-md-6 text-center text-lg-start mb-lg-0 px-4">
                                 <div class="bg-light p-1 rounded-3">
                                     <div class="text-start fw-bolder mb-2 h5 resume-heading">
-                                        <i class="bi bi-2-square-fill"></i> Web Developer -
-                                        Part-time
+                                        <i class="bi bi-2-square-fill"></i> Full Stack Developer - PHP (1Yr)
                                     </div>
-                                    <div class="text-start fw-bolder">Jan 2023 - Jul 2023</div>
+                                    <div class="text-start fw-bolder">Jan 2023 - Jan 2024</div>
                                     <div class="text-start text-muted">
                                         <i class="bi bi-building-fill"></i> Vinyasa Tech Solutions
                                     </div>
                                     <div class="text-start text-muted">
-                                        <i class="bi bi-geo-alt-fill"></i> Mangalore
+                                        <i class="bi bi-geo-alt-fill"></i> Mangalore, India
                                     </div>
                                 </div>
                                 <div class="p-1">
@@ -951,7 +1251,7 @@
                                         <i class="bi bi-building-fill"></i> Codelab Systems
                                     </div>
                                     <div class="text-start text-muted">
-                                        <i class="bi bi-geo-alt-fill"></i> Mangalore
+                                        <i class="bi bi-geo-alt-fill"></i> Mangalore, India
                                     </div>
                                 </div>
 
@@ -986,7 +1286,7 @@
                                         Technology
                                     </p>
                                     <p class="text-start text-muted">
-                                        <i class="bi bi-geo-alt-fill"></i>Mangalore
+                                        <i class="bi bi-geo-alt-fill"></i>Mangalore, India
                                     </p>
                                     <p class="text-start text-muted">
                                         <i class="bi bi-buildings"></i> Visvesvaraya Technological
@@ -1007,7 +1307,7 @@
                                         <i class="bi bi-book-half"></i> St. Mary's college
                                     </p>
                                     <p class="text-start text-muted">
-                                        <i class="bi bi-geo-alt-fill"></i> Shirva, Udupi Dist
+                                        <i class="bi bi-geo-alt-fill"></i> Shirva, Udupi Dist, India
                                     </p>
                                     <p class="text-start text-muted">
                                         <i class="bi bi-buildings"></i> Mangalore University
@@ -1297,6 +1597,73 @@
                 document.querySelector("#mapIframe").style.visibility = "visible";
             });
     </script>
+
+    <!-- script to enable typewriter effect -->
+    <script>
+        var app = document.getElementById('typewriter');
+
+        var typewriter = new Typewriter(app, {
+            loop: false,
+            delay: 50,
+        });
+
+        typewriter
+            .typeString(" I am actively seeking a web developer position due to my current company running out of projects!")
+            .start();
+    </script>
+
+    <!-- script to generate project cards -->
+    <!-- Include portfolio data -->
+    <script src="portfolio-projects.js"></script>
+    <script>
+        function generateCards(data) {
+          const companyProjects = data.categories.find(category => category.categoryId === 1).projects;
+          const companyProjectsDiv = document.getElementById("company-projects");
+    
+          companyProjectsDiv.innerHTML = '<h1 class="main-heading mt-5">Company Contributions</h1>';
+    
+          companyProjects.forEach((project, index) => {
+            const iconsHtml = project.technologyIcons
+              .map(icon => `<img src="icons/${icon}-icon.svg" alt="${icon}">`)
+              .join('<span class="separator"></span>');
+    
+            const liveButton = project.liveURL
+              ? `<a class="px-3 btn btn-outline-dark" href="${project.liveURL}" target="_blank">View Live</a>`
+              : "";
+            const sourceCodeButton = project.sourceCode
+              ? `<a class="px-3 btn btn-outline-dark" href="${project.sourceCode}" target="_blank">Source Code</a>`
+              : "";
+    
+            const cardHtml = `
+              <div data-aos="fade-up" data-aos-duration="1500"
+                class="d-flex justify-content-center project-container row mx-auto my-5 rounded-4">
+                <div class="project-body card col-md-9 col-lg-4">
+                  <div class="d-flex flex-column align-items-center justify-content-center card-body">
+                    <h3 class="card-title">
+                      <i class="bi bi-${index + 1}-circle-fill"></i> ${project.projectTitle}
+                    </h3>
+                    <div class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
+                      ${iconsHtml}
+                    </div>
+                    <p class="card-text project-description">${project.projectDescription}</p>
+                    ${liveButton}
+                    ${sourceCodeButton}
+                  </div>
+                </div>
+                <div class="project-image col-md-3 col-lg-3 border-1 border"
+                  style="background-image: url('img/${project.projectImage}'); background-size: cover; background-position: center;">
+                </div>
+              </div>
+            `;
+    
+            companyProjectsDiv.insertAdjacentHTML("beforeend", cardHtml);
+          });
+        }
+    
+        // Pass the portfolioData to generateCards
+        generateCards(portfolioData);
+      </script>
+
 </body>
 
 </html>
