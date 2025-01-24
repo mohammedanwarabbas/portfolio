@@ -145,7 +145,7 @@ const portfolioData = {
           {
             "id": null,
             "projectTitle": "React.js Quote Generator",
-            "projectDescription": "This is my first React.js project called QuoteDog, developed when I start studying React.js. This website fetches quotes from quote generator API",
+            "projectDescription": "[API is Down !] This is my first React.js project called QuoteDog, developed when I start studying React.js. This website fetches quotes from quote generator API",
             "technologyIcons": ["reactjs", "html", "css", "bootstrap", "javascript", "api"],
             "projectImage": "ss-quotedog.png",
             "liveURL": "https://mohammedanwarabbas.github.io/quotedog/",
@@ -295,7 +295,7 @@ function generateTrainingProjectsCards(data) {
       return;
   }
 
-  trainingProjectsDiv.innerHTML = '<h1 class="main-heading mt-5">Training/Internship/Academic Projects</h1>';
+  trainingProjectsDiv.innerHTML = '<h1 class="main-heading mt-5">Training / Internship / Academic Projects</h1>';
 
   trainingProjects.forEach((project, index) => {
       const iconsHtml = project.technologyIcons
