@@ -30,13 +30,7 @@ const portfolioData = {
             "projectImage": "ss-hoabl-payments.png",
             "liveURL": "https://payments.hoabl.in/login/login",
             "sourceCode": ""
-          }
-        ]
-      },
-      {
-        "categoryId":2,
-        "categoryTitle": "Freelance Projects",
-        "projects": [
+          },
           {
             "id": null,
             "projectTitle": "Click&Vision (Live Website)",
@@ -109,6 +103,12 @@ const portfolioData = {
             "liveURL": "https://www.almirath.ae/dammac-sapphire/",
             "sourceCode": ""
           },
+        ]
+      },
+      {
+        "categoryId":2,
+        "categoryTitle": "Freelance Projects",
+        "projects": [
           // {
           //   "id": null,
           //   "projectTitle": "AG Travels",
@@ -277,8 +277,8 @@ function generateFreelanceCards(data) {
   });
 }
 
-// Call the function for freelance projects
-generateFreelanceCards(portfolioData);
+// Call the function for freelance projects only if there are atleast one freelancing project
+portfolioData.categories[1].projects.length && generateFreelanceCards(portfolioData);
 
 
 
