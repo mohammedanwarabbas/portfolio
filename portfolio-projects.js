@@ -203,7 +203,7 @@ function generateCards(data) {
       <div class="project-body card col-md-9 col-lg-4">
         <div class="d-flex flex-column align-items-center justify-content-center card-body">
           <h3 class="card-title">
-            <i class="bi bi-${index + 1}-circle-fill"></i> ${project.projectTitle}
+            <i class="border border-primary rounded-3 bg-dark text-white px-1">${index+1} </i>&nbsp; ${project.projectTitle}
           </h3>
           <div class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
             ${iconsHtml}
@@ -257,7 +257,7 @@ function generateFreelanceCards(data) {
           <div class="project-body card col-md-9 col-lg-4">
               <div class="d-flex flex-column align-items-center justify-content-center card-body">
                   <h3 class="card-title">
-                      <i class="bi bi-${index + 1}-circle-fill"></i> ${project.projectTitle}
+                  <i class="border border-primary rounded-3 bg-dark text-white px-1">${index+1} </i>&nbsp; ${project.projectTitle}
                   </h3>
                   <div class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
                       ${iconsHtml}
@@ -315,7 +315,7 @@ function generateTrainingProjectsCards(data) {
   <div class="project-body card col-md-9 col-lg-4">
     <div class="d-flex flex-column align-items-center justify-content-center card-body">
       <h3 class="card-title">
-        <i class="bi bi-${index + 1}-circle-fill"></i> ${project.projectTitle}
+      <i class="border border-primary rounded-3 bg-dark text-white px-1"> ${index+1} </i>&nbsp; ${project.projectTitle}
       </h3>
       <div class="projects-section-tech-icon-section w-100 d-flex justify-content-center align-items-center">
         ${iconsHtml}
