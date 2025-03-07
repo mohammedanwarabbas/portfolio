@@ -166,7 +166,25 @@ const portfolioData = {
             "projectDescription": "This ReactJS + TypeScript project was developed as part of a case study for the company, Innoscripta. The goal of the project was to create a news aggregator website using a variety of technologies, incorporating data from 3 different APIs at a same time to provide users with real-time, curated news.",
             "technologyIcons": ["reactjs", "typescript", "bootstrap", "html", "css", "api"],
             "projectImage": "ss-news-hub.png",
-            "liveURL": "https://newshubbyanwar.vercel.app/",
+            "liveURL": "https://news-hub-by-anwar.vercel.app/",
+            "sourceCode": ""
+          },
+          {
+            "id": null,
+            "projectTitle": "ReactJs Registration Form",
+            "projectDescription": "A responsive ReactJs + TypeScript registration form built with React.js + TypeScript, MUI, Formik, Yup, and SASS for smooth validation and styling.",
+            "technologyIcons": ["reactjs", "typescript", "mui", "html", "css", "api"],
+            "projectImage": "ss-registration-form-task.png",
+            "liveURL": "https://mohammedanwarabbas.github.io/registration-form-task/",
+            "sourceCode": ""
+          },
+          {
+            "id": null,
+            "projectTitle": "ReactJs Task Manager",
+            "projectDescription": "A responsive MERN stack (MongoDB, Express.js, React.js, Node.js) Task Manager application allows users to manage tasks with priority and due dates.",
+            "technologyIcons": ["reactjs", "typescript", "mui", "html", "css", "api"],
+            "projectImage": "ss-task-manager-mern-stack.png",
+            "liveURL": "https://task-manager-mern-stack-frontend-by-anwar.vercel.app/",
             "sourceCode": ""
           },
           
