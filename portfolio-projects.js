@@ -144,7 +144,7 @@ const portfolioData = {
           },
           {
             "id": null,
-            "projectTitle": "React.js Quote Generator",
+            "projectTitle": "React.js Quote Generator (😢API Down!😢)",
             "projectDescription": "[API is Down !] This is my first React.js project called QuoteDog, developed when I start studying React.js. This website fetches quotes from quote generator API",
             "technologyIcons": ["reactjs", "html", "css", "bootstrap", "javascript", "api"],
             "projectImage": "ss-quotedog.png",
@@ -173,7 +173,7 @@ const portfolioData = {
             "id": null,
             "projectTitle": "ReactJs Registration Form",
             "projectDescription": "A responsive ReactJs + TypeScript registration form built with React.js + TypeScript, MUI, Formik, Yup, and SASS for smooth validation and styling.",
-            "technologyIcons": ["reactjs", "typescript", "mui", "html", "css", "api"],
+            "technologyIcons": ["reactjs", "typescript", "mui", "sass", "html", "css", "api"],
             "projectImage": "ss-registration-form-task.png",
             "liveURL": "https://mohammedanwarabbas.github.io/registration-form-task/",
             "sourceCode": ""
@@ -182,7 +182,7 @@ const portfolioData = {
             "id": null,
             "projectTitle": "ReactJs Task Manager",
             "projectDescription": "A responsive MERN stack (MongoDB, Express.js, React.js, Node.js) Task Manager application allows users to manage tasks with priority and due dates.",
-            "technologyIcons": ["reactjs", "typescript", "mui", "html", "css", "api"],
+            "technologyIcons": [ "mongodb", "expressjs", "reactjs", "nodejs", "bootstrap", "html", "css", "api"],
             "projectImage": "ss-task-manager-mern-stack.png",
             "liveURL": "https://task-manager-mern-stack-frontend-by-anwar.vercel.app/",
             "sourceCode": ""

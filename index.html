@@ -159,6 +159,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             color: white;
+            background:linear-gradient(transparent,rgba(0,0, 0, 0.6),transparent);
         }
 
         .hero-content h1 {
@@ -341,6 +342,15 @@
             }
         }
 
+        @keyframes blink {
+            0%, 100% { opacity: 1; }  
+            50% { opacity: 0; }  
+}
+
+.blinking-effect {
+  animation: blink 3s infinite;
+}
+
         /* custom-underline */
         .custom-underline {
             position: relative;
@@ -440,6 +450,7 @@
                                 alt="Profile Picture" />
                             <h4 class="profile-name mt-3">Mohd. Anwar</h4>
                             <p class="profile-designation text-muted">Web Developer</p>
+                           <p class="profile-alert text-muted"><span class="blinking-effect"> ⏳</span> Immediately Available</p>
                             <div class="p-4">
                                 <p class="text-start text-light">
                                     <i class="bi bi-globe-central-south-asia"></i><span>&nbsp;&nbsp;</span>Karnataka,
@@ -492,7 +503,7 @@
                 <section id="home">
                     <section class="parallax-hero">
                         <div class="parallax-bg"></div>
-                        <div class="hero-content">
+                        <div class="hero-content rounded-3 py-4">
                             <h1>Mohammed Anwar</h1>
                             <p>
                                 I am a passionate and creative web developer dedicated to
@@ -517,10 +528,15 @@
                     <h1 class="mt-5 pt-5"></h1>
                     <h1 class="main-heading mt-5 pt-5">About Me</h1>
                     <h4 data-aos="fade-up" data-aos-duration="1500" class="mt-5">
+                        <p class="blinking-effect">🚀 Open to Work | ⏳ Immediately Available</p>
                         My name is <span class="my-name">Mohammed Anwar</span>. 
                         I completed <span class="fw-bold">M.C.A</span> in
-                        <span class="fw-bold">2023 June</span>. I am a skilled web developer with 1.5+ years of professional experience. I am proficient in JavaScript, ReactJS, and possess a strong understanding of RESTful APIs, Agile methodologies, etc. 
+                        <span class="fw-bold">2023 June</span>. I am a skilled web developer with 2 years of professional experience. I am proficient in JavaScript, ReactJS, and possess a strong understanding of RESTful APIs, Agile methodologies, etc. 
                         I am passionate about creating user-friendly and high-quality web applications and am eager to contribute my skills and experience to a challenging and rewarding role.
+                    <br>
+                    <span class="h5">
+                        "Give me the opportunity, and I'll code like there's no tomorrow—let's grow together, debug the future, and make merge conflicts jealous!" 😆🚀
+                    </span>
                     <br>
                     <a href="index.html#resume" class="btn btn-dark my-2">my resume -></a>
                     </h4>
@@ -576,6 +592,8 @@
                                 <span data-aos="fade-down" data-aos-duration="1500" class="skill">React Router</span>
                                 <span data-aos="fade-up" data-aos-duration="1500" class="skill">Redux</span>
                                 <span data-aos="fade-down" data-aos-duration="1500" class="skill">AXIOS</span>
+                                <span data-aos="fade-up" data-aos-duration="1500" class="skill">Formik</span>
+                                <span data-aos="fade-down" data-aos-duration="1500" class="skill">SASS</span>
                                 <span data-aos="fade-up" data-aos-duration="1500" class="skill">Docker</span>
                                 <span data-aos="fade-down" data-aos-duration="1500" class="skill">Restful APIs</span>
                             </p>
@@ -605,7 +623,8 @@
                                     <div class="text-start fw-bolder mb-2 h5 resume-heading">
                                         <i class="bi bi-1-square-fill"></i> Software Engineer - ReactJS
                                     </div>
-                                    <div class="text-start fw-bolder">Jan 2024 - Present</div>
+                                    <div class="text-start fw-bolder">Jan 2024 - Dec 2024</div>
+                                    <p class="bg-warning p-1">Reason for leaving: Company ceased operations due to financial losses and project shortages</p>
                                     <div class="text-start text-muted">
                                         <i class="bi bi-building-fill"></i> Emproto Technologies
                                     </div>
@@ -636,7 +655,7 @@
                                         <i class="bi bi-2-square-fill"></i> Full Stack Developer - PHP (1Yr)
                                     </div>
                                     <div class="text-start fw-bolder">Jan 2023 - Jan 2024</div>
-                                    <p class="bg-warning">Initially part-time due to MCA, later full-time</p>
+                                    <p class="bg-warning p-1">Initially part-time due to MCA, later full-time</p>
                                     <div class="text-start text-muted">
                                         <i class="bi bi-building-fill"></i> Vinyasa Tech Solutions
                                     </div>
@@ -1030,7 +1049,7 @@
         });
 
         typewriter
-            .typeString(" I am actively seeking a web developer position due to my current company running out of projects!")
+            .typeString(" I am actively seeking a web developer position after my previous company ceased operations due to project shortages. Last worked there in December 2025!")
             .start();
     </script>
 
