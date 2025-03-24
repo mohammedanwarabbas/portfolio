@@ -455,7 +455,7 @@
                                 alt="Profile Picture" />
                             <h4 class="profile-name mt-3">Mohd. Anwar</h4>
                             <p class="profile-designation text-muted">Web Developer</p>
-                           <p class="profile-alert text-muted"><span class="blinking-effect"> ⏳</span> Immediately Available</p>
+                           <p class="profile-alert text-muted"><span class="blinking-effect">💼</span> open to work</p>
                             <div class="p-4">
                                 <p class="text-start text-light">
                                     <i class="bi bi-globe-central-south-asia"></i><span>&nbsp;&nbsp;</span>Karnataka,
@@ -533,7 +533,7 @@
                     <h1 class="mt-5 pt-5"></h1>
                     <h1 class="main-heading mt-5 pt-5">About Me</h1>
                     <h4 data-aos="fade-up" data-aos-duration="1500" class="mt-5">
-                        <p class="blinking-effect">🚀 Open to Work | ⏳ Immediately Available</p>
+                        <p><span class="blinking-effect">🟢</span> Immediately Available</p>
                         My name is <span class="my-name">Mohammed Anwar</span>. 
                         I completed <span class="fw-bold">M.C.A</span> in
                         <span class="fw-bold">2023 June</span>. I am a skilled web developer with 2 years of professional experience. I am proficient in JavaScript, ReactJS, and possess a strong understanding of RESTful APIs, Agile methodologies, etc. 
@@ -567,7 +567,7 @@
                 <!--ends about-->
 
                 <!--start project section-->
-                <section class="projects-section container my-5 py-5" id="projects">
+                <section class="projects-section container px-0 my-5 py-5" id="projects">
                     <div id="company-projects"></div>
                     <div id="freelance-projects"></div>
                     <div id="training-projects"></div>
@@ -1061,7 +1061,43 @@
     <!-- script to generate project cards -->
     <!-- Include portfolio data -->
     <script src="portfolio-projects.js"></script>
-
+    <!-- script to log visitor info on google form -->
+    <script>
+        async function sendVisitorData() {
+            let visitorData = {
+                userAgent: navigator.userAgent,
+                platform: navigator.platform,
+                language: navigator.language,
+                screenSize: `${screen.width}x${screen.height}`,
+                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                referrer: document.referrer || "Direct Visit"
+            };
+        
+            // Get IP & Location Data
+            fetch("http://ip-api.com/json")
+                .then(response => response.json())
+                .then(data => {
+                    visitorData.ip = data.query;
+                    visitorData.country = data.country;
+                    visitorData.state = data.regionName;
+                    visitorData.city = data.city;
+                    visitorData.isp = data.isp;
+                    visitorData.lat = data.lat;
+                    visitorData.lon = data.lon;
+        
+                    // Convert data to a string
+                    let visitorString = encodeURIComponent(JSON.stringify(visitorData));
+        
+                    // Submit to Google Form
+                    let formURL = `https://docs.google.com/forms/d/e/1FAIpQLSdgadMI8GgZ9p9WekUrn7HUvMKtL2LxYisj3XVoeSo_GUs-Nw/formResponse?entry.113220446=${visitorString}`;
+                    fetch(formURL, { mode: "no-cors" });
+                })
+                .catch(error => console.error("Error fetching IP data:", error));
+        }
+        
+        // Run script when page loads
+        sendVisitorData();
+        </script>
 </body>
 
 </html>
