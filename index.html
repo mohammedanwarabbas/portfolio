@@ -1072,32 +1072,37 @@
                 timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
                 referrer: document.referrer || "Direct Visit"
             };
-        
-            // Get IP & Location Data
-            fetch("https://ip-api.com/json")
+    
+            // Get IP & Location Data from ipinfo.io
+            fetch("https://ipinfo.io/json?token=d5ac72dd5b8554")  // Replace with your actual API key
                 .then(response => response.json())
                 .then(data => {
-                    visitorData.ip = data.query;
+                    let [lat, lon] = data.loc.split(","); // Extracts lat & lon from "loc"
+    
+                    visitorData.ip = data.ip;
                     visitorData.country = data.country;
-                    visitorData.state = data.regionName;
+                    visitorData.state = data.region;
                     visitorData.city = data.city;
-                    visitorData.isp = data.isp;
-                    visitorData.lat = data.lat;
-                    visitorData.lon = data.lon;
-        
+                    visitorData.isp = data.org;
+                    visitorData.lat = lat;
+                    visitorData.lon = lon;
+    
                     // Convert data to a string
                     let visitorString = encodeURIComponent(JSON.stringify(visitorData));
-        
+    
                     // Submit to Google Form
                     let formURL = `https://docs.google.com/forms/d/e/1FAIpQLSdgadMI8GgZ9p9WekUrn7HUvMKtL2LxYisj3XVoeSo_GUs-Nw/formResponse?entry.113220446=${visitorString}`;
+                    
                     fetch(formURL, { mode: "no-cors" });
                 })
                 .catch(error => console.error("Error fetching IP data:", error));
         }
-        
+    
         // Run script when page loads
         sendVisitorData();
-        </script>
+    </script>
+    
+    
 </body>
 
 </html>
