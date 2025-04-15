@@ -33,11 +33,11 @@ const portfolioData = {
           },
           {
             "id": null,
-            "projectTitle": "Click&Vision (Live Website)",
-            "projectDescription": "A bespoke digital marketing agency platform, Click And Vision, meticulously crafted from scratch. This innovative solution is tailored exclusively for Digital Marketing agency - Click&Vision, located in Mangalore, designed to elevate online visibility and amplify audience engagement. With a keen focus on strategic marketing initiatives, this platform stands as a testament to the commitment to delivering unique and impactful solutions.",
+            "projectTitle": "Click&Vision (company closure)",
+            "projectDescription": "[😢Re-hosted on GitHub Pages for portfolio demonstration, due to Click&Vision's company shutdown.😢] A bespoke digital marketing agency platform, Click And Vision, meticulously crafted from scratch. This innovative solution is tailored exclusively for Digital Marketing agency - Click&Vision, located in Mangalore, designed to elevate online visibility and amplify audience engagement. With a keen focus on strategic marketing initiatives, this platform stands as a testament to the commitment to delivering unique and impactful solutions.",
             "technologyIcons": ["html", "css", "bootstrap", "javascript", "jquery"],
             "projectImage": "ss-cnv.png",
-            "liveURL": "https://clicknvision.com/",
+            "liveURL": "https://mohammedanwarabbas.github.io/clickandvision/",
             "sourceCode": ""
           },
           {
