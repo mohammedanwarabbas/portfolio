@@ -180,11 +180,20 @@ const portfolioData = {
           },
           {
             "id": null,
-            "projectTitle": "ReactJs Task Manager",
+            "projectTitle": "MERN stack Task Manager",
             "projectDescription": "A responsive MERN stack (MongoDB, Express.js, React.js, Node.js) Task Manager application allows users to manage tasks with priority and due dates.",
             "technologyIcons": [ "mongodb", "expressjs", "reactjs", "nodejs", "bootstrap", "html", "css", "api"],
             "projectImage": "ss-task-manager-mern-stack.png",
             "liveURL": "https://task-manager-mern-stack-frontend-by-anwar.vercel.app/",
+            "sourceCode": ""
+          },
+          {
+            "id": null,
+            "projectTitle": "Mind Lines MERN stack Quote Publisher",
+            "projectDescription": "A responsive MERN stack (MongoDB, Express.js, React.js, Node.js) Quote publisher application allows writers to add and edit Quotes and allows admin to monitor writers and their quotes",
+            "technologyIcons": [ "mongodb", "expressjs", "reactjs", "nodejs", "mui", "html", "css", "api"],
+            "projectImage": "ss-mind-lines-mern-stack.png",
+            "liveURL": "https://mind-lines-mern-stack-frontend.vercel.app/",
             "sourceCode": ""
           },
           
