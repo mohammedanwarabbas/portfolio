@@ -239,18 +239,18 @@
         cursor: pointer;
       }
 
-      .project-image .project-image-redirect-button{
+      .project-image .project-image-redirect-button {
         opacity: 0.5;
         color: white;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, 50%) scale(3.5,4);
+        transform: translate(-50%, 50%) scale(3.5, 4);
         transition: all 1s ease-in-out;
       }
-      .project-image:hover .project-image-redirect-button{
+      .project-image:hover .project-image-redirect-button {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(3.5,4);
+        transform: translate(-50%, -50%) scale(3.5, 4);
         transition: all 1s ease-in-out;
       }
 
@@ -321,6 +321,38 @@
       .resume-section div.card-body {
         box-shadow: 0.5rem 0.5rem 1rem rgba(34, 33, 33, 0.199),
           -0.5rem -0.5rem 1rem rgba(34, 33, 33, 0.199);
+      }
+
+      .resume-section .download-resume-button {
+        padding: 0.2rem 0.4rem;
+        background: -webkit-linear-gradient(
+          246deg,
+          rgba(255, 0, 0, 1) 0%,
+          rgba(13, 29, 163, 1) 52%,
+          rgba(182, 29, 241, 1) 100%
+        );
+        color: white;
+        border-radius: 0.4rem;
+      }
+      .resume-section .download-resume-button .icon {
+        animation: downloadAnimation 2s ease-in-out infinite;
+        display: inline-block;
+      }
+      @keyframes downloadAnimation {
+        0% {
+          transform: translateY(-20px);
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(20px);
+          opacity: 0.4;
+        }
       }
 
       /* contact us section */
@@ -765,12 +797,19 @@
 
           <!--starts resume section-->
           <section class="resume-section container my-5 py-5" id="resume">
-            <h1 class="main-heading my-5">Resume</h1>
+            <!-- make inline block to bring download icon beside the h1 -->
+            <h1 class="main-heading my-5 d-inline-block">Resume</h1>
+            <a
+              target="_blank"
+              href="https://mohammedanwarabbas.github.io/resume/Anwar-Resume.pdf"
+              class="download-resume-button h2"
+              ><i class="icon bi bi-download"></i
+            ></a>
 
             <div
               data-aos="fade-up"
               data-aos-duration="1500"
-              class="card-body rounded-3 my-1"
+              class="card-body rounded-3 my-1 px-0 px-md-3"
             >
               <h3 class="text-start mt-4">
                 <i class="bi bi-clipboard2-check"></i> Skills
