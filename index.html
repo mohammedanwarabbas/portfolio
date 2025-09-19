@@ -185,9 +185,16 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(img/parallax-hero.jpg);
+        background-image: 
+        /* linear-gradient(to bottom,#040404 15%,transparent 40%), */
+        /* linear-gradient(to right,#040404 10%,transparent 40%), */
+        /* linear-gradient(to left,#040404 10%,transparent 40%), */
+        /* linear-gradient(to top,#040404 15%,transparent 40%), */
+        url(img/parallax-hero.jpg);
+        /* linear-gradient(to bottom,#040404); */
         background-size: cover;
-        background-position: top;
+        background-repeat: no-repeat;
+        background-position:top center;
         background-attachment: fixed;
         z-index: -1;
         /* Make sure the background is behind the content */
@@ -195,16 +202,11 @@
 
       .hero-content {
         position: absolute;
-        top: 50%;
+        bottom: 0%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0%);
         text-align: center;
         color: white;
-        background: linear-gradient(
-          transparent,
-          rgba(0, 0, 0, 0.6),
-          transparent
-        );
       }
 
       .hero-content h1 {
@@ -219,8 +221,89 @@
       .hero-content p {
         font-size: 1.5rem;
         font-family: "Skranji", cursive;
+        text-shadow: 0.2rem 0.2rem black;
+        letter-spacing: 0.2rem;
       }
+      /*============================================ image popup modal =========================================== */
+/* Popup Modal Styles */
+        .image-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
+        .image-modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .image-modal-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .image-modal-overlay.active .image-modal-content {
+            transform: scale(1);
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.6);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            z-index: 10001;
+        }
+
+        .image-modal-close:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: rotate(90deg);
+        }
+
+        .image-modal-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        }
+
+        /* Make images clickable */
+        .clickable-image {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .clickable-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
       /*=========================================== project section=========================================== */
 
       .project-image {
@@ -606,8 +689,9 @@
               <div id="profile" class="text-center">
                 <img
                   src="img/profile-picture.png"
-                  class="border border-dark border-5"
+                  class="clickable-image border border-dark border-5"
                   alt="Profile Picture"
+                  onclick="openImageModal('img/profile-picture.png', 'Mohammed Anwar - Web Developer')"
                 />
                 <h4 class="profile-name mt-3">Mohd. Anwar</h4>
                 <p class="profile-designation text-muted">Web Developer</p>
@@ -686,20 +770,30 @@
               <div class="parallax-bg"></div>
               <div class="hero-content rounded-3 py-4">
                 <h1>Mohammed Anwar</h1>
-                <p>
+                <!--
+                 <p> 
                   I am a passionate and creative web developer dedicated to
                   crafting engaging and user-friendly websites. With expertise
                   in front-end and back-end development, I bring ideas to life
                   and deliver impactful digital experiences.
                 </p>
+                -->
+
+
+                <!--
                 <p class="text-warning d-none d-md-block">
-                  <!-- content comes from typewriter library -->
                   <i
                     class="bi bi-briefcase text-danger h2"
                     style="filter: drop-shadow(0.2rem 0.2rem 0.2rem red)"
                   ></i>
-                  <span id="typewriter"></span>
+                  <span id="currentStatusTypeWriter"></span>
                 </p>
+                -->
+
+                <!--my designation typewriter effect-->
+                <p id="myDesignationTypeWriter"></p>
+
+
               </div>
             </section>
           </section>
@@ -788,10 +882,6 @@
             <div id="freelance-projects"></div>
             <div id="training-projects"></div>
 
-            <p>
-              and many other MERN stack,Django and PHP ecommerce non-live
-              projects...
-            </p>
           </section>
           <!--ends projects section-->
 
@@ -1402,6 +1492,63 @@
       </div>
     </div>
 
+    
+ <!-- The Reusable Image Modal -->
+    <div id="imageModal" class="image-modal-overlay" onclick="closeImageModal()">
+        <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
+        <img class="image-modal-content" id="modalImage" src="" alt="Enlarged view">
+        <div class="image-modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- Reusable Image Modal script -->
+    <script>
+        // Function to open the image modal
+        function openImageModal(imageUrl, captionText = '') {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const caption = document.getElementById('modalCaption');
+            
+            // Set image source and caption
+            modalImg.src = imageUrl;
+            caption.textContent = captionText;
+            
+            // Show modal with animation
+            modal.classList.add('active');
+            
+            // Prevent body from scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Function to close the image modal
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            
+            // Hide modal with animation
+            modal.classList.remove('active');
+            
+            // Re-enable body scrolling after transition completes
+            setTimeout(() => {
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+
+        // Prevent modal from closing when clicking on the image or caption
+        document.getElementById('modalImage').addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+        
+        document.getElementById('modalCaption').addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    </script>
+
     <script>
       // Function to hide Div A
       function hideLoader() {
@@ -1528,9 +1675,9 @@
         });
     </script>
 
-    <!-- script to enable typewriter effect -->
+    <!-- script to enable typewriter effect on  -->
     <script>
-      var app = document.getElementById("typewriter");
+      var app = document.getElementById("currentStatusTypeWriter");
 
       var typewriter = new Typewriter(app, {
         loop: false,
@@ -1543,6 +1690,37 @@
         )
         .start();
     </script>
+
+    <!-- typewriter effect on my designation -->
+     <script>
+  var app = document.getElementById("myDesignationTypeWriter");
+
+  var typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 50,
+    deleteSpeed: 30,
+  });
+
+  typewriter
+   .typeString('I am a ')
+    .pauseFor(300)
+    .typeString('ReactJS Developer')
+    .pauseFor(1500)
+    .deleteChars(17) // Delete "ReactJS Developer"
+    .typeString('Frontend Developer')
+    .pauseFor(1500)
+    .deleteChars(18) // Delete "Frontend Developer"
+    .typeString('Full Stack Developer')
+    .pauseFor(1500)
+    .deleteChars(20) // Delete "Full Stack Developer"
+    .typeString('UI/UX Designer')
+    .pauseFor(1500)
+    .deleteChars(14) // Delete "UI/UX Designer"
+    .typeString('MERN Stack Developer')
+    .pauseFor(1500)
+    .deleteChars(21) // Delete "MERN Stack Developer"
+    .start();
+</script>
 
     <!-- script to generate project cards -->
     <!-- Include portfolio data -->

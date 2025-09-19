@@ -8,7 +8,7 @@ const portfolioData = {
           "id": null,
           "projectTitle": "Real Estate | ReactJS",
           "projectDescription": "This is a comprehensive main real estate platform developed to client - HOABL, showcasing a wide range of properties for potential buyers. The site, built using React.js, Redux, and Material-UI (MUI), features detailed property listings, advanced search filters, and interactive maps to help users find their ideal properties.",
-          "technologyIcons": ["reactjs", "typescript", "mui", "html", "css", "api"],
+          "technologyIcons": ["reactjs", "typescript", "mui", "redux", "html", "css", "api"],
           "projectImage": "ss-hoabl-main-site.png",
           "liveURL": "https://www.hoabl.com/",
           "sourceCode": ""
@@ -17,7 +17,7 @@ const portfolioData = {
           "id": null,
           "projectTitle": "Real Estate CMS | ReactJS",
           "projectDescription": "RealEstateCMS is a robust content management system designed to streamline the management of the client’s real estate listings. Developed with React.js, Redux, and MUI, it allows administrators to add or remove properties, modify prices, update locations, and manage other critical information. This tool ensures that the main real estate site is always up-to-date with the latest property information.",
-          "technologyIcons": ["reactjs", "typescript", "mui", "html", "css", "api"],
+          "technologyIcons": ["reactjs", "typescript", "mui", "redux", "html", "css", "api"],
           "projectImage": "ss-hoabl-CMS.png",
           "liveURL": "https://cms-panel.hoabl.in/",
           "sourceCode": ""
@@ -26,7 +26,7 @@ const portfolioData = {
           "id": null,
           "projectTitle": "Payment Gateway Site | ReactJS",
           "projectDescription": "This web application serves as a secure payment gateway integrated across Android, iOS, and web platforms. Utilizing React.js, Redux, and Material-UI (MUI) for the web interface, the system facilitates seamless financial transactions for property purchases listed on the main Real Estate website.",
-          "technologyIcons": ["reactjs", "typescript", "mui", "html", "css", "api"],
+          "technologyIcons": ["reactjs", "typescript", "mui", "redux", "html", "css", "api"],
           "projectImage": "ss-hoabl-payments.png",
           "liveURL": "https://payments.hoabl.in/login/login",
           "sourceCode": ""
@@ -217,6 +217,24 @@ const portfolioData = {
             }
           ],
         },
+        {
+          "id": null,
+          "projectTitle": "Title Generator MERN stack AI app",
+          "projectDescription": "A responsive MERN stack, AI powered application that generates catchy titles based on user-provided long story. The app utilizes NLP Cloud API's AI headline generation model. Beuilt with Reacjs+Typescript,SCSS,MUI,Framer Moton for UI, Redux+Thunk for state management, and Node.js+Express.js for the backend.",
+          "technologyIcons": ["mongodb", "expressjs", "reactjs", "nodejs", "typescript", "mui", "redux", "sass", "framer-motion", "html", "css", "api"],
+          "projectImage": "ss-title-nova-mern-stack.png",
+          "liveURL": "https://title-nova-mern.vercel.app/",
+          "sourceCode": "",
+        },
+        {
+          "id": null,
+          "projectTitle": "TapTask CRM: Modern Lead Management Dashboard",
+          "projectDescription": "A responsive, modern React.js dashboard for lead management, built by meticulously implementing a professional Figma design. The application efficiently displays and filters lead data fetched from a public API, featuring a clean UI with shadcn/ui components, state management via Zustand, and a fully responsive layout powered by Tailwind CSS.",
+          "technologyIcons": ["reactjs", "shadcn-ui","tailwind-css", "zustand", "html", "css", "api"],
+          "projectImage": "ss-tap-task-crm.png",
+          "liveURL": "https://tap-task-by-anwar.vercel.app/",
+          "sourceCode": "",
+        },
 
       ]
     }
@@ -281,7 +299,7 @@ function generateCards(data) {
         </div>
       </div>
      <div onClick="window.open('${project.liveURL || project.sourceCode}', '_blank')" class="project-image col-md-3 col-lg-3 border-1 border"
-    style="background-image: url('img/${project.projectImage}');">
+    style="background-image: url('img/${project.projectImage}'); ">
     <a class="project-image-redirect-button" onClick="window.open('${project.liveURL || project.sourceCode}', '_blank')"><i class="bi bi-hand-index-thumb"></i></a>
   </div>
     </div>
