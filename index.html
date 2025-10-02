@@ -68,6 +68,7 @@
     ></script>
     <!--end additional scripts and styles-->
     <style>
+
       /* loader container */
       #loader {
         position: fixed;
@@ -87,7 +88,7 @@
         color: rgb(9, 31, 232);
       }
 
-      /* body */
+/*============================================ global styles =========================================== */
       body {
         box-sizing: border-box;
         font-family: "Plus Jakarta Sans";
@@ -107,7 +108,17 @@
         -webkit-text-fill-color: transparent;
       }
 
-      /* navbar */
+          /* Make images clickable */
+        .clickable-image {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .clickable-image:hover {
+            transform: scale(1.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+/*============================================ navbar section =========================================== */
       #top-navbar {
         box-shadow: 0 0.5rem 0.5rem rgba(74, 71, 71, 0.527);
       }
@@ -120,7 +131,7 @@
         font-family: "Pacifico";
       }
 
-      /* sidebar section */
+/*============================================ sidebar section =========================================== */
       .sidebar-section {
         background-color: rgba(4, 11, 20, 1);
       }
@@ -171,7 +182,7 @@
         color: rgba(64, 0, 166, 1);
       }
 
-      /* parallax hero section */
+/*============================================ parallax hero section =========================================== */
       .parallax-hero {
         position: relative;
         height: 100vh;
@@ -287,20 +298,117 @@
             background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
         }
 
-        /* Make images clickable */
-        .clickable-image {
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .clickable-image:hover {
-            transform: scale(1.03);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
       /*=========================================== project section=========================================== */
 
+      .projects-section .project-index-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 4px;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+     background: rgb(255, 0, 194);
+        background: -moz-linear-gradient(
+          246deg,
+          rgba(255, 0, 194, 1) 0%,
+          rgba(78, 13, 163, 1) 55%,
+          rgba(241, 29, 29, 1) 100%
+        );
+        background: -webkit-linear-gradient(
+          246deg,
+          rgba(255, 0, 194, 1) 0%,
+          rgba(78, 13, 163, 1) 55%,
+          rgba(241, 29, 29, 1) 100%
+        );
+        background: linear-gradient(
+          246deg,
+          rgba(255, 0, 194, 1) 0%,
+          rgba(78, 13, 163, 1) 55%,
+          rgba(241, 29, 29, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00c2", endColorstr="#f11d1d", GradientType=1); 
+}
+
+.projects-section .card .card-body .tech-icon-image {
+  width: auto;
+  height: 32px;
+  margin: 0 4px;
+}
+.projects-section .card .project-image-banner {
+    position: relative;
+    height: 9rem;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.projects-section .card .project-image-banner:hover {
+  transform: scale3d(1.1,1.1,1.1);
+}
+.projects-section .card .date-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+/* to make project image have an overlay */
+.projects-section .card .image-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+.projects-section .card .image-gradient-overlay:hover {
+  background:none;
+}
+
+.projects-section .card .card-body{
+  background-color:black;
+}
+.projects-section .card .card-body .tech-stack-icons{
+  background-color: white;
+  border-radius: 0.5rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.projects-section .card .card-body .btn:hover{
+  animation: shakeAnimation 0.5s ease infinite;
+}
+
+.projects-section .read-more-modal .client-logo-modal {
+    max-width: 150px; 
+    height: auto; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+    padding: 5px; 
+}
+
+.projects-section .read-more-modal .tech-icon-image {
+    width: auto;
+    height: 45px;
+    margin: 0 4px;
+}
+.projects-section .read-more-modal .project-image-modal-banner {
+    height: 150px; 
+    background-size: cover; 
+    background-position: top center; 
+    background-repeat: no-repeat;
+}
+
+      /*=============================================== old =================================================== */
+      /*
       .project-image {
-        /* make relative to add live button in center */
         position: relative;
         background-position: center;
         background-size: cover;
@@ -338,14 +446,12 @@
       .projects-section .projects-section-tech-icon-section {
         display: flex;
         flex-wrap: wrap;
-        /* Allow the icons to wrap to the next line */
         justify-content: center;
         align-items: center;
       }
 
       .projects-section .icon-section img {
         margin: 0 10px;
-        /* Adjust the margin as needed */
       }
 
       .project-body {
@@ -372,8 +478,8 @@
         background-color: rgba(13, 110, 253, 0.1);
         color: #0d6efd;
       }
-
-      /* resume section */
+*/
+/*============================================= resume section =========================================== */
       .resume-section .resume-heading {
         background: -webkit-linear-gradient(
           246deg,
@@ -387,7 +493,8 @@
       }
 
       .resume-section .skill {
-        background-color: rgb(240, 129, 18);
+        background-color: rgb(0, 0, 0);
+        color:white;
         border-radius: 0.2rem;
         padding: 0.2rem;
         margin: 0.2rem;
@@ -483,7 +590,7 @@
         /* Set the border color and style */
       }
 
-      /* about us section */
+/*============================================= about section =========================================== */
 
       .about-section .my-name {
         font-family: "Rubik Wet Paint";
@@ -578,7 +685,7 @@
         /* transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); */
       }
 
-      /*For mobile or small screen*/
+/*============================================= media queries =========================================== */
       @media (max-width: 767px) {
 
         /*remove side borders from address and find me on section */
@@ -625,6 +732,7 @@
             class="navbar-brand navbar-logo"
             src="img/anwar-logo.png"
             alt=""
+            onclick="openImageModal('img/profile-picture.png', 'Mohammed Anwar - Web Developer')"
           />
 
           <h2 class="m-auto">Anwar's Portfolio</h2>
@@ -900,7 +1008,7 @@
               </h3>
               <div>
                 <p>
-                  <span>Frontend scripting/Tools/Technologies</span><br />
+                  <span>Frontend Languages & Frameworks</span><br />
                   <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
@@ -929,15 +1037,49 @@
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
-                    >Bootstrap</span
+                    >ReactJS</span
+                  >
+                </p>
+
+                 <p>
+                  <span>Frontend Libraries & State Management</span><br />
+                   <span
+                    data-aos="fade-down"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >React Router</span
                   >
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
-                    >Material UI</span
+                    >Redux + Thunk</span
                   >
                   <span
+                    data-aos="fade-down"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >Zustand</span
+                  >
+                   <span
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >Formik</span
+                  >
+                   <span
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >React Hooks</span
+                  >
+                   <span
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >React Query/Tanstack Query</span
+                  >
+                    <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
@@ -953,27 +1095,37 @@
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
-                    >React Router</span
+                    >AXIOS</span
                   >
-                  <span
-                    data-aos="fade-up"
-                    data-aos-duration="1500"
-                    class="skill"
-                    >Redux</span
-                  >
-                  <span
+                </p>
+
+                <p>
+                  <span>Frontend Styling & UI Frameworks  </span><br />
+                   <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
-                    >AXIOS</span
+                    >Bootstrap</span
                   >
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
-                    >Formik</span
+                    >Material UI</span
                   >
-                  <span
+                   <span
+                    data-aos="fade-down"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >Shadcn/UI</span
+                  >
+                   <span
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >Tailwind CSS</span
+                  >
+                   <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
@@ -982,45 +1134,45 @@
                 </p>
 
                 <p>
-                  <span>Backend scripting</span><br />
+                  <span>Backend scripting/Technologies</span><br />
+                  <span
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  class="skill"
+                  >NodeJS</span
+                  >
+                  <span
+                  data-aos="fade-down"
+                  data-aos-duration="1500"
+                  class="skill"
+                  >ExpressJS</span
+                  >
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
                     >Core PHP</span
                   >
-                  <span
-                    data-aos="fade-up"
-                    data-aos-duration="1500"
-                    class="skill"
-                    >NodeJs</span
-                  >
                 </p>
                 <p>
-                  <span>Backend Tools/Technologies</span><br />
+                  <span>Backend APIs & Integrations</span><br />
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
                     >Restful APIs</span
                   >
-                </p>
-                <p>
-                  <span>Frontend framework</span><br />
-                  <span
-                    data-aos="fade-up"
+                   <span
+                    data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
-                    >ReactJS</span
+                    >Twilio WhatsApp API</span
                   >
-                </p>
-                <p>
-                  <span>Backend framework</span><br />
-                  <span
+                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
-                    >ExpressJS</span
+                    >Razorpay Payment Gateway</span
                   >
                 </p>
                 <p>
