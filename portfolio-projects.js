@@ -858,7 +858,7 @@ function generateTechnicalSkillsSection(skillsData, containerId, vectorGraphicPa
     let skillsGridHtml = '';
     for (const [key, name] of Object.entries(skillsData)) {
         skillsGridHtml += `
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="col-4 col-sm-4 col-md-3 col-lg-2">
                 <div class="skill-card">
                     <div class="skill-icon-circle"
                      data-aos="fade-up" data-aos-duration="1500"
