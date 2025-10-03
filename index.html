@@ -69,6 +69,28 @@
     <!--end additional scripts and styles-->
     <style>
 
+      /* tooltip */
+      .tooltip-inner {
+          background-color: red;
+          color: white;
+      }
+      /* Bottom tooltip arrow */
+      .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+          border-bottom-color: red !important;
+      }
+      /* Top tooltip arrow (for mobile/small screens) */
+      .tooltip.bs-tooltip-top .tooltip-arrow::before {
+          border-top-color: red !important;
+      }
+      /* Left tooltip arrow */
+      .tooltip.bs-tooltip-start .tooltip-arrow::before {
+          border-left-color: red !important;
+      }
+      /* Right tooltip arrow */
+      .tooltip.bs-tooltip-end .tooltip-arrow::before {
+          border-right-color: red !important;
+      }
+
       /* loader container */
       #loader {
         position: fixed;
@@ -131,6 +153,10 @@
         font-family: "Pacifico";
       }
 
+      #top-navbar a.nav-link.active{
+        background-color: rgba(32, 32, 32, 0.836);
+        color:white
+      }
 /*============================================ sidebar section =========================================== */
       .sidebar-section {
         background-color: rgba(4, 11, 20, 1);
@@ -333,12 +359,19 @@
         );
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00c2", endColorstr="#f11d1d", GradientType=1); 
 }
-
+/* tech icons of cards */
 .projects-section .card .card-body .tech-icon-image {
   width: auto;
   height: 32px;
   margin: 0 4px;
 }
+/* while hovering tech icons of cards */
+.projects-section .card .card-body .tech-icon-image:hover {
+  border: 0.15rem solid black;
+  border-radius: 0.2rem;
+  padding: 0.05rem;
+}
+/* project image preview in card */
 .projects-section .card .project-image-banner {
     position: relative;
     height: 9rem;
@@ -348,13 +381,18 @@
     cursor: pointer;
 }
 .projects-section .card .project-image-banner:hover {
-  transform: scale3d(1.1,1.1,1.1);
+  transform: scale3d(1.05,1.05,1.05);
 }
 .projects-section .card .date-overlay {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 10;
+    /* transform: translate(50%, 0); */
+    padding: 0.7rem;
+    border-radius: 0 0 0 0.5rem;
+    background-color:red;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.692), -0.1rem 0 1rem rgba(0, 0, 0, 0.808);
 }
 /* to make project image have an overlay */
 .projects-section .card .image-gradient-overlay {
@@ -479,6 +517,95 @@
         color: #0d6efd;
       }
 */
+
+
+/*============================================= technial skills with logo section ==========================*/
+/* --- Custom CSS for Technical Skills Section --- */
+
+/* Keyframe animation for the floating vector graphic */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); } /* Moves up by 10px */
+    100% { transform: translateY(0px); }
+}
+
+/* Apply the floating animation to the vector graphic */
+.floating-vector {
+    animation: float 3s ease-in-out infinite; /* 3 seconds, smooth start/end, repeats forever */
+}
+
+/* Styling for each individual skill card container */
+.skill-card {
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack children (icon and name) vertically */
+    align-items: center; /* Horizontally center children within the card */
+    text-align: center; /* Ensure any other text in the card is centered */
+    margin-bottom: 30px; /* Space between skill cards for visual separation */
+    /* Remove any default padding from Bootstrap columns if causing issues */
+    padding: 0; 
+}
+
+/* Styling for the circular icon background */
+.skill-icon-circle {
+    background-color: white; /* White background for the circle */
+    border-radius: 50%; /* Makes it perfectly round */
+    width: 5rem; /* Fixed width of the circle */
+    height: 5rem; /* Fixed height of the circle */
+    display: flex; /* Use flexbox to center the image inside */
+    align-items: center; /* Vertically center the image */
+    justify-content: center; /* Horizontally center the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    margin: 0 auto 10px auto; /* Center the circle itself and add space below */
+}
+
+/* Hover effect for the skill icon circle */
+.skill-icon-circle:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: translateY(-5px); /* Slightly lifts the circle on hover */
+}
+
+/* Styling for the technology icon image inside the circle */
+.skill-icon-circle img {
+    max-width: 70%; /* Ensures the icon doesn't overflow the circle */
+    max-height: 70%; /* Ensures the icon doesn't overflow the circle */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the skill name text below the icon */
+.skill-name {
+    margin-top: 10px; /* Space between the circle and the name */
+    font-weight: 500; /* Medium font weight */
+    color: #333; /* Dark gray text color */
+    width: 100%; /* Ensure text takes full width to allow centering */
+    /* text-align: center; - Already applied inline in JS for robustness */
+}
+
+/* --- Responsive Adjustments (Optional, if needed for fine-tuning) --- */
+
+/* Adjustments specifically for the 'lg' breakpoint range if circles still overlap */
+/* This targets screens where the vector graphic is visible (col-lg-4) 
+   and the skills are in col-lg-8, but before 'xl' resolution. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .skill-card {
+        padding: 0 5px; /* Add slight horizontal padding to cards if they appear too close */
+    }
+    .skill-icon-circle {
+        width: 90px; /* Slightly reduce circle size to prevent overlap if necessary */
+        height: 90px;
+    }
+}
+
+/* Further reduce circle size on very small screens if 2 per row is too tight */
+@media (max-width: 575.98px) { /* Extra small devices (less than 576px) */
+    .skill-icon-circle {
+        width: 80px;
+        height: 80px;
+    }
+    .skill-name {
+        font-size: 0.9em; /* Smaller text */
+    }
+}
 /*============================================= resume section =========================================== */
       .resume-section .resume-heading {
         background: -webkit-linear-gradient(
@@ -750,28 +877,34 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html#home"
+                <a class="nav-link active" aria-current="page" href="#home"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html#resume"
-                  >Resume</a
-                >
-              </li>
-              <li class="nav-item">
                 <a
                   class="nav-link"
                   aria-current="page"
-                  href="index.html#projects"
+                  href="#projects"
                   >Project</a
                 >
               </li>
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#technical-skills-section"
+                  >Tech Skills</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#resume"
+                  >Resume</a
+                >
+              </li>
+              
               <li class="nav-item">
                 <a
                   class="nav-link"
                   aria-current="page"
-                  href="index.html#contact"
+                  href="#contact"
                   >Contact</a
                 >
               </li>
@@ -820,7 +953,7 @@
                 <ul class="list-unstyled">
                   <li class="mb-4 p-0">
                     <a
-                      href="index.html#home"
+                      href="#home"
                       class="d-block text-decoration-none active"
                     >
                       <i class="bi bi-house-door-fill me-2"></i> Home
@@ -828,7 +961,7 @@
                   </li>
                   <li class="mb-4 p-0">
                     <a
-                      href="index.html#about"
+                      href="#about"
                       class="d-block text-decoration-none"
                     >
                       <i class="bi bi-info-circle-fill me-2"></i> About
@@ -836,15 +969,23 @@
                   </li>
                   <li class="mb-4 p-0">
                     <a
-                      href="index.html#projects"
+                      href="#projects"
                       class="d-block text-decoration-none"
                     >
                       <i class="bi bi-card-list me-2"></i> Project
                     </a>
                   </li>
+                   <li class="mb-4 p-0">
+                    <a
+                      href="#technical-skills-section"
+                      class="d-block text-decoration-none"
+                    >
+                      <i class="bi bi-card-list me-2"></i> Tech Skills
+                    </a>
+                  </li>
                   <li class="mb-4 p-0">
                     <a
-                      href="index.html#resume"
+                      href="#resume"
                       class="d-block text-decoration-none"
                     >
                       <i class="bi bi-file-person-fill me-2"></i> Resume
@@ -853,7 +994,7 @@
 
                   <li class="mb-4 p-0">
                     <a
-                      href="index.html#contact"
+                      href="#contact"
                       class="d-block text-decoration-none"
                     >
                       <i class="bi bi-telephone-fill me-2"></i> Contact
@@ -893,7 +1034,7 @@
                 -->
 
                 <!--my designation typewriter effect-->
-                <p id="myDesignationTypeWriter"></p>
+                <p class="pb-4" id="myDesignationTypeWriter"></p>
 
 
               </div>
@@ -910,6 +1051,7 @@
               <p>
                 <span class="blinking-effect">🟢</span> Immediately Available
               </p>
+              <p style="text-align: justify;">
               My name is <span class="my-name">Mohammed Anwar</span>. I
               completed <span class="fw-bold">M.C.A</span> in
               <span class="fw-bold">2023 June</span>. I am a skilled web
@@ -919,14 +1061,14 @@
               creating user-friendly and high-quality web applications and am
               eager to contribute my skills and experience to a challenging and
               rewarding role.
-              <br />
+              </p>
               <span class="h5">
                 "Give me the opportunity, and I'll code like there's no
                 tomorrow—let's grow together, debug the future, and make merge
                 conflicts jealous!" 😆🚀
               </span>
               <br />
-              <a href="index.html#resume" class="btn btn-dark my-2"
+              <a href="#resume" class="btn btn-dark my-2"
                 >my resume -></a
               >
             </h4>
@@ -987,6 +1129,10 @@
           </section>
           <!--ends projects section-->
 
+          <!--start technical skills section with technology logos-->
+          <section id="technical-skills-section" class="bg-light"></section>
+          <!-- end technical skills seciton with technology logs -->
+
           <!--starts resume section-->
           <section class="resume-section container my-5 py-5" id="resume">
             <!-- make inline block to bring download icon beside the h1 -->
@@ -1006,9 +1152,9 @@
               <h3 class="text-start mt-4">
                 <i class="bi bi-clipboard2-check"></i> Skills
               </h3>
-              <div>
-                <p>
-                  <span>Frontend Languages & Frameworks</span><br />
+              <div class="text-start">
+                <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold">Frontend Languages & Frameworks</span><br />
                   <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
@@ -1040,9 +1186,10 @@
                     >ReactJS</span
                   >
                 </p>
+                
 
-                 <p>
-                  <span>Frontend Libraries & State Management</span><br />
+                 <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold">Frontend Libraries & State Management</span><br />
                    <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
@@ -1099,8 +1246,8 @@
                   >
                 </p>
 
-                <p>
-                  <span>Frontend Styling & UI Frameworks  </span><br />
+              <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold">Frontend Styling & UI Frameworks  </span><br />
                    <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
@@ -1133,8 +1280,8 @@
                   >
                 </p>
 
-                <p>
-                  <span>Backend scripting/Technologies</span><br />
+               <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold">Backend scripting/Technologies</span><br />
                   <span
                   data-aos="fade-up"
                   data-aos-duration="1500"
@@ -1154,8 +1301,8 @@
                     >Core PHP</span
                   >
                 </p>
-                <p>
-                  <span>Backend APIs & Integrations</span><br />
+                <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold">Backend APIs & Integrations</span><br />
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
@@ -1175,8 +1322,8 @@
                     >Razorpay Payment Gateway</span
                   >
                 </p>
-                <p>
-                  <span>Databases</span><br />
+               <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold">Databases</span><br />
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
@@ -1190,8 +1337,8 @@
                     >MongoDB</span
                   >
                 </p>
-                <p>
-                  <span>Version Control Systems/Repositoreis</span><br />
+               <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold">Version Control Systems/Repositoreis</span><br />
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
@@ -1211,8 +1358,8 @@
                     >Bitbucket</span
                   >
                 </p>
-                <p>
-                  <span>Devops & Deployments</span><br />
+                <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold">Devops & Deployments</span><br />
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
@@ -1421,8 +1568,6 @@
           <!--start contact section-->
           <section
             class="contact-section container-fluid text-center mt-5 py-5"
-            data-aos="fade-up"
-            data-aos-duration="1500"
             id="contact"
           >
             <h2 class="text-light mt-5">Ready to Create Together?</h2>
@@ -1439,12 +1584,13 @@
                 </h3>
                 <form class="needs-validation" novalidate>
                   <div class="mb-3">
-                    <label for="fullName" class="form-label">Full Name</label>
+                    <label for="fullName" class="form-label">Your Name*</label>
                     <input
                       type="text"
                       class="form-control"
                       id="fullName"
                       name="fullName"
+                      placeholder="Future BOSS / The next person to make me rich 🤑 (enter your sweet name)"
                       required
                     />
                     <div class="valid-feedback">Looks good!</div>
@@ -1455,13 +1601,14 @@
                   </div>
                   <div class="mb-3">
                     <label for="emailAddress" class="form-label"
-                      >Email Address</label
+                      >Email Address*</label
                     >
                     <input
                       type="email"
                       class="form-control"
                       id="emailAddress"
                       name="emailAddress"
+                      placeholder="your.awesome.company@hireme.now"
                       required
                     />
                     <div class="valid-feedback">Looks good!</div>
@@ -1472,13 +1619,14 @@
                   </div>
                   <div class="mb-3">
                     <label for="contactNumber" class="form-label"
-                      >Contact Number</label
+                      >Contact Number*</label
                     >
                     <input
                       type="number"
                       class="form-control"
                       id="contactNumber"
                       name="contactNumber"
+                      placeholder="☎️+1-800-HIRE-AWESOME"
                       required
                     />
                     <div class="valid-feedback">Looks good!</div>
@@ -1496,11 +1644,12 @@
                       class="form-control"
                       id="company"
                       name="company"
+                      placeholder="The place where dreams come true 💫 [enter my future organisation name]"
                     />
                   </div>
                   <div class="mb-3">
                     <label for="message" class="form-label"
-                      >Message/Inquiry</label
+                      >Message/Inquiry*</label
                     >
                     <textarea
                       class="form-control"
@@ -1508,7 +1657,8 @@
                       name="message"
                       rows="4"
                       required
-                    ></textarea>
+                    >Let's make your comeback story legendary! 📖✨. We will give you an opportunity😊
+                  </textarea>
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback text-white">
                       <i class="bi bi-arrow-90deg-up"></i>Please enter your
@@ -1576,17 +1726,34 @@
                 <hr class="d-md-none d-block" />
 
                 <!-- loader to displaytill map iframe loads -->
-                <div class="iframe-loader">
+                
+
+<!-- <iframe
+    id="mapIframe"
+    class="border border-5 rounded-3 w-100 h-50"
+    src="https://maps.google.com/maps?q=13.243757547671503,74.74303577865774&hl=en&z=14&output=embed"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+></iframe> -->
+
+
+<div class="h-50" style="position: relative;">
+  <iframe
+  id="mapIframe"
+  class="border border-5 rounded-3 w-100 h-100"
+  src="https://maps.google.com/maps?q=13.243757547671503,74.74303577865774&hl=en&z=14&output=embed"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe>
+
+<div class="iframe-loader" style="position: absolute;top: 50%;right: 50%;transform: translate(50%, -50%);">
                   <div class="spinner-border text-dark"></div>
                   <p>map is loading</p>
                 </div>
+</div>
 
-                <iframe
-                  style="visibility: hidden"
-                  id="mapIframe"
-                  class="border border-5 rounded-3 w-100 h-50"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62144.23735493468!2d74.76296606476087!3d13.224385178337211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcb02b2bc438eb%3A0x901c0008c65ea894!2sPadu%2C%20Karnataka%20574106!5e0!3m2!1sen!2sin!4v1695202542356!5m2!1sen!2sin"
-                ></iframe>
               </div>
             </div>
 
@@ -1706,7 +1873,20 @@
     </script>
 
     <script>
-      AOS.init();
+       AOS.init({
+    // Global settings:
+    
+    // Defines the distance (in px) from the bottom of the viewport at which the animation should start
+    // The default is usually 120px. 
+    // Setting it higher (e.g., 500) makes the element animate sooner.
+    offset: 50, // <--- Change this value
+
+    // Duration of the animation (in ms)
+    duration: 1500, 
+    
+    // Once: Controls whether animation should happen only once - highly recommended for performance
+    once: true 
+  });
     </script>
 
     <script>
@@ -1783,7 +1963,8 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll("section[id]");
-        const menuLinks = document.querySelectorAll(".sidbar-menu a");
+        // fetch menulinks of both top navbar and sidebar
+        const menuLinks = document.querySelectorAll(".sidbar-menu a, .navbar-nav a.nav-link");
 
         function highlightMenu() {
           let scrollY = window.scrollY;
@@ -1799,7 +1980,8 @@
             ) {
               menuLinks.forEach((link) => {
                 link.classList.remove("active");
-                if (link.getAttribute("href") === `index.html#${sectionId}`) {
+                // if (link.getAttribute("href") === `index.html#${sectionId}`) {
+                if (link.getAttribute("href") === `#${sectionId}`) {
                   link.classList.add("active");
                 }
               });
@@ -1807,6 +1989,8 @@
           });
         }
 
+        //inital topbar issue:if not called highlighe menu here, initally if user loads page in #contact section home menu will acive class unless we scroll littlebit which triggers on scroll event
+        highlightMenu();
         window.addEventListener("scroll", highlightMenu);
       });
     </script>

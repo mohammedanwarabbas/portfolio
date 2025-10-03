@@ -282,6 +282,64 @@ const portfolioData = {
   ]
 }
 
+// for tooltip in cards tech icons
+const TECH_ICON_ALIASES={
+'api': 'REST api',
+'bootstrap': 'Bootstrap',
+'css': 'CSS',
+'django': 'Django',
+'elementor': 'Elementor',
+'expressjs': 'Express JS',
+'framer-motion': 'Framer-Motion',
+'html': 'HTML',
+'javascript': 'Javascript',
+'jquery': 'Jquery',
+'mongodb': 'Mongodb',
+'mui': 'Material UI',
+'mysql': 'MySQL',
+'nodejs': 'Node js',
+'php': 'PHP',
+'python': 'Python',
+'razorpay': 'Razorpay payment gateway',
+'reactjs': 'React JS',
+'redux': 'Redux',
+'sass': 'SASS/SCSS',
+'shadcn-ui': 'Shadcn/UI',
+'tailwind-css': 'Tailwind-css',
+'typescript': 'Typescript',
+'wordpress': 'Wordpress',
+'zustand': 'Zustand state management'
+}
+
+// for technical-skills seciton logos
+const TECHNICAL_SKILLS_SECTION_LOGOS={
+  'html': 'HTML',
+  'css': 'CSS',
+  'javascript': 'Javascript',
+  'typescript': 'Typescript',
+  'reactjs': 'React JS',
+  'bootstrap': 'Bootstrap',
+  'sass': 'SASS/SCSS',
+  'tailwind-css': 'Tailwind-css',
+  'shadcn-ui': 'Shadcn/UI',
+  'mui': 'Material UI',
+  'framer-motion': 'Framer-Motion',
+  'zustand': 'Zustand state management',
+  'redux': 'Redux',
+  'jquery': 'Jquery',
+  'nodejs': 'Node js',
+  'expressjs': 'Express JS',
+  'php': 'PHP',
+  'python': 'Python',
+  'django': 'Django',
+  'mongodb': 'Mongodb',
+  'mysql': 'MySQL',
+  'razorpay': 'Razorpay payment gateway',
+  'api': 'REST api',
+  'wordpress': 'Wordpress',
+  'elementor': 'Elementor',
+}
+
 
 
 // Helper function to safely truncate the description text
@@ -312,7 +370,7 @@ function generateProjectCardsDynamic(data, categoryId, containerId) {
     projectsDiv.innerHTML = `
         <h1 class="main-heading mt-5">${category.categoryTitle}</h1>
          ${category.categoryId === 2 ? `
-        <p class="text-center text-muted fst-italic">
+        <p class="text-center text-dark fst-italic" style="max-width:600px;margin:auto">
             <small>Note: I don't take freelance projects while working for a company. 
             These freelance projects were not for money but to keep updated during career gap</small>
         </p>
@@ -321,8 +379,12 @@ function generateProjectCardsDynamic(data, categoryId, containerId) {
     `;
 
     projects.forEach((project, index) => {
+
         const iconsHtml = project.technologyIcons
-            .map(icon => `<img class="tech-icon-image" src="icons/${icon}-icon.svg" alt="${icon}">`)
+            .map(icon => `<img class="tech-icon-image" src="icons/${icon}-icon.svg" alt="${icon}" 
+              data-bs-toggle="tooltip" 
+              data-bs-placement="bottom" 
+              data-bs-title="${TECH_ICON_ALIASES[icon] || icon}" >`)
             .join('');
 
         const snippet = getSnippet(project.projectDescription, 100);
@@ -394,7 +456,7 @@ function generateProjectCardsDynamic(data, categoryId, containerId) {
                     style="background-image: url('img/${project.projectImage}');" 
                     onclick="window.open('${project.liveURL || project.sourceCode || '#'}', '_blank')">
                     
-                    <span class="date-overlay badge bg-dark opacity-75">${formattedDate}</span>
+                    <span class="date-overlay badge">${formattedDate}</span>
 
                     <div class="image-gradient-overlay"></div>
                 </div>
@@ -405,7 +467,8 @@ function generateProjectCardsDynamic(data, categoryId, containerId) {
                          <h5 class="card-title mb-0 text-light">${project.projectTitle}</h5>
                     </div>
                     
-                    <p class="text-muted small mb-2 text-center">${category.categoryTitle}</p>
+                    
+                   <!-- <p class="text-muted small mb-2 text-center">${category.categoryTitle}</p>-->
 
                     <div class="tech-stack-icons mb-3 text-center">${iconsHtml}</div>
 
@@ -536,6 +599,12 @@ generateProjectCardsDynamic(portfolioData, 3, "training-projects");
 
 // Make copy button work (Call this AFTER all cards are generated)
 initializeCopyButtons();
+
+// make tooltips work
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 //################################################### OLD STYLES ###############################################################################
 // OLD STYLE STARTS
@@ -763,3 +832,69 @@ generateTrainingProjectsCards(portfolioData);
 initializeCopyButtons();
 
 */
+
+
+/**
+ * Dynamically generates the HTML for the technical skills section
+ * and injects it into the specified container.
+ * This function builds an HTML string and uses innerHTML,
+ * relying on CSS for animations and hover effects.
+ * @param {object} skillsData - An object mapping skill keys to their display names.
+ * @param {string} containerId - The ID of the HTML element to inject the skills into.
+ * @param {string} vectorGraphicPath - Path to the vector graphic for the left column.
+ * @param {string} sectionTitle - The title for the skills section.
+ */
+function generateTechnicalSkillsSection(skillsData, containerId, vectorGraphicPath, sectionTitle = 'My Skillset') { // Changed default title
+    const skillsSection = document.getElementById(containerId);
+    if (!skillsSection) {
+        console.error(`Section with ID #${containerId} not found.`);
+        return;
+    }
+
+    // Determine the column class for the skills grid dynamically
+    // If vector is present (on lg screens), skills take col-lg-8. Otherwise, they take col-12.
+    const skillsColumnClasses = 'col-12 col-xl-8';
+
+    let skillsGridHtml = '';
+    for (const [key, name] of Object.entries(skillsData)) {
+        skillsGridHtml += `
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <div class="skill-card">
+                    <div class="skill-icon-circle"
+                     data-aos="fade-up" data-aos-duration="1500"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="bottom"
+                        data-bs-title="${name}" >
+                        <img src="icons/${key}-icon.svg" alt="${name} Icon">
+                    </div>
+                    <div class="skill-name text-center">${name}</div> </div>
+            </div>
+        `;
+    }
+
+    const fullSectionHtml = `
+        <div class="container py-5">
+            <h2 class="text-center mb-5">${sectionTitle}</h2>
+            <div class="row align-items-center">
+                <div class="col-12 col-xl-4 text-center mb-4 mb-lg-0 d-none d-xl-block">
+                    <img src="${vectorGraphicPath}" alt="Boy Programming" class="img-fluid floating-vector" style="max-height: 400px;">
+                </div>
+                <div class="${skillsColumnClasses}">
+                    <div class="row justify-content-center g-4">
+                        ${skillsGridHtml}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    skillsSection.innerHTML = fullSectionHtml; // Inject all HTML at once
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    generateTechnicalSkillsSection(
+        TECHNICAL_SKILLS_SECTION_LOGOS,
+        'technical-skills-section', // container ID
+        'img/boy-programming.svg', //vector graphic image
+        'Technologies I\'ve Worked With'//section heading
+    );
+});
