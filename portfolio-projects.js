@@ -148,6 +148,25 @@ const portfolioData = {
               "size": "" // or "Startup", "Small Business", etc.
               },
         },
+         {
+          "id": null,
+          "projectTitle": "Super Study (client: super child)",
+          "projectDescription": "A full-stack MERN application enabling student kit donations where users can donate via integrated payment gateway(Razorpay) and receive exclusive coupon codes redeemable in the partner Super Gold gaming app. Features secure payment processing, real-time coupon generation. This Freelancing was not for financial purpose but to prove recruiters that my career gap was filled with meaningful real-world project works",
+          "technologyIcons": ["mongodb", "expressjs", "reactjs", "nodejs", "typescript", "mui", "sass", "tailwind-css", "razorpay","framer-motion", "html", "css", "api"],
+          "projectImage": "ss-super-study-mern-stack.png",
+          "liveURL": "https://superstudy.co.in/",
+          "sourceCode": "",
+          "date": "2025-10-01",
+          "client": {
+              "name": "",
+              "location": "",
+              "url": "",
+              "industry": "",
+              "logo": "",
+              "logoBackground": "", //#172A47 fro light/white logo
+              "size": "" // or "Startup", "Small Business", etc.
+              },
+        },
       ]
     },
     {
