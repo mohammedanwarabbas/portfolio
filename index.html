@@ -68,27 +68,26 @@
     ></script>
     <!--end additional scripts and styles-->
     <style>
-
       /* tooltip */
       .tooltip-inner {
-          background-color: red;
-          color: white;
+        background-color: red;
+        color: white;
       }
       /* Bottom tooltip arrow */
       .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
-          border-bottom-color: red !important;
+        border-bottom-color: red !important;
       }
       /* Top tooltip arrow (for mobile/small screens) */
       .tooltip.bs-tooltip-top .tooltip-arrow::before {
-          border-top-color: red !important;
+        border-top-color: red !important;
       }
       /* Left tooltip arrow */
       .tooltip.bs-tooltip-start .tooltip-arrow::before {
-          border-left-color: red !important;
+        border-left-color: red !important;
       }
       /* Right tooltip arrow */
       .tooltip.bs-tooltip-end .tooltip-arrow::before {
-          border-right-color: red !important;
+        border-right-color: red !important;
       }
 
       /* loader container */
@@ -110,7 +109,7 @@
         color: rgb(9, 31, 232);
       }
 
-/*============================================ global styles =========================================== */
+      /*============================================ global styles =========================================== */
       body {
         box-sizing: border-box;
         font-family: "Plus Jakarta Sans";
@@ -130,17 +129,17 @@
         -webkit-text-fill-color: transparent;
       }
 
-          /* Make images clickable */
-        .clickable-image {
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+      /* Make images clickable */
+      .clickable-image {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
 
-        .clickable-image:hover {
-            transform: scale(1.08);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-/*============================================ navbar section =========================================== */
+      .clickable-image:hover {
+        transform: scale(1.08);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      /*============================================ navbar section =========================================== */
       #top-navbar {
         box-shadow: 0 0.5rem 0.5rem rgba(74, 71, 71, 0.527);
       }
@@ -153,11 +152,11 @@
         font-family: "Pacifico";
       }
 
-      #top-navbar a.nav-link.active{
+      #top-navbar a.nav-link.active {
         background-color: rgba(32, 32, 32, 0.836);
-        color:white
+        color: white;
       }
-/*============================================ sidebar section =========================================== */
+      /*============================================ sidebar section =========================================== */
       .sidebar-section {
         background-color: rgba(4, 11, 20, 1);
       }
@@ -208,7 +207,7 @@
         color: rgba(64, 0, 166, 1);
       }
 
-/*============================================ parallax hero section =========================================== */
+      /*============================================ parallax hero section =========================================== */
       .parallax-hero {
         position: relative;
         height: 100vh;
@@ -224,7 +223,7 @@
         height: 100%;
         background-image: url(img/parallax-hero-4.png);
         background-size: cover;
-        background-position:center top 20%;
+        background-position: center top 20%;
         background-attachment: fixed;
         z-index: -1;
         /* Make sure the background is behind the content */
@@ -255,90 +254,90 @@
         letter-spacing: 0.2rem;
       }
       /*============================================ image popup modal =========================================== */
-/* Popup Modal Styles */
-        .image-modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+      /* Popup Modal Styles */
+      .image-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 10000;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
 
-        .image-modal-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
+      .image-modal-overlay.active {
+        display: flex;
+        opacity: 1;
+      }
 
-        .image-modal-content {
-            max-width: 90vw;
-            max-height: 90vh;
-            border-radius: 8px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-        }
+      .image-modal-content {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: 8px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
 
-        .image-modal-overlay.active .image-modal-content {
-            transform: scale(1);
-        }
+      .image-modal-overlay.active .image-modal-content {
+        transform: scale(1);
+      }
 
-        .image-modal-close {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            color: white;
-            font-size: 32px;
-            cursor: pointer;
-            background: rgba(0, 0, 0, 0.6);
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s ease;
-            z-index: 10001;
-        }
+      .image-modal-close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        color: white;
+        font-size: 32px;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.6);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        z-index: 10001;
+      }
 
-        .image-modal-close:hover {
-            background: rgba(0, 0, 0, 0.8);
-            transform: rotate(90deg);
-        }
+      .image-modal-close:hover {
+        background: rgba(0, 0, 0, 0.8);
+        transform: rotate(90deg);
+      }
 
-        .image-modal-caption {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            color: white;
-            font-size: 18px;
-            padding: 10px;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-        }
+      .image-modal-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+      }
 
       /*=========================================== project section=========================================== */
 
       .projects-section .project-index-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 28px;
-    height: 28px;
-    padding: 0 4px;
-    font-size: 0.9rem;
-    font-style: normal;
-    font-weight: bold;
-    color: white;
-    border-radius: 4px;
-     background: rgb(255, 0, 194);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 28px;
+        height: 28px;
+        padding: 0 4px;
+        font-size: 0.9rem;
+        font-style: normal;
+        font-weight: bold;
+        color: white;
+        border-radius: 4px;
+        background: rgb(255, 0, 194);
         background: -moz-linear-gradient(
           246deg,
           rgba(255, 0, 194, 1) 0%,
@@ -357,92 +356,97 @@
           rgba(78, 13, 163, 1) 55%,
           rgba(241, 29, 29, 1) 100%
         );
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00c2", endColorstr="#f11d1d", GradientType=1); 
-}
-/* tech icons of cards */
-.projects-section .card .card-body .tech-icon-image {
-  width: auto;
-  height: 32px;
-  margin: 0 4px;
-}
-/* while hovering tech icons of cards */
-.projects-section .card .card-body .tech-icon-image:hover {
-  border: 0.15rem solid black;
-  border-radius: 0.2rem;
-  padding: 0.05rem;
-}
-/* project image preview in card */
-.projects-section .card .project-image-banner {
-    position: relative;
-    height: 9rem;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-.projects-section .card .project-image-banner:hover {
-  transform: scale3d(1.05,1.05,1.05);
-}
-.projects-section .card .date-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    /* transform: translate(50%, 0); */
-    padding: 0.7rem;
-    border-radius: 0 0 0 0.5rem;
-    background-color:red;
-    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.692), -0.1rem 0 1rem rgba(0, 0, 0, 0.808);
-}
-/* to make project image have an overlay */
-.projects-section .card .image-gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
-}
-.projects-section .card .image-gradient-overlay:hover {
-  background:none;
-}
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00c2", endColorstr="#f11d1d", GradientType=1);
+      }
+      /* tech icons of cards */
+      .projects-section .card .card-body .tech-icon-image {
+        width: auto;
+        height: 32px;
+        margin: 0 4px;
+      }
+      /* while hovering tech icons of cards */
+      .projects-section .card .card-body .tech-icon-image:hover {
+        border: 0.15rem solid black;
+        border-radius: 0.2rem;
+        padding: 0.05rem;
+      }
+      /* project image preview in card */
+      .projects-section .card .project-image-banner {
+        position: relative;
+        height: 9rem;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      .projects-section .card .project-image-banner:hover {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+      .projects-section .card .date-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        /* transform: translate(50%, 0); */
+        padding: 0.7rem;
+        border-radius: 0 0 0 0.5rem;
+        background-color: red;
+        box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.692),
+          -0.1rem 0 1rem rgba(0, 0, 0, 0.808);
+      }
+      /* to make project image have an overlay */
+      .projects-section .card .image-gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+      }
+      .projects-section .card .image-gradient-overlay:hover {
+        background: none;
+      }
 
-.projects-section .card .card-body{
-  background-color:black;
-}
-.projects-section .card .card-body .tech-stack-icons{
-  background-color: white;
-  border-radius: 0.5rem;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-}
+      .projects-section .card .card-body {
+        background-color: black;
+      }
+      .projects-section .card .card-body .tech-stack-icons {
+        background-color: white;
+        border-radius: 0.5rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+      }
 
-.projects-section .card .card-body .btn:hover{
-  animation: shakeAnimation 0.5s ease infinite;
-}
+      .projects-section .card .card-body .btn:hover {
+        animation: shakeAnimation 0.5s ease infinite;
+      }
 
-.projects-section .read-more-modal .client-logo-modal {
-    max-width: 150px; 
-    height: auto; 
-    display: block; 
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #ddd; 
-    border-radius: 4px;
-    padding: 5px; 
-}
+      .projects-section .read-more-modal .client-logo-modal {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+      }
 
-.projects-section .read-more-modal .tech-icon-image {
-    width: auto;
-    height: 45px;
-    margin: 0 4px;
-}
-.projects-section .read-more-modal .project-image-modal-banner {
-    height: 150px; 
-    background-size: cover; 
-    background-position: top center; 
-    background-repeat: no-repeat;
-}
+      .projects-section .read-more-modal .tech-icon-image {
+        width: auto;
+        height: 45px;
+        margin: 0 4px;
+      }
+      .projects-section .read-more-modal .project-image-modal-banner {
+        height: 150px;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+      }
 
       /*=============================================== old =================================================== */
       /*
@@ -518,95 +522,101 @@
       }
 */
 
+      /*============================================= technial skills with logo section ==========================*/
+      /* --- Custom CSS for Technical Skills Section --- */
 
-/*============================================= technial skills with logo section ==========================*/
-/* --- Custom CSS for Technical Skills Section --- */
+      /* Keyframe animation for the floating vector graphic */
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        } /* Moves up by 10px */
+        100% {
+          transform: translateY(0px);
+        }
+      }
 
-/* Keyframe animation for the floating vector graphic */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); } /* Moves up by 10px */
-    100% { transform: translateY(0px); }
-}
+      /* Apply the floating animation to the vector graphic */
+      .floating-vector {
+        animation: float 3s ease-in-out infinite; /* 3 seconds, smooth start/end, repeats forever */
+      }
 
-/* Apply the floating animation to the vector graphic */
-.floating-vector {
-    animation: float 3s ease-in-out infinite; /* 3 seconds, smooth start/end, repeats forever */
-}
+      /* Styling for each individual skill card container */
+      .skill-card {
+        display: flex; /* Use flexbox for vertical alignment */
+        flex-direction: column; /* Stack children (icon and name) vertically */
+        align-items: center; /* Horizontally center children within the card */
+        text-align: center; /* Ensure any other text in the card is centered */
+        margin-bottom: 30px; /* Space between skill cards for visual separation */
+        /* Remove any default padding from Bootstrap columns if causing issues */
+        padding: 0;
+      }
 
-/* Styling for each individual skill card container */
-.skill-card {
-    display: flex; /* Use flexbox for vertical alignment */
-    flex-direction: column; /* Stack children (icon and name) vertically */
-    align-items: center; /* Horizontally center children within the card */
-    text-align: center; /* Ensure any other text in the card is centered */
-    margin-bottom: 30px; /* Space between skill cards for visual separation */
-    /* Remove any default padding from Bootstrap columns if causing issues */
-    padding: 0; 
-}
+      /* Styling for the circular icon background */
+      .skill-icon-circle {
+        background-color: white; /* White background for the circle */
+        border-radius: 50%; /* Makes it perfectly round */
+        width: 5rem; /* Fixed width of the circle */
+        height: 5rem; /* Fixed height of the circle */
+        display: flex; /* Use flexbox to center the image inside */
+        align-items: center; /* Vertically center the image */
+        justify-content: center; /* Horizontally center the image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+        margin: 0 auto 10px auto; /* Center the circle itself and add space below */
+      }
 
-/* Styling for the circular icon background */
-.skill-icon-circle {
-    background-color: white; /* White background for the circle */
-    border-radius: 50%; /* Makes it perfectly round */
-    width: 5rem; /* Fixed width of the circle */
-    height: 5rem; /* Fixed height of the circle */
-    display: flex; /* Use flexbox to center the image inside */
-    align-items: center; /* Vertically center the image */
-    justify-content: center; /* Horizontally center the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    margin: 0 auto 10px auto; /* Center the circle itself and add space below */
-}
+      /* Hover effect for the skill icon circle */
+      .skill-icon-circle:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+        transform: translateY(-5px); /* Slightly lifts the circle on hover */
+      }
 
-/* Hover effect for the skill icon circle */
-.skill-icon-circle:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-    transform: translateY(-5px); /* Slightly lifts the circle on hover */
-}
+      /* Styling for the technology icon image inside the circle */
+      .skill-icon-circle img {
+        max-width: 70%; /* Ensures the icon doesn't overflow the circle */
+        max-height: 70%; /* Ensures the icon doesn't overflow the circle */
+        height: auto; /* Maintain aspect ratio */
+      }
 
-/* Styling for the technology icon image inside the circle */
-.skill-icon-circle img {
-    max-width: 70%; /* Ensures the icon doesn't overflow the circle */
-    max-height: 70%; /* Ensures the icon doesn't overflow the circle */
-    height: auto; /* Maintain aspect ratio */
-}
+      /* Styling for the skill name text below the icon */
+      .skill-name {
+        margin-top: 10px; /* Space between the circle and the name */
+        font-weight: 500; /* Medium font weight */
+        color: #333; /* Dark gray text color */
+        width: 100%; /* Ensure text takes full width to allow centering */
+        /* text-align: center; - Already applied inline in JS for robustness */
+      }
 
-/* Styling for the skill name text below the icon */
-.skill-name {
-    margin-top: 10px; /* Space between the circle and the name */
-    font-weight: 500; /* Medium font weight */
-    color: #333; /* Dark gray text color */
-    width: 100%; /* Ensure text takes full width to allow centering */
-    /* text-align: center; - Already applied inline in JS for robustness */
-}
+      /* --- Responsive Adjustments (Optional, if needed for fine-tuning) --- */
 
-/* --- Responsive Adjustments (Optional, if needed for fine-tuning) --- */
-
-/* Adjustments specifically for the 'lg' breakpoint range if circles still overlap */
-/* This targets screens where the vector graphic is visible (col-lg-4) 
+      /* Adjustments specifically for the 'lg' breakpoint range if circles still overlap */
+      /* This targets screens where the vector graphic is visible (col-lg-4) 
    and the skills are in col-lg-8, but before 'xl' resolution. */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .skill-card {
-        padding: 0 5px; /* Add slight horizontal padding to cards if they appear too close */
-    }
-    .skill-icon-circle {
-        width: 90px; /* Slightly reduce circle size to prevent overlap if necessary */
-        height: 90px;
-    }
-}
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .skill-card {
+          padding: 0 5px; /* Add slight horizontal padding to cards if they appear too close */
+        }
+        .skill-icon-circle {
+          width: 90px; /* Slightly reduce circle size to prevent overlap if necessary */
+          height: 90px;
+        }
+      }
 
-/* Further reduce circle size on very small screens if 2 per row is too tight */
-@media (max-width: 575.98px) { /* Extra small devices (less than 576px) */
-    .skill-icon-circle {
-        width: 80px;
-        height: 80px;
-    }
-    .skill-name {
-        font-size: 0.9em; /* Smaller text */
-    }
-}
-/*============================================= resume section =========================================== */
+      /* Further reduce circle size on very small screens if 2 per row is too tight */
+      @media (max-width: 575.98px) {
+        /* Extra small devices (less than 576px) */
+        .skill-icon-circle {
+          width: 80px;
+          height: 80px;
+        }
+        .skill-name {
+          font-size: 0.9em; /* Smaller text */
+        }
+      }
+      /*============================================= resume section =========================================== */
       .resume-section .resume-heading {
         background: -webkit-linear-gradient(
           246deg,
@@ -621,7 +631,7 @@
 
       .resume-section .skill {
         background-color: rgb(0, 0, 0);
-        color:white;
+        color: white;
         border-radius: 0.2rem;
         padding: 0.2rem;
         margin: 0.2rem;
@@ -717,7 +727,7 @@
         /* Set the border color and style */
       }
 
-/*============================================= about section =========================================== */
+      /*============================================= about section =========================================== */
 
       .about-section .my-name {
         font-family: "Rubik Wet Paint";
@@ -812,9 +822,8 @@
         /* transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); */
       }
 
-/*============================================= media queries =========================================== */
+      /*============================================= media queries =========================================== */
       @media (max-width: 767px) {
-
         /* change to diff parallax bg */
         .parallax-bg {
           background-image: url(./img/parallax-hero-5.png);
@@ -886,15 +895,17 @@
                 >
               </li>
               <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#projects"
+                  >Projects</a
+                >
+              </li>
+              
+              
+              <li class="nav-item">
                 <a
                   class="nav-link"
                   aria-current="page"
-                  href="#projects"
-                  >Project</a
-                >
-              </li>
-                <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#technical-skills-section"
+                  href="#technical-skills-section"
                   >Tech Skills</a
                 >
               </li>
@@ -903,12 +914,9 @@
                   >Resume</a
                 >
               </li>
-              
+
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="#contact"
+                <a class="nav-link" aria-current="page" href="#contact"
                   >Contact</a
                 >
               </li>
@@ -952,55 +960,42 @@
                   </p>
                 </div>
               </div>
+               <!--horizontal divider-->
+                        <div class="bg-dark mt-0 mb-4" style="height: 0.2rem; width: 100%;border-radius:50%;"></div>
 
               <div class="sidbar-menu my-2">
                 <ul class="list-unstyled">
                   <li class="mb-4 p-0">
-                    <a
-                      href="#home"
-                      class="d-block text-decoration-none active"
-                    >
+                    <a href="#home" class="d-block text-decoration-none active">
                       <i class="bi bi-house-door-fill me-2"></i> Home
                     </a>
                   </li>
                   <li class="mb-4 p-0">
-                    <a
-                      href="#about"
-                      class="d-block text-decoration-none"
-                    >
+                    <a href="#about" class="d-block text-decoration-none">
                       <i class="bi bi-info-circle-fill me-2"></i> About
                     </a>
                   </li>
                   <li class="mb-4 p-0">
-                    <a
-                      href="#projects"
-                      class="d-block text-decoration-none"
-                    >
-                      <i class="bi bi-card-list me-2"></i> Project
-                    </a>
-                  </li>
-                   <li class="mb-4 p-0">
-                    <a
-                      href="#technical-skills-section"
-                      class="d-block text-decoration-none"
-                    >
-                      <i class="bi bi-card-list me-2"></i> Tech Skills
+                    <a href="#projects" class="d-block text-decoration-none">
+                      <i class="bi bi-card-list me-2"></i> Projects
                     </a>
                   </li>
                   <li class="mb-4 p-0">
                     <a
-                      href="#resume"
+                      href="#technical-skills-section"
                       class="d-block text-decoration-none"
                     >
+                      <i class="bi bi-journal-code me-2"></i> Tech Skills
+                    </a>
+                  </li>
+                  <li class="mb-4 p-0">
+                    <a href="#resume" class="d-block text-decoration-none">
                       <i class="bi bi-file-person-fill me-2"></i> Resume
                     </a>
                   </li>
 
                   <li class="mb-4 p-0">
-                    <a
-                      href="#contact"
-                      class="d-block text-decoration-none"
-                    >
+                    <a href="#contact" class="d-block text-decoration-none">
                       <i class="bi bi-telephone-fill me-2"></i> Contact
                     </a>
                   </li>
@@ -1026,7 +1021,6 @@
                 </p>
                 -->
 
-
                 <!--
                 <p class="text-warning d-none d-md-block">
                   <i
@@ -1039,8 +1033,6 @@
 
                 <!--my designation typewriter effect-->
                 <p class="pb-4" id="myDesignationTypeWriter"></p>
-
-
               </div>
             </section>
           </section>
@@ -1055,16 +1047,16 @@
               <p>
                 <span class="blinking-effect">🟢</span> Immediately Available
               </p>
-              <p style="text-align: justify;">
-              My name is <span class="my-name">Mohammed Anwar</span>. I
-              completed <span class="fw-bold">M.C.A</span> in
-              <span class="fw-bold">2023 June</span>. I am a skilled web
-              developer with 2 years of professional experience. I am proficient
-              in JavaScript, ReactJS, and possess a strong understanding of
-              RESTful APIs, Agile methodologies, etc. I am passionate about
-              creating user-friendly and high-quality web applications and am
-              eager to contribute my skills and experience to a challenging and
-              rewarding role.
+              <p style="text-align: justify">
+                My name is <span class="my-name">Mohammed Anwar</span>. I
+                completed <span class="fw-bold">M.C.A</span> in
+                <span class="fw-bold">2023 June</span>. I am a skilled web
+                developer with 2 years of professional experience. I am
+                proficient in JavaScript, ReactJS, and possess a strong
+                understanding of RESTful APIs, Agile methodologies, etc. I am
+                passionate about creating user-friendly and high-quality web
+                applications and am eager to contribute my skills and experience
+                to a challenging and rewarding role.
               </p>
               <span class="h5">
                 "Give me the opportunity, and I'll code like there's no
@@ -1072,9 +1064,7 @@
                 conflicts jealous!" 😆🚀
               </span>
               <br />
-              <a href="#resume" class="btn btn-dark my-2"
-                >my resume -></a
-              >
+              <a href="#resume" class="btn btn-dark my-2">my resume -></a>
             </h4>
             <p
               class="d-flex justify-content-center align-items-center social-accounts my-4"
@@ -1126,15 +1116,17 @@
             class="projects-section container px-0 my-5 py-5"
             id="projects"
           >
-            <div id="company-projects"></div>
             <div id="freelance-projects"></div>
+            <div id="company-projects"></div>
             <div id="training-projects"></div>
-
           </section>
           <!--ends projects section-->
 
           <!--start technical skills section with technology logos-->
-          <section id="technical-skills-section" class="bg-light pt-5"></section>
+          <section
+            id="technical-skills-section"
+            class="bg-light pt-5"
+          ></section>
           <!-- end technical skills seciton with technology logs -->
 
           <!--starts resume section-->
@@ -1158,7 +1150,8 @@
               </h3>
               <div class="text-start">
                 <p data-aos="fade-up" data-aos-duration="1500">
-                  <span class="h6 fw-bold">Frontend Languages & Frameworks</span><br />
+                  <span class="h6 fw-bold">Frontend Languages & Frameworks</span
+                  ><br />
                   <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
@@ -1190,11 +1183,12 @@
                     >ReactJS</span
                   >
                 </p>
-                
 
-                 <p data-aos="fade-up" data-aos-duration="1500">
-                  <span class="h6 fw-bold">Frontend Libraries & State Management</span><br />
-                   <span
+                <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold"
+                    >Frontend Libraries & State Management</span
+                  ><br />
+                  <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
@@ -1212,25 +1206,25 @@
                     class="skill"
                     >Zustand</span
                   >
-                   <span
+                  <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
                     >Formik</span
                   >
-                   <span
+                  <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
                     >React Hooks</span
                   >
-                   <span
+                  <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
                     >React Query/Tanstack Query</span
                   >
-                    <span
+                  <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
@@ -1250,9 +1244,11 @@
                   >
                 </p>
 
-              <p data-aos="fade-up" data-aos-duration="1500">
-                  <span class="h6 fw-bold">Frontend Styling & UI Frameworks  </span><br />
-                   <span
+                <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold"
+                    >Frontend Styling & UI Frameworks </span
+                  ><br />
+                  <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
@@ -1264,19 +1260,19 @@
                     class="skill"
                     >Material UI</span
                   >
-                   <span
+                  <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
                     >Shadcn/UI</span
                   >
-                   <span
+                  <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
                     >Tailwind CSS</span
                   >
-                   <span
+                  <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
@@ -1284,19 +1280,20 @@
                   >
                 </p>
 
-               <p data-aos="fade-up" data-aos-duration="1500">
-                  <span class="h6 fw-bold">Backend scripting/Technologies</span><br />
+                <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold">Backend scripting/Technologies</span
+                  ><br />
                   <span
-                  data-aos="fade-up"
-                  data-aos-duration="1500"
-                  class="skill"
-                  >NodeJS</span
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >NodeJS</span
                   >
                   <span
-                  data-aos="fade-down"
-                  data-aos-duration="1500"
-                  class="skill"
-                  >ExpressJS</span
+                    data-aos="fade-down"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >ExpressJS</span
                   >
                   <span
                     data-aos="fade-up"
@@ -1306,27 +1303,28 @@
                   >
                 </p>
                 <p data-aos="fade-up" data-aos-duration="1500">
-                  <span class="h6 fw-bold">Backend APIs & Integrations</span><br />
+                  <span class="h6 fw-bold">Backend APIs & Integrations</span
+                  ><br />
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
                     >Restful APIs</span
                   >
-                   <span
+                  <span
                     data-aos="fade-down"
                     data-aos-duration="1500"
                     class="skill"
                     >Twilio WhatsApp API</span
                   >
-                   <span
+                  <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
                     class="skill"
                     >Razorpay Payment Gateway</span
                   >
                 </p>
-               <p data-aos="fade-up" data-aos-duration="1500">
+                <p data-aos="fade-up" data-aos-duration="1500">
                   <span class="h6 fw-bold">Databases</span><br />
                   <span
                     data-aos="fade-up"
@@ -1341,8 +1339,10 @@
                     >MongoDB</span
                   >
                 </p>
-               <p data-aos="fade-up" data-aos-duration="1500">
-                  <span class="h6 fw-bold">Version Control Systems/Repositoreis</span><br />
+                <p data-aos="fade-up" data-aos-duration="1500">
+                  <span class="h6 fw-bold"
+                    >Version Control Systems/Repositoreis</span
+                  ><br />
                   <span
                     data-aos="fade-up"
                     data-aos-duration="1500"
@@ -1661,8 +1661,10 @@
                       name="message"
                       rows="4"
                       required
-                    >Let's make your comeback story legendary! 📖✨. We will give you an opportunity😊
-                  </textarea>
+                    >
+Let's make your comeback story legendary! 📖✨. We will give you an opportunity😊
+                  </textarea
+                    >
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback text-white">
                       <i class="bi bi-arrow-90deg-up"></i>Please enter your
@@ -1730,9 +1732,8 @@
                 <hr class="d-md-none d-block" />
 
                 <!-- loader to displaytill map iframe loads -->
-                
 
-<!-- <iframe
+                <!-- <iframe
     id="mapIframe"
     class="border border-5 rounded-3 w-100 h-50"
     src="https://maps.google.com/maps?q=13.243757547671503,74.74303577865774&hl=en&z=14&output=embed"
@@ -1741,23 +1742,29 @@
     referrerpolicy="no-referrer-when-downgrade"
 ></iframe> -->
 
+                <div class="h-50" style="position: relative">
+                  <iframe
+                    id="mapIframe"
+                    class="border border-5 rounded-3 w-100 h-100"
+                    src="https://maps.google.com/maps?q=13.243757547671503,74.74303577865774&hl=en&z=14&output=embed"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
 
-<div class="h-50" style="position: relative;">
-  <iframe
-  id="mapIframe"
-  class="border border-5 rounded-3 w-100 h-100"
-  src="https://maps.google.com/maps?q=13.243757547671503,74.74303577865774&hl=en&z=14&output=embed"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade"
-></iframe>
-
-<div class="iframe-loader" style="position: absolute;top: 50%;right: 50%;transform: translate(50%, -50%);">
-                  <div class="spinner-border text-dark"></div>
-                  <p>map is loading</p>
+                  <div
+                    class="iframe-loader"
+                    style="
+                      position: absolute;
+                      top: 50%;
+                      right: 50%;
+                      transform: translate(50%, -50%);
+                    "
+                  >
+                    <div class="spinner-border text-dark"></div>
+                    <p>map is loading</p>
+                  </div>
                 </div>
-</div>
-
               </div>
             </div>
 
@@ -1809,60 +1816,72 @@
       </div>
     </div>
 
-    
- <!-- The Reusable Image Modal -->
-    <div id="imageModal" class="image-modal-overlay" onclick="closeImageModal()">
-        <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
-        <img class="image-modal-content" id="modalImage" src="" alt="Enlarged view">
-        <div class="image-modal-caption" id="modalCaption"></div>
+    <!-- The Reusable Image Modal -->
+    <div
+      id="imageModal"
+      class="image-modal-overlay"
+      onclick="closeImageModal()"
+    >
+      <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
+      <img
+        class="image-modal-content"
+        id="modalImage"
+        src=""
+        alt="Enlarged view"
+      />
+      <div class="image-modal-caption" id="modalCaption"></div>
     </div>
 
     <!-- Reusable Image Modal script -->
     <script>
-        // Function to open the image modal
-        function openImageModal(imageUrl, captionText = '') {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            const caption = document.getElementById('modalCaption');
-            
-            // Set image source and caption
-            modalImg.src = imageUrl;
-            caption.textContent = captionText;
-            
-            // Show modal with animation
-            modal.classList.add('active');
-            
-            // Prevent body from scrolling when modal is open
-            document.body.style.overflow = 'hidden';
-        }
+      // Function to open the image modal
+      function openImageModal(imageUrl, captionText = "") {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const caption = document.getElementById("modalCaption");
 
-        // Function to close the image modal
-        function closeImageModal() {
-            const modal = document.getElementById('imageModal');
-            
-            // Hide modal with animation
-            modal.classList.remove('active');
-            
-            // Re-enable body scrolling after transition completes
-            setTimeout(() => {
-                document.body.style.overflow = 'auto';
-            }, 300);
-        }
+        // Set image source and caption
+        modalImg.src = imageUrl;
+        caption.textContent = captionText;
 
-        // Close modal when pressing Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeImageModal();
-            }
+        // Show modal with animation
+        modal.classList.add("active");
+
+        // Prevent body from scrolling when modal is open
+        document.body.style.overflow = "hidden";
+      }
+
+      // Function to close the image modal
+      function closeImageModal() {
+        const modal = document.getElementById("imageModal");
+
+        // Hide modal with animation
+        modal.classList.remove("active");
+
+        // Re-enable body scrolling after transition completes
+        setTimeout(() => {
+          document.body.style.overflow = "auto";
+        }, 300);
+      }
+
+      // Close modal when pressing Escape key
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeImageModal();
+        }
+      });
+
+      // Prevent modal from closing when clicking on the image or caption
+      document
+        .getElementById("modalImage")
+        .addEventListener("click", function (event) {
+          event.stopPropagation();
         });
 
-        // Prevent modal from closing when clicking on the image or caption
-        document.getElementById('modalImage').addEventListener('click', function(event) {
-            event.stopPropagation();
-        });
-        
-        document.getElementById('modalCaption').addEventListener('click', function(event) {
-            event.stopPropagation();
+      document
+        .getElementById("modalCaption")
+        .addEventListener("click", function (event) {
+          event.stopPropagation();
         });
     </script>
 
@@ -1877,20 +1896,20 @@
     </script>
 
     <script>
-       AOS.init({
-    // Global settings:
-    
-    // Defines the distance (in px) from the bottom of the viewport at which the animation should start
-    // The default is usually 120px. 
-    // Setting it higher (e.g., 500) makes the element animate sooner.
-    offset: 50, // <--- Change this value
+      AOS.init({
+        // Global settings:
 
-    // Duration of the animation (in ms)
-    duration: 1500, 
-    
-    // Once: Controls whether animation should happen only once - highly recommended for performance
-    once: true 
-  });
+        // Defines the distance (in px) from the bottom of the viewport at which the animation should start
+        // The default is usually 120px.
+        // Setting it higher (e.g., 500) makes the element animate sooner.
+        offset: 50, // <--- Change this value
+
+        // Duration of the animation (in ms)
+        duration: 1500,
+
+        // Once: Controls whether animation should happen only once - highly recommended for performance
+        once: false,
+      });
     </script>
 
     <script>
@@ -1968,7 +1987,9 @@
       document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll("section[id]");
         // fetch menulinks of both top navbar and sidebar
-        const menuLinks = document.querySelectorAll(".sidbar-menu a, .navbar-nav a.nav-link");
+        const menuLinks = document.querySelectorAll(
+          ".sidbar-menu a, .navbar-nav a.nav-link"
+        );
 
         function highlightMenu() {
           let scrollY = window.scrollY;
@@ -2026,35 +2047,35 @@
     </script>
 
     <!-- typewriter effect on my designation -->
-     <script>
-  var app = document.getElementById("myDesignationTypeWriter");
+    <script>
+      var app = document.getElementById("myDesignationTypeWriter");
 
-  var typewriter = new Typewriter(app, {
-    loop: true,
-    delay: 50,
-    deleteSpeed: 30,
-  });
+      var typewriter = new Typewriter(app, {
+        loop: true,
+        delay: 50,
+        deleteSpeed: 30,
+      });
 
-  typewriter
-   .typeString('I am a ')
-    .pauseFor(300)
-    .typeString('ReactJS Developer')
-    .pauseFor(1500)
-    .deleteChars(17) // Delete "ReactJS Developer"
-    .typeString('Frontend Developer')
-    .pauseFor(1500)
-    .deleteChars(18) // Delete "Frontend Developer"
-    .typeString('Full Stack Developer')
-    .pauseFor(1500)
-    .deleteChars(20) // Delete "Full Stack Developer"
-    .typeString('UI/UX Designer')
-    .pauseFor(1500)
-    .deleteChars(14) // Delete "UI/UX Designer"
-    .typeString('MERN Stack Developer')
-    .pauseFor(1500)
-    .deleteChars(21) // Delete "MERN Stack Developer"
-    .start();
-</script>
+      typewriter
+        .typeString("I am a ")
+        .pauseFor(300)
+        .typeString("ReactJS Developer")
+        .pauseFor(1500)
+        .deleteChars(17) // Delete "ReactJS Developer"
+        .typeString("Frontend Developer")
+        .pauseFor(1500)
+        .deleteChars(18) // Delete "Frontend Developer"
+        .typeString("Full Stack Developer")
+        .pauseFor(1500)
+        .deleteChars(20) // Delete "Full Stack Developer"
+        .typeString("UI/UX Designer")
+        .pauseFor(1500)
+        .deleteChars(14) // Delete "UI/UX Designer"
+        .typeString("MERN Stack Developer")
+        .pauseFor(1500)
+        .deleteChars(21) // Delete "MERN Stack Developer"
+        .start();
+    </script>
 
     <!-- script to generate project cards -->
     <!-- Include portfolio data -->
