@@ -4,18 +4,30 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" href="img/profile-picture.png" type="image/x-icon" />
-    <meta name="description" content="Full-Stack Developer specializing in Next.js, React, Node.js, Express.js, and MongoDB. Building performant, scalable, and modern web applications." />
+    <meta
+      name="description"
+      content="Full-Stack Developer specializing in Next.js, React, Node.js, Express.js, and MongoDB. Building performant, scalable, and modern web applications."
+    />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Anwar | Portfolio</title>
 
     <link rel="canonical" href="https://dev-anwar.vercel.app/" />
     <!-- open graph tags -->
-    <meta property="og:title" content="Mohammed Anwar | Full-Stack Developer Portfolio" />
+    <meta
+      property="og:title"
+      content="Mohammed Anwar | Full-Stack Developer Portfolio"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dev-anwar.vercel.app/" />
-    <meta property="og:image" content="https://mohammedanwarabbas.github.io/portfolio/img/profile-picture.png" />
-    <meta property="og:description" content="🚀 This isn’t just a portfolio — it’s my story, my grind, and my growth. 💻 Explore it to truly know who I am as a 👨‍💻 developer." />
+    <meta
+      property="og:image"
+      content="https://mohammedanwarabbas.github.io/portfolio/img/img/Anwar Photo.jpg"
+    />
+    <meta
+      property="og:description"
+      content="🚀 This isn’t just a portfolio — it’s my story, my grind, and my growth. 💻 Explore it to truly know who I am as a 👨‍💻 developer."
+    />
     <meta property="og:locale" content="en_US" />
     <!-- twitter open graph tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -122,6 +134,44 @@
         height: 3.5rem;
         width: 3.5rem;
         color: rgb(9, 31, 232);
+      }
+
+      /*============================================ scroll to top =========================================== */
+      #scrollToTopBtn {
+        /* Positioning & Visibility */
+        position: fixed;
+        bottom: 75px;
+        right: 14px;
+        opacity: 0; /* Starts hidden */
+        visibility: hidden;
+        z-index: 1000; /* Ensure it stays on top of content */
+        /* Appearance */
+        width: 50px;
+        height: 50px;
+        background-color: #3f51b5; /* A beautiful, deep blue */
+        color: white;
+        border: none;
+        border-radius: 1rem; /* Makes it perfectly round */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+        cursor: pointer;
+        font-size: 24px;
+        line-height: 50px;
+        text-align: center;
+        transition: all 0.3s ease-in-out; /* Smooth transition for appearance/hover */
+
+        display: flex;
+        align-items: center; /* Centers content vertically */
+        justify-content: center;
+      }
+      /* Visibility Class (Added by JS) */
+      #scrollToTopBtn.show {
+        opacity: 0.8;
+        visibility: visible;
+      }
+      /* Hover Effect */
+      #scrollToTopBtn:hover {
+        background-color: #303f9f; /* Slightly darker blue on hover */
+        transform: scale(1.1); /* Slight enlarge effect */
       }
 
       /*============================================ global styles =========================================== */
@@ -623,6 +673,14 @@
 
       /* Further reduce circle size on very small screens if 2 per row is too tight */
       @media (max-width: 575.98px) {
+        /* scroll to top button */
+        #scrollToTopBtn {
+          /* Positioning & Visibility */
+          right: 13px;
+          bottom: 60px;
+          width: 45px;
+          height: 45px;
+        }
         /* Extra small devices (less than 576px) */
         .skill-icon-circle {
           width: 80px;
@@ -915,8 +973,7 @@
                   >Projects</a
                 >
               </li>
-              
-              
+
               <li class="nav-item">
                 <a
                   class="nav-link"
@@ -976,8 +1033,11 @@
                   </p>
                 </div>
               </div>
-               <!--horizontal divider-->
-                        <div class="bg-dark mt-0 mb-4" style="height: 0.2rem; width: 100%;border-radius:50%;"></div>
+              <!--horizontal divider-->
+              <div
+                class="bg-dark mt-0 mb-4"
+                style="height: 0.2rem; width: 100%; border-radius: 50%"
+              ></div>
 
               <div class="sidbar-menu my-2">
                 <ul class="list-unstyled">
@@ -1066,13 +1126,13 @@
               <p style="text-align: justify">
                 My name is <span class="my-name">Mohammed Anwar</span>. I
                 completed <span class="fw-bold">M.C.A</span> in
-                <span class="fw-bold">2023 June</span>. I am a skilled web
-                developer with 2 years of professional experience. I am
-                proficient in JavaScript, ReactJS, and possess a strong
-                understanding of RESTful APIs, Agile methodologies, etc. I am
-                passionate about creating user-friendly and high-quality web
-                applications and am eager to contribute my skills and experience
-                to a challenging and rewarding role.
+                <span class="fw-bold">2023</span>. I am a skilled web developer
+                with 2 years of professional experience. I am proficient in
+                JavaScript, ReactJS, and possess a strong understanding of
+                RESTful APIs, Agile methodologies, etc. I am passionate about
+                creating user-friendly and high-quality web applications and am
+                eager to contribute my skills and experience to a challenging
+                and rewarding role.
               </p>
               <span class="h5">
                 "Give me the opportunity, and I'll code like there's no
@@ -1197,6 +1257,12 @@
                     data-aos-duration="1500"
                     class="skill"
                     >ReactJS</span
+                  >
+                  <span
+                    data-aos="fade-down"
+                    data-aos-duration="1500"
+                    class="skill"
+                    >NextJS (App Router, Pages Router, SSR, SSG, ISR)</span
                   >
                 </p>
 
@@ -1443,7 +1509,8 @@
                     </div>
                     <div class="text-start fw-bolder">Jan 2023 - Jan 2024</div>
                     <p class="bg-warning p-1">
-                      Initially part-time due to MCA, later full-time
+                      Tech stack restricted to core PHP (no React, TypeScript,
+                      or Node.js used)
                     </p>
                     <div class="text-start text-muted">
                       <i class="bi bi-building-fill"></i> Vinyasa Tech Solutions
@@ -1848,6 +1915,9 @@ Let's make your comeback story legendary! 📖✨. We will give you an opportuni
       <div class="image-modal-caption" id="modalCaption"></div>
     </div>
 
+    <!-- scroll to top button -->
+    <button id="scrollToTopBtn" aria-label="Scroll to top">&#x2191;</button>
+
     <!-- Reusable Image Modal script -->
     <script>
       // Function to open the image modal
@@ -2135,6 +2205,35 @@ Let's make your comeback story legendary! 📖✨. We will give you an opportuni
 
       // Run script when page loads
       sendVisitorData();
+    </script>
+
+    <!-- chatbot -->
+    <script src="chatbot.js"></script>
+
+    <!-- goto top button -->
+    <script>
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      const rootElement = document.documentElement; // HTML element for scroll
+      // Function to check scroll position and show/hide button
+      function handleScroll() {
+        // Show button if user scrolls more than 300px
+        if (rootElement.scrollTop > 300) {
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      }
+      // Function to perform the smooth scroll
+      function scrollToTop() {
+        // Use the modern 'scroll-to' method for smooth scrolling
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // This is the beautiful, smooth part!
+        });
+      }
+      // Event listeners
+      document.addEventListener("scroll", handleScroll);
+      scrollToTopBtn.addEventListener("click", scrollToTop);
     </script>
   </body>
 </html>
